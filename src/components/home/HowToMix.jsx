@@ -1,0 +1,323 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+
+const STEPS = [
+  {
+    id: 1,
+    title: "Fill It Generously",
+    description:
+      "The cold is half the craft. Start with a glass filled generously with plenty of ice. A well-chilled drink brings out the best in every sip, keeping your cocktail crisp, refreshing, and perfectly balanced from the first pour to the last.",
+    image: "/home/how-to-mix/steps/1.png",
+  },
+  {
+    id: 2,
+    title: "Add Your Spirit, or Keep It Zero-Proof",
+    description:
+      "Make it your own. Pour 50ml of your favourite spirit for a classic cocktail experience, or skip the alcohol and add soda for a refreshing zero-proof serve. Either way, our mixer brings the flavour, balance, and character to every glass.",
+    image: "/home/how-to-mix/steps/2.png",
+  },
+  {
+    id: 3,
+    title: "Top It Up with Your Barcraft Mixer",
+    description:
+      "Bring your drink to life with a generous pour of your Bartisans mixer. Crafted to complement your favourite spirit or shine on its own, our mixer adds layers of flavour, refreshing character, and the perfect finishing touch to your serve.",
+    image: "/home/how-to-mix/steps/3.png",
+  },
+  {
+    id: 4,
+    title: "Stir Once, Garnish, Done.",
+    description:
+      "Give your drink a gentle stir to bring the spirit, mixer, and ice together in perfect harmony. Finish with your favourite garnish—a citrus twist, fresh herbs, or a slice of fruit—to add a final touch of flavour and flair.",
+    image: "/home/how-to-mix/steps/4.png",
+  },
+];
+
+export default function HowToMix() {
+  const [activeStep, setActiveStep] = useState(0);
+
+  const previousStep = () => {
+    setActiveStep((current) =>
+      current === 0 ? STEPS.length - 1 : current - 1
+    );
+  };
+
+  const nextStep = () => {
+    setActiveStep((current) =>
+      current === STEPS.length - 1 ? 0 : current + 1
+    );
+  };
+
+  return (
+    <section className="relative h-screen min-h-[760px] w-full overflow-hidden bg-black">
+      {/* =====================================================
+          FIXED BACKGROUND
+      ====================================================== */}
+      <div className="absolute inset-0">
+        <Image
+          src="/home/how-to-mix/how-to-mix.png"
+          alt="How to mix a BarCraft cocktail"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
+
+      {/* =====================================================
+          TOP BLACK FADE
+      ====================================================== */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-x-0
+          top-0
+          z-10
+          h-[220px]
+          bg-gradient-to-b
+          from-black
+          via-black/75
+          to-transparent
+        "
+      />
+
+      {/* =====================================================
+          TITLE
+      ====================================================== */}
+      <div className="absolute left-[28px] top-[36px] z-30">
+        <h2
+          className="
+            font-movault
+            text-[64px]
+            font-normal
+            uppercase
+            leading-[0.9]
+            text-brand-yellow
+            max-[900px]:text-[50px]
+            max-[600px]:text-[40px]
+          "
+        >
+          How To Mix
+        </h2>
+      </div>
+
+      {/* =====================================================
+          STEP NAVIGATION / CONTENT
+      ====================================================== */}
+      <div
+        className="
+          absolute
+          left-[5.5%]
+          top-1/2
+          z-30
+          flex
+          w-[340px]
+          -translate-y-1/2
+          flex-col
+          items-center
+          text-center
+          text-white
+
+          max-[1100px]:left-[4%]
+          max-[1100px]:w-[310px]
+
+          max-[900px]:w-[280px]
+
+          max-[600px]:left-[20px]
+          max-[600px]:w-[230px]
+        "
+      >
+        {/* =================================================
+            UP BUTTON
+        ================================================== */}
+        <button
+          type="button"
+          onClick={previousStep}
+          aria-label="Previous step"
+          className="
+            mb-[38px]
+            flex
+            h-[28px]
+            w-[28px]
+            shrink-0
+            items-center
+            justify-center
+            rounded-full
+            bg-brand-yellow
+            text-black
+            transition-transform
+            duration-200
+            hover:scale-110
+          "
+        >
+          <svg
+            viewBox="0 0 24 24"
+            className="h-[15px] w-[15px]"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+          >
+            <path
+              d="M6 14L12 8L18 14"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+
+        {/* =================================================
+            HORIZONTAL STEP STRIP
+        ================================================== */}
+        <div className="relative mb-[32px] h-[24px] w-[88px] overflow-hidden">
+          <div
+            className="
+              absolute
+              left-0
+              top-0
+              flex
+              h-[24px]
+              transition-transform
+              duration-500
+              ease-[cubic-bezier(0.65,0,0.35,1)]
+            "
+            style={{
+              transform: `translateX(-${activeStep * 88}px)`,
+            }}
+          >
+            {STEPS.map((step) => (
+              <div
+                key={step.id}
+                className="
+                  flex
+                  h-[24px]
+                  w-[88px]
+                  shrink-0
+                  items-center
+                  justify-center
+                  bg-brand-yellow
+                "
+              >
+                <span className="font-sf-pro text-[13px] font-bold uppercase leading-none text-black">
+                  Step {step.id}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* =================================================
+            VERTICAL STEP CONTENT
+        ================================================== */}
+        <div className="relative h-[330px] w-full overflow-hidden">
+          <div
+            className="
+              absolute
+              left-0
+              top-0
+              w-full
+              transition-transform
+              duration-500
+              ease-[cubic-bezier(0.65,0,0.35,1)]
+            "
+            style={{
+              transform: `translateY(-${activeStep * 330}px)`,
+            }}
+          >
+            {STEPS.map((step) => (
+              <div
+                key={step.id}
+                className="
+                  flex
+                  h-[330px]
+                  w-full
+                  flex-col
+                  items-center
+                "
+              >
+                {/* STEP IMAGE */}
+                <div className="relative mb-[22px] h-[145px] w-[145px] shrink-0">
+                  <Image
+                    src={step.image}
+                    alt=""
+                    fill
+                    sizes="145px"
+                    className="object-contain"
+                  />
+                </div>
+
+                {/* STEP TITLE */}
+                <h3
+                  className="
+                    max-w-[330px]
+                    font-sf-pro
+                    text-[20px]
+                    font-semibold
+                    leading-[23px]
+                    text-white
+                  "
+                >
+                  {step.title}
+                </h3>
+
+                {/* STEP DESCRIPTION */}
+                <p
+                  className="
+                    mt-[11px]
+                    max-w-[320px]
+                    font-sf-pro
+                    text-[11px]
+                    font-normal
+                    leading-[13px]
+                    text-white
+                  "
+                >
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* =================================================
+            DOWN BUTTON
+        ================================================== */}
+        <button
+          type="button"
+          onClick={nextStep}
+          aria-label="Next step"
+          className="
+            mt-[18px]
+            flex
+            h-[28px]
+            w-[28px]
+            shrink-0
+            items-center
+            justify-center
+            rounded-full
+            bg-brand-yellow
+            text-black
+            transition-transform
+            duration-200
+            hover:scale-110
+          "
+        >
+          <svg
+            viewBox="0 0 24 24"
+            className="h-[15px] w-[15px]"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+          >
+            <path
+              d="M6 10L12 16L18 10"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+  );
+}
