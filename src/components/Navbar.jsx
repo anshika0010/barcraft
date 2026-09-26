@@ -18,10 +18,7 @@ const navItems = [
     label: "Blog",
     href: "/blog",
   },
-  {
-    label: "Recipes",
-    href: "/recipes",
-  },
+ 
 ];
 
 export default function Navbar() {
