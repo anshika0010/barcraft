@@ -127,31 +127,36 @@ export const COLLECTIONS = [
         description:
           "A dark, complex strike of blood orange and tart pomegranate, finished with sharp lemon and a lingering ginger beer heat.",
         accent: "#7a0f1c",
+        image: "/Witcher Blood.png",
       },
       {
         name: "Devil’s Lemonade",
         description:
           "A heavy, tart pour of classic lemonade and rich pomegranate, structurally built to carry dark, heavy spirits like bourbon.",
         accent: "#d4202c",
+        // File is named "Devil's Blood" but the label is Devil's Lemonade
+        image: "/Devil's Blood.png",
       },
       {
         name: "Watermelon Mint",
         description:
           "Cold-pressed summer watermelon spiked heavily with sharp lime and fresh mint.",
         accent: "#f25c6e",
+        image: "/Watermelon Mint.png",
       },
       {
         name: "Sex on the Beach",
         description:
           "Ripe peach and sweet orange, immediately cut by a tart cranberry and cherry finish.",
         accent: "#f7934c",
+        image: "/Sex on the Beach.png",
       },
-      {
-        name: "Sex on the Brain",
-        description:
-          "A heavy sensory overload of sweet melon, peach, golden pineapple, and sharp citrus orange.",
-        accent: "#f4b942",
-      },
+      // {
+      //   name: "Sex on the Brain",
+      //   description:
+      //     "A heavy sensory overload of sweet melon, peach, golden pineapple, and sharp citrus orange.",
+      //   accent: "#f4b942",
+      // },
     ],
   },
 ];
