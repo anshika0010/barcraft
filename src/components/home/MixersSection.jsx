@@ -26,14 +26,16 @@ const MIXERS = [
 
 export default function MixersSection() {
   return (
-    <section className="w-full bg-black px-[28px] py-[100px]">
+    <section className="w-full bg-black px-4 py-[60px] sm:px-6 md:py-[80px] lg:px-[28px] lg:py-[100px]">
       {/* Section heading */}
 
       <h2
         className="
           font-movault
-          text-[70px]
+          text-[40px]
           font-normal
+          sm:text-[52px]
+          lg:text-[70px]
           uppercase
           leading-none
           text-brand-yellow
@@ -46,10 +48,14 @@ export default function MixersSection() {
 
       <div
         className="
-          mt-[55px]
+          mt-8
           grid
-          grid-cols-3
-          gap-[6px]
+          grid-cols-1
+          gap-x-[6px]
+          gap-y-10
+          sm:grid-cols-2
+          lg:mt-[55px]
+          lg:grid-cols-3
         "
       >
         {MIXERS.map((mixer) => (
@@ -74,7 +80,7 @@ function MixerCard({ mixer }) {
             src={mixer.image}
             alt={mixer.name}
             fill
-            sizes="(max-width: 768px) 100vw, 33vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="
             object-cover
             transition-opacity
@@ -89,7 +95,7 @@ function MixerCard({ mixer }) {
             src={mixer.hoverImage}
             alt=""
             fill
-            sizes="(max-width: 768px) 100vw, 33vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="
             object-cover
             opacity-0
@@ -102,7 +108,7 @@ function MixerCard({ mixer }) {
         </div>
 
       {/* Product information */}
-      <div className="mt-7"> 
+      <div className="mt-4 lg:mt-7">
       <div className="mt-[10px]">
         <h3
           className="

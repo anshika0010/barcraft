@@ -38,26 +38,26 @@ export default function FAQs() {
   };
 
   return (
-    <section className="w-full bg-black px-[28px] py-[70px]">
+    <section className="w-full bg-black px-4 py-[60px] sm:px-6 lg:px-[28px] lg:py-[70px]">
       {/* =====================================================
           HEADING
       ====================================================== */}
-      <h1
+      <h2
         className="
           text-center
           font-movault
-          text-[120px]    
+          text-[38px]
           font-normal
           uppercase
           leading-[0.9]
           text-brand-yellow
-
-          max-[900px]:text-[52px]
-          max-[600px]:text-[38px]
+          sm:text-[52px]
+          lg:text-[88px]
+          xl:text-[120px]
         "
       >
         Frequently Asked Questions.
-      </h1>
+      </h2>
 
       {/* =====================================================
           FAQ LIST
@@ -65,12 +65,10 @@ export default function FAQs() {
       <div
         className="
           mx-auto
-          mt-[65px]
+          mt-10
           w-full
           max-w-[826px]
-
-          max-[900px]:max-w-[90%]
-          max-[600px]:max-w-full
+          lg:mt-[65px]
         "
       >
         <div className="flex flex-col gap-[25px]">

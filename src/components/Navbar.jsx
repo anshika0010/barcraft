@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const navItems = [
   {
@@ -23,14 +25,18 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
   return (
     <header className="fixed left-0 right-0 top-0 z-50">
-      <nav className="relative flex h-[86px] w-full items-center px-[28px] border-white/30
+      <nav className="relative flex h-[64px] w-full items-center px-4 border-white/30
                     bg-white/[0.08]
-                    backdrop-blur-md">
+                    backdrop-blur-md
+                    sm:px-6 md:h-[86px] lg:px-[28px]">
         {/* Navigation */}
-        <div className="flex items-center gap-[76px]">
-          {navItems.map((item, index) => (
+        <div className="hidden items-center gap-8 md:flex lg:gap-[76px]">
+          {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
@@ -42,7 +48,7 @@ export default function Navbar() {
                 duration-300
                 
                 ${
-                  index === 0
+                  item.href === pathname
                     ? "text-[#FFD400]"
                     : "text-white hover:text-[#FFD400]"
                 }
@@ -52,6 +58,31 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
+
+        {/* Mobile menu toggle */}
+        <button
+          type="button"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          className="flex h-10 w-10 items-center justify-center text-white md:hidden"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            className="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          >
+            {menuOpen ? (
+              <path d="M6 6L18 18M18 6L6 18" />
+            ) : (
+              <path d="M4 7H20M4 12H20M4 17H20" />
+            )}
+          </svg>
+        </button>
 
         {/* Logo */}
         <Link
@@ -71,12 +102,12 @@ export default function Navbar() {
             width={100}
             height={70}
             priority
-            className="h-auto w-[100px] object-contain"
+            className="h-auto w-[80px] object-contain md:w-[100px]"
           />
         </Link>
 
-        {/* Search */}
-        <div className="ml-auto">
+{/* Search */}
+        {/* <div className="ml-auto">
          <div
                 className="
                     flex
@@ -106,8 +137,33 @@ export default function Navbar() {
               "
             />
           </div>
-        </div>
+        </div> */}
       </nav>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div
+          id="mobile-menu"
+          className="flex flex-col border-t border-white/10 bg-black/90 px-4 py-2 backdrop-blur-md sm:px-6 md:hidden"
+        >
+          {navItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
+              className={`
+                py-3
+                font-sf-pro
+                text-[16px]
+                font-bold
+                ${item.href === pathname ? "text-[#FFD400]" : "text-white"}
+              `}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
     </header>
   );
 }

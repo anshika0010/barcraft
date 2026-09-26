@@ -9,13 +9,13 @@ const MARQUEE_TEXT = "2 SERVE BOTTLE";
 // the <img> tags below fill this box (object-contain), so this
 // single value is the source of truth for bottle size at every
 // screen width instead of fighting with fixed px/vh classes.
-const BOTTLE_WIDTH = "clamp(260px, 24vw, 480px)";
+const BOTTLE_WIDTH = "clamp(180px, 24vw, 480px)";
 const BOTTLE_ASPECT = "1024 / 1536";
 
 export default function TwoServeBottle() {
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-black">
-      <div className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-black">
+      <div className="relative h-full w-full overflow-hidden">
         {/* =====================================================
             BACKGROUND
         ====================================================== */}
@@ -53,9 +53,8 @@ export default function TwoServeBottle() {
             BEHIND MARQUEE — pulled in closer to center
         ====================================================== */}
         <div
-          className="absolute bottom-[-5px] z-10"
+          className="absolute bottom-[-5px] left-[calc(50%-18vw)] z-10 md:left-[calc(50%-9vw)]"
           style={{
-            left: "calc(50% - 9vw)",
             transform: "translateX(-50%)",
             width: BOTTLE_WIDTH,
             aspectRatio: BOTTLE_ASPECT,
@@ -77,7 +76,7 @@ export default function TwoServeBottle() {
             pointer-events-none
             absolute
             inset-x-0
-            top-[65%]
+            top-[80%]
             z-20
             -translate-y-1/2
             overflow-hidden
@@ -92,9 +91,8 @@ export default function TwoServeBottle() {
             IN FRONT OF MARQUEE — pulled in closer to center
         ====================================================== */}
         <div
-          className="absolute bottom-[-5px] z-30"
+          className="absolute bottom-[-5px] left-[calc(50%+14vw)] z-30 md:left-[calc(50%+6vw)]"
           style={{
-            left: "calc(50% + 6vw)",
             transform: "translateX(-50%)",
             width: BOTTLE_WIDTH,
             aspectRatio: BOTTLE_ASPECT,
@@ -113,37 +111,40 @@ export default function TwoServeBottle() {
         <div
           className="
             absolute
-            bottom-[60px]
-            left-[65%]
+            left-0
+            right-0
+            top-[100px]
             z-50
-            w-[390px]
-            p-[16px]
+            px-4
+            py-[16px]
 
-            max-[1200px]:left-[67%]
-            max-[1200px]:w-[330px]
+            sm:px-6
 
-            max-[900px]:left-[68%]
-            max-[900px]:w-[280px]
+            md:bottom-[60px]
+            md:left-auto
+            md:right-[4%]
+            md:top-auto
+            md:w-[300px]
+            md:p-[16px]
 
-            max-[600px]:bottom-[35px]
-            max-[600px]:left-[20px]
-            max-[600px]:w-[calc(100%-40px)]
+            lg:right-[6%]
+            lg:w-[330px]
+
+            xl:right-[8%]
+            xl:w-[390px]
           "
         >
           <p
             className="
               font-sf-pro
-              text-sm
+              text-[15px]
               font-bold
-              leading-[21.02px]
+              leading-[19px]
               text-white
               [text-shadow:0_2px_10px_rgba(0,0,0,0.85)]
 
-              max-[900px]:text-[17px]
-              max-[900px]:leading-[18px]
-
-              max-[600px]:text-[15px]
-              max-[600px]:leading-[17px]
+              lg:text-sm
+              lg:leading-[21.02px]
             "
           >
             Crafted for intimate moments and effortless entertaining, our

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const BLOGS = [
   {
@@ -28,37 +29,63 @@ const BLOGS = [
 
 export default function BlogsAndArticles() {
   return (
-    <section className="w-full bg-black px-[28px] py-[85px]">
+    <section className="w-full bg-black px-4 py-[60px] sm:px-6 md:py-[70px] lg:px-[28px] lg:py-[85px]">
       {/* =====================================================
           SECTION TITLE
       ====================================================== */}
-      <h2
-        className="
-          font-movault
-          text-[64px]
-          font-normal
-          uppercase
-          leading-[0.9]
-          text-brand-yellow
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <h2
+          className="
+            font-movault
+            text-[40px]
+            font-normal
+            uppercase
+            leading-[0.9]
+            text-brand-yellow
+            sm:text-[52px]
+            lg:text-[64px]
+          "
+        >
+          Blogs and Articles
+        </h2>
 
-          max-[900px]:text-[52px]
-          max-[600px]:text-[40px]
-        "
-      >
-        Blogs and Articles
-      </h2>
+        <Link
+          href="/blog"
+          className="
+            flex
+            h-[32px]
+            min-w-[88px]
+            items-center
+            justify-center
+            bg-brand-yellow
+            px-[16px]
+            font-sf-pro
+            text-[13px]
+            font-bold
+            leading-none
+            text-black
+            transition-transform
+            duration-200
+            hover:scale-105
+          "
+        >
+          View all
+        </Link>
+      </div>
 
       {/* =====================================================
           BLOG GRID
       ====================================================== */}
       <div
         className="
-          mt-[55px]
+          mt-8
           grid
-          grid-cols-3
-          gap-[16px]
-
-          max-[700px]:grid-cols-1
+          grid-cols-1
+          gap-x-[16px]
+          gap-y-10
+          sm:grid-cols-2
+          lg:mt-[55px]
+          lg:grid-cols-3
         "
       >
         {BLOGS.map((blog) => (
@@ -76,10 +103,7 @@ export default function BlogsAndArticles() {
                 src={blog.image}
                 alt={blog.title}
                 fill
-                sizes="
-                  (max-width: 700px) 100vw,
-                  33vw
-                "
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="
                   object-cover
                   transition-transform

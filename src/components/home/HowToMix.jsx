@@ -50,7 +50,7 @@ export default function HowToMix() {
   };
 
   return (
-    <section className="relative h-screen min-h-[760px] w-full overflow-hidden bg-black">
+    <section className="relative h-screen min-h-[680px] w-full overflow-hidden bg-black md:min-h-[760px]">
       {/* =====================================================
           FIXED BACKGROUND
       ====================================================== */}
@@ -64,6 +64,9 @@ export default function HowToMix() {
           className="object-cover object-center"
         />
       </div>
+
+      {/* Dim the image on narrow screens, where the steps sit over it */}
+      <div className="pointer-events-none absolute inset-0 z-[5] bg-black/45 md:hidden" />
 
       {/* =====================================================
           TOP BLACK FADE
@@ -86,17 +89,17 @@ export default function HowToMix() {
       {/* =====================================================
           TITLE
       ====================================================== */}
-      <div className="absolute left-[28px] top-[36px] z-30">
+      <div className="absolute left-4 top-[88px] z-30 sm:left-6 md:top-[36px] lg:left-[28px]">
         <h2
           className="
             font-movault
-            text-[64px]
+            text-[40px]
             font-normal
             uppercase
             leading-[0.9]
             text-brand-yellow
-            max-[900px]:text-[50px]
-            max-[600px]:text-[40px]
+            sm:text-[50px]
+            lg:text-[64px]
           "
         >
           How To Mix
@@ -109,24 +112,25 @@ export default function HowToMix() {
       <div
         className="
           absolute
-          left-[5.5%]
-          top-1/2
+          left-1/2
+          top-[calc(50%+40px)]
           z-30
           flex
-          w-[340px]
+          w-[min(340px,calc(100%-32px))]
+          -translate-x-1/2
           -translate-y-1/2
           flex-col
           items-center
           text-center
           text-white
 
-          max-[1100px]:left-[4%]
-          max-[1100px]:w-[310px]
+          md:left-[4%]
+          md:top-1/2
+          md:w-[310px]
+          md:translate-x-0
 
-          max-[900px]:w-[280px]
-
-          max-[600px]:left-[20px]
-          max-[600px]:w-[230px]
+          xl:left-[5.5%]
+          xl:w-[340px]
         "
       >
         {/* =================================================
@@ -210,7 +214,7 @@ export default function HowToMix() {
         {/* =================================================
             VERTICAL STEP CONTENT
         ================================================== */}
-        <div className="relative h-[330px] w-full overflow-hidden">
+        <div className="relative h-[350px] w-full overflow-hidden md:h-[330px]">
           <div
             className="
               absolute
@@ -222,7 +226,9 @@ export default function HowToMix() {
               ease-[cubic-bezier(0.65,0,0.35,1)]
             "
             style={{
-              transform: `translateY(-${activeStep * 330}px)`,
+              // Percent of the strip's own height, so each step can
+              // change height per breakpoint without breaking the slide.
+              transform: `translateY(-${(activeStep * 100) / STEPS.length}%)`,
             }}
           >
             {STEPS.map((step) => (
@@ -230,8 +236,9 @@ export default function HowToMix() {
                 key={step.id}
                 className="
                   flex
-                  h-[330px]
+                  h-[350px]
                   w-full
+                  md:h-[330px]
                   flex-col
                   items-center
                 "
@@ -267,9 +274,11 @@ export default function HowToMix() {
                     mt-[11px]
                     max-w-[320px]
                     font-sf-pro
-                    text-[11px]
+                    text-[12px]
                     font-normal
-                    leading-[13px]
+                    leading-[15px]
+                    md:text-[11px]
+                    md:leading-[13px]
                     text-white
                   "
                 >

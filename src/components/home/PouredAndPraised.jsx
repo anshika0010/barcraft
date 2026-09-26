@@ -80,18 +80,17 @@ export default function PouredAndPraised() {
         {/* ===================================================
             SECTION TITLE
         ==================================================== */}
-        <div className="relative z-30 px-[28px] pt-[50px]">
+        <div className="relative z-30 px-4 pt-[50px] sm:px-6 lg:px-[28px]">
           <h2
             className="
               font-movault
-              text-[64px]
+              text-[40px]
               font-normal
               uppercase
               leading-[0.9]
               text-brand-yellow
-
-              max-[900px]:text-[52px]
-              max-[600px]:text-[40px]
+              sm:text-[52px]
+              lg:text-[64px]
             "
           >
             Poured &amp; Praised
@@ -105,19 +104,21 @@ export default function PouredAndPraised() {
           className="
             relative
             mx-auto
-            mt-[58px]
-            h-[545px]
-            w-[calc(100%-150px)]
+            mt-8
+            h-[460px]
+            w-[calc(100%-32px)]
             max-w-[1200px]
             overflow-hidden
-            rounded-[55px]
+            rounded-[28px]
 
-            max-[1100px]:h-[500px]
-            max-[1100px]:w-[calc(100%-100px)]
+            min-[400px]:h-[500px]
 
-            max-[700px]:h-[560px]
-            max-[700px]:w-[calc(100%-40px)]
-            max-[700px]:rounded-[35px]
+            md:mt-[58px]
+            md:w-[calc(100%-100px)]
+            md:rounded-[55px]
+
+            xl:h-[545px]
+            xl:w-[calc(100%-150px)]
           "
         >
           {/* =================================================
@@ -128,7 +129,7 @@ export default function PouredAndPraised() {
             alt="BarCraft cocktail being prepared"
             fill
             priority
-            sizes="(max-width: 700px) calc(100vw - 40px), 1200px"
+            sizes="(max-width: 768px) calc(100vw - 32px), 1200px"
             className="object-cover object-center"
           />
 
@@ -139,7 +140,7 @@ export default function PouredAndPraised() {
             {/* =================================================
                 REVIEW PAGES
             ================================================= */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center max-md:pb-[40px]">
             {/* CURRENT PAGE */}
             <ReviewPage
                 review={REVIEWS[activeIndex]}
@@ -175,13 +176,12 @@ export default function PouredAndPraised() {
             aria-label="Previous review"
             className="
               absolute
-              left-[45px]
-              top-1/2
+              bottom-[12px]
+              left-[calc(50%-52px)]
               z-30
               flex
               h-[42px]
               w-[42px]
-              -translate-y-1/2
               items-center
               justify-center
               text-white
@@ -189,7 +189,10 @@ export default function PouredAndPraised() {
               duration-200
               hover:scale-110
 
-              max-[700px]:left-[15px]
+              md:bottom-auto
+              md:left-[45px]
+              md:top-1/2
+              md:-translate-y-1/2
             "
           >
             <svg
@@ -216,13 +219,12 @@ export default function PouredAndPraised() {
             aria-label="Next review"
             className="
               absolute
-              right-[45px]
-              top-1/2
+              bottom-[12px]
+              right-[calc(50%-52px)]
               z-30
               flex
               h-[42px]
               w-[42px]
-              -translate-y-1/2
               items-center
               justify-center
               text-white
@@ -230,7 +232,10 @@ export default function PouredAndPraised() {
               duration-200
               hover:scale-110
 
-              max-[700px]:right-[15px]
+              md:bottom-auto
+              md:right-[45px]
+              md:top-1/2
+              md:-translate-y-1/2
             "
           >
             <svg
@@ -267,9 +272,9 @@ function ReviewPage({ review, className = "", onAnimationEnd }) {
         h-[475px]
         w-[395px]
         shrink-0
-
-        max-[700px]:h-[475px]
-        max-[700px]:w-[340px]
+        scale-[0.72]
+        min-[400px]:scale-[0.82]
+        md:scale-100
 
         ${className}
       `}
@@ -309,8 +314,6 @@ function ReviewPage({ review, className = "", onAnimationEnd }) {
             uppercase
             leading-[0.95]
             text-[#8b6200]
-
-            max-[700px]:text-[24px]
           "
         >
           {review.title}
@@ -356,11 +359,6 @@ function ReviewPage({ review, className = "", onAnimationEnd }) {
             font-normal
             leading-[13px]
             text-[#252525]
-
-            max-[700px]:left-[35px]
-            max-[700px]:right-[35px]
-            max-[700px]:text-[10px]
-            max-[700px]:leading-[12px]
           "
         >
           “{review.review}”
@@ -399,8 +397,6 @@ function ReviewPage({ review, className = "", onAnimationEnd }) {
             uppercase
             leading-none
             text-[#8b6200]
-
-            max-[700px]:text-[22px]
           "
         >
           {review.name}

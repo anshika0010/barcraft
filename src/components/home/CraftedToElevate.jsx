@@ -35,8 +35,10 @@ export default function CraftedToElevate() {
 
       const rect = sectionRef.current.getBoundingClientRect();
 
+      // Read the live window height: this effect only runs once, so
+      // `viewport` state here would be stuck at its initial value.
       const scrollableDistance =
-        sectionRef.current.offsetHeight - viewport.height;
+        sectionRef.current.offsetHeight - window.innerHeight;
 
       if (scrollableDistance <= 0) {
         setProgress(0);
@@ -132,9 +134,14 @@ export default function CraftedToElevate() {
    * Initial size of the image.
    *
    * The screenshot shows approximately a 465px wide image
-   * on a 1440px viewport.
+   * on a 1440px viewport. Narrow screens get a relatively larger
+   * image so it doesn't shrink to a thumbnail on phones.
    */
-  const initialWidth = Math.min(465, viewport.width * 0.325);
+  const isMobile = viewport.width < 768;
+
+  const initialWidth = isMobile
+    ? viewport.width * 0.55
+    : Math.min(465, viewport.width * 0.325);
 
   /*
    * Final size.
@@ -160,7 +167,11 @@ export default function CraftedToElevate() {
   // IMAGE Y POSITION
   // ==========================================================
 
-  const imageY = lerp(0, 0, imageProgress);
+  // On phones there's no room beside the heading, so the image starts
+  // below it and glides back to center as it zooms to full screen.
+  const imageStartY = isMobile ? viewport.height * 0.14 : 0;
+
+  const imageY = lerp(imageStartY, 0, easeInOut(imageProgress));
 
   // ==========================================================
   // HEADING
@@ -210,9 +221,12 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
         <div
           className="
             absolute
-            left-[28px]
-            top-1/2
+            left-4
+            top-[32%]
             z-10
+            sm:left-6
+            md:top-1/2
+            lg:left-[28px]
           "
           style={{
             transform: `
@@ -270,9 +284,12 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
           className="
             pointer-events-none
             absolute
-            left-[28px]
-            top-1/2
+            left-4
+            top-[32%]
             z-[25]
+            sm:left-6
+            md:top-1/2
+            lg:left-[28px]
           "
           style={{
             transform: `
@@ -335,7 +352,8 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
             bottom-[25%]
             left-1/2
             z-50
-            w-[min(930px,80vw)]
+            w-[min(930px,90vw)]
+            sm:w-[min(930px,80vw)]
           "
           style={{
             opacity: paragraphOneOpacity,
@@ -348,9 +366,12 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
             className="
               font-sf-pro
               text-center
-              text-[18.33px]
+              text-[15px]
               font-semibold
-              leading-[22px]
+              leading-[20px]
+              sm:text-[17px]
+              lg:text-[18.33px]
+              lg:leading-[22px]
               text-white
             "
           >
@@ -368,7 +389,8 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
             bottom-[25%]
             left-1/2
             z-50
-            w-[min(930px,80vw)]
+            w-[min(930px,90vw)]
+            sm:w-[min(930px,80vw)]
           "
           style={{
             opacity: paragraphTwoOpacity,
@@ -381,9 +403,12 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
             className="
               font-sf-pro
               text-center
-              text-[18.33px]
+              text-[15px]
               font-semibold
-              leading-[22px]
+              leading-[20px]
+              sm:text-[17px]
+              lg:text-[18.33px]
+              lg:leading-[22px]
               text-white
             "
           >
@@ -426,7 +451,7 @@ function HeadingText({ onlyEvery = false }) {
       <span
         className={`
           block
-          text-[131.46px]
+          text-[15vw] md:text-[min(9.13vw,131.46px)]
           leading-[0.9]
           ${hideUnlessEvery}
         `}
@@ -440,7 +465,7 @@ function HeadingText({ onlyEvery = false }) {
         className="
           block
           whitespace-nowrap
-          text-[262.91px]
+          text-[30vw] md:text-[min(18.26vw,262.91px)]
           leading-[0.77]
         "
       >
@@ -456,7 +481,7 @@ function HeadingText({ onlyEvery = false }) {
       <span
         className={`
           block
-          text-[262.91px]
+          text-[30vw] md:text-[min(18.26vw,262.91px)]
           leading-[0.77]
           ${hideUnlessEvery}
         `}
