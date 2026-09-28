@@ -154,7 +154,7 @@ export default function Footer() {
             sm:text-[12px]
           "
         >
-          © 2026 Round The Cocktails Pvt Ltd | All rights reserved
+          © 2026| All rights reserved
         </p>
 
         {/* SOCIAL ICONS */}
