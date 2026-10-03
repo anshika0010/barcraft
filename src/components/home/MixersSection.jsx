@@ -6,7 +6,7 @@ import { useState } from "react";
 const flavor = [
   {
     id: 1,
-    name: "BarCraft Mojito Mixer",
+    name: "Mojito",
     description: "Crisp, cooling garden mint paired with a sharp citrus bite.",
     image: "/NEW BARCRAFT IMAGES/MOJITO H 1.jpg",
     image60: "/60ml images/MOJITOO SMALL.jpg",
@@ -17,7 +17,7 @@ const flavor = [
 
   {
     id: 2,
-    name: "BarCraft Cosmopolitan Mixer",
+    name: "Cosmopolitan",
     description: "Cranberry & Citrus Cocktail Mixer",
     accent: "#c8102e",
     image: "/NEW BARCRAFT IMAGES/COSMOPOLITAN 1.jpg",
@@ -26,7 +26,7 @@ const flavor = [
   },
   {
     id: 3,
-    name: "BarCraft Moscow Mule Mixer",
+    name: "Moscow Mule",
     description: "Real Ginger & Lime Cocktail Mixer",
     hoverImage: "/home/barcraft-mixers/moscow-mule-glass.png",
             accent: "#d9a520",

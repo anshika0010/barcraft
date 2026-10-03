@@ -11,10 +11,10 @@ const CONTENT = {
   },
 
   paragraphOne:
-    "At BarCraft, we believe a great cocktail begins with great ingredients. Our cocktail mixers are thoughtfully crafted to bring together vibrant flavours, premium-quality ingredients, and bartender-inspired expertise—making it easier to create refreshing, delicious drinks at home.",
+    "We believe a great cocktail starts with great ingredients. Every BarCraft mixer is made to give you bright, balanced flavour without the fuss of squeezing, muddling and measuring five different things.",
 
   paragraphTwo:
-    "Whether you're hosting friends, celebrating a special moment, or simply unwinding after a long day, BarCraft makes every pour an opportunity to create something memorable. Just mix, pour, and enjoy—because exceptional cocktails should be effortless, inviting, and crafted for every occasion.",
+    "Hosting friends? Celebrating something? Or just switching off after a long day? BarCraft makes it easy to serve something that feels special. Just mix, pour and enjoy.",
 };
 
 export default function CraftedToElevate() {

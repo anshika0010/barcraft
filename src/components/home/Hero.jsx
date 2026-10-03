@@ -59,7 +59,7 @@ export default function Hero() {
                 leading-[0.78]
               "
             >
-              Perfect Mojito
+             Perfect Cocktail 
             </span>
           </h1>
 
@@ -79,10 +79,7 @@ export default function Hero() {
                 text-white
             "
             >
-            Refreshingly crafted with zesty lime and cool mint, BARCRAFT
-            Mojito Cocktail Mixer brings the essence of a classic mojito to
-            your glass. Just mix, pour, and enjoy a bar-quality experience at
-            home.
+           Great drinks don't need a bar. BarCraft cocktail mixers bring the taste of a classic mojito, cosmopolitan or moscow mule to your glass in a few easy steps. Add ice, pour your mixer, and finish with a garnish. Add your favourite spirit if you like, or keep it zero-proof.
           </p>
         </div>
       </div>
