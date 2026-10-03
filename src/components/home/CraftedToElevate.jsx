@@ -98,45 +98,10 @@ export default function CraftedToElevate() {
     };
   }, []);
 
-  /*
-   * ==========================================================
-   * ANIMATION TIMELINE
-   * ==========================================================
-   *
-   * 0.00
-   * Initial state
-   *
-   * 0.00 → 0.50
-   * Image zooms
-   * Heading moves upward
-   *
-   * 0.42 → 0.55
-   * Heading disappears
-   *
-   * 0.52 → 0.68
-   * Paragraph 1 enters
-   *
-   * 0.68 → 0.82
-   * Paragraph 1 stays
-   *
-   * 0.82 → 1.00
-   * Paragraph 1 leaves
-   * Paragraph 2 enters from below
-   */
-
-  // ==========================================================
-  // IMAGE ZOOM
-  // ==========================================================
 
   const imageProgress = clamp(mapRange(progress, 0, 0.55), 0, 1);
 
-  /*
-   * Initial size of the image.
-   *
-   * The screenshot shows approximately a 465px wide image
-   * on a 1440px viewport. Narrow screens get a relatively larger
-   * image so it doesn't shrink to a thumbnail on phones.
-   */
+  
   const isMobile = viewport.width < 768;
 
   const initialWidth = isMobile
@@ -349,11 +314,11 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
         <div
           className="
             absolute
-            bottom-[25%]
+            bottom-[35%]
             left-1/2
             z-50
-            w-[min(930px,90vw)]
-            sm:w-[min(930px,80vw)]
+            w-[min(930px,95vw)]
+            sm:w-[min(930px,90vw)]
           "
           style={{
             opacity: paragraphOneOpacity,
@@ -368,10 +333,10 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
               text-center
               text-[15px]
               font-semibold
-              leading-[20px]
-              sm:text-[17px]
-              lg:text-[18.33px]
-              lg:leading-[22px]
+              leading-[25px]
+              sm:text-[25px]
+              lg:text-[25px]
+              lg:leading-[30px]
               text-white
             "
           >
@@ -405,10 +370,10 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
               text-center
               text-[15px]
               font-semibold
-              leading-[20px]
-              sm:text-[17px]
-              lg:text-[18.33px]
-              lg:leading-[22px]
+              leading-[25px]
+              sm:text-[25px]
+              lg:text-[25px]
+              lg:leading-[30px]
               text-white
             "
           >

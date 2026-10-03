@@ -1,26 +1,38 @@
+"use client";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
-const MIXERS = [
+const flavor = [
   {
     id: 1,
     name: "BarCraft Mojito Mixer",
-    description: "Refreshing Lime & Mint Cocktail Mixer",
-    image: "/home/barcraft-mixers/mojito.png",
-    hoverImage: "/home/barcraft-mixers/mojito-glass.png",
+    description: "Crisp, cooling garden mint paired with a sharp citrus bite.",
+    image: "/NEW BARCRAFT IMAGES/MOJITO H 1.jpg",
+    image60: "/60ml images/MOJITOO SMALL.jpg",
+    accent: "#c8102e",
+
+    hoverImage: "/NEW BARCRAFT IMAGES/MOJITO H 1.jpg",
   },
+
   {
     id: 2,
     name: "BarCraft Cosmopolitan Mixer",
     description: "Cranberry & Citrus Cocktail Mixer",
-    image: "/home/barcraft-mixers/cosmopolitan.png",
+    accent: "#c8102e",
+    image: "/NEW BARCRAFT IMAGES/COSMOPOLITAN 1.jpg",
+    image60: "/60ml images/cosmopolitan small.jpg",
     hoverImage: "/home/barcraft-mixers/cosmopolitan-glass.png",
   },
   {
     id: 3,
     name: "BarCraft Moscow Mule Mixer",
     description: "Real Ginger & Lime Cocktail Mixer",
-    image: "/home/barcraft-mixers/moscow-mule.png",
     hoverImage: "/home/barcraft-mixers/moscow-mule-glass.png",
+            accent: "#d9a520",
+        image: "/NEW BARCRAFT IMAGES/MOSCOW MULE 1.jpg",
+        image60: "/60ml images/MOSCOW MULE SMALL.jpg",
+
   },
 ];
 
@@ -58,119 +70,131 @@ export default function MixersSection() {
           lg:grid-cols-3
         "
       >
-        {MIXERS.map((mixer) => (
-          <MixerCard
-            key={mixer.id}
-            mixer={mixer}
-          />
+        {flavor.map((flavor) => (
+          <MixerCard key={flavor.id} flavor={flavor} />
         ))}
       </div>
     </section>
   );
 }
 
-function MixerCard({ mixer }) {
+function MixerCard({ flavor, index }) {
+  const [selectedSize, setSelectedSize] = useState("600ml");
+
+  const selectedImage =
+    selectedSize === "60ml" && flavor.image60 ? flavor.image60 : flavor.image;
+
+  const selectedHoverImage =
+    selectedSize === "60ml" ? flavor.hoverImage60 : flavor.hoverImage;
+
   return (
     <article className="min-w-0">
-      {/* Image */}
+      <div className="group relative aspect-[0.76] w-full overflow-hidden">
+        <AnimatePresence mode="sync">
+          {selectedImage ? (
+            selectedHoverImage ? (
+              <motion.div
+                key={`${selectedSize}-hover`}
+                className="absolute inset-0"
+                initial={{ opacity: 0, scale: 1.03 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  opacity: { duration: 0.45, ease: "easeInOut" },
+                  scale: { duration: 0.6, ease: "easeOut" },
+                }}
+              >
+                <Image
+                  src={selectedImage}
+                  alt={`BarCraft ${flavor.name} Mixer`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                  style={{
+                    objectPosition: flavor.imagePosition ?? "center",
+                  }}
+                />
 
-        <div className="group relative aspect-[0.76] w-full overflow-hidden">
-        {/* Normal image */}
-        <Image
-            src={mixer.image}
-            alt={mixer.name}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="
-            object-cover
-            transition-opacity
-            duration-500
-            ease-in-out
-            group-hover:opacity-0
-            "
-        />
-
-        {/* Hover image */}
-        <Image
-            src={mixer.hoverImage}
-            alt=""
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="
-            object-cover
-            opacity-0
-            transition-opacity
-            duration-500
-            ease-in-out
-            group-hover:opacity-100
-            "
-        />
-        </div>
-
-      {/* Product information */}
-      <div className="mt-4 lg:mt-7">
-      <div className="mt-[10px]">
-        <h3
-          className="
-            font-sf-pro
-            text-[16px]
-            font-semibold
-            leading-[17px]
-            text-white
-          "
-        >
-          {mixer.name}
-        </h3>
-
-        <p
-          className="
-            font-sf-pro
-            text-[14px]
-            font-normal
-            leading-[16px]
-            text-white/60
-          "
-        >
-          {mixer.description}
-        </p>
+                <Image
+                  src={selectedHoverImage}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                />
+              </motion.div>
+            ) : (
+              <motion.div
+                key={selectedSize}
+                className="absolute inset-0"
+                initial={{
+                  opacity: 0,
+                  scale: 1.04,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.98,
+                }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                }}
+              >
+                <Image
+                  src={selectedImage}
+                  alt={`BarCraft ${flavor.name} Mixer`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                  style={{
+                    objectPosition: flavor.imagePosition ?? "center",
+                  }}
+                />
+              </motion.div>
+            )
+          ) : (
+            <LabelArt flavor={flavor} index={index} />
+          )}
+        </AnimatePresence>
       </div>
 
-      {/* Size buttons */}
+      <div className="mt-4 lg:mt-7">
+        <h3 className="font-sf-pro text-[16px] font-semibold leading-[17px] text-white">
+          BarCraft {flavor.name} Mixer
+        </h3>
 
-      <div className="mt-[13px] flex gap-[7px]">
-        <button
-          type="button"
-          className="
-            h-[35px]
-            w-[113px]
-            bg-brand-yellow
-            font-sf-pro
-            text-[17px]
-            font-semibold
-            leading-none
-            text-black
-          "
-        >
-          600ml
-        </button>
+        <p className="mt-[6px] max-w-[430px] font-sf-pro text-[14px] font-normal leading-[18px] text-white/60">
+          {flavor.description}
+        </p>
 
-        <button
-          type="button"
-          className="
-            h-[35px]
-            w-[113px]
-            border
-            border-brand-yellow
-            bg-transparent
-            font-sf-pro
-            text-[17px]
-            font-semibold
-            leading-none
-            text-brand-yellow
-          "
-        >
-          60ml
-        </button>
+        <div className="mt-[13px] flex gap-[7px]">
+          <button
+            type="button"
+            onClick={() => setSelectedSize("600ml")}
+            className={`h-[35px] w-[113px] cursor-pointer font-sf-pro text-[17px] font-semibold leading-none ${
+              selectedSize === "600ml"
+                ? "bg-brand-yellow text-black"
+                : "border border-brand-yellow bg-transparent text-brand-yellow"
+            }`}
+          >
+            600ml
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setSelectedSize("60ml")}
+            className={`h-[35px] w-[113px] cursor-pointer font-sf-pro text-[17px] font-semibold leading-none ${
+              selectedSize === "60ml"
+                ? "bg-brand-yellow text-black"
+                : "border border-brand-yellow bg-transparent text-brand-yellow"
+            }`}
+          >
+            60ml
+          </button>
         </div>
       </div>
     </article>

@@ -16,28 +16,40 @@ export const COLLECTIONS = [
         description:
           "Ripe pink guava and tart lime, cut with fiery chili powder and grounded by an earthy finish of roasted jeera.",
         accent: "#e8577a",
-        image: "/spicy-pink-guava.png",
+        image: "/NEW BARCRAFT IMAGES/pink-guava.jpg",
+                image60: "/60ml images/PINK GUAVA & LIME SMALL.jpg",
+
+        
+
       },
       {
         name: "Smoked Aam Panna",
-        description:
-          "A sharp, tangy strike of raw mango paired with crisp mint and deep roasted jeera.",
+        description:"A sharp, tangy strike of raw mango paired with crisp mint and deep roasted jeera.",
         accent: "#b5c93a",
-        image: "/smoked-aam.png",
+        image: "/NEW BARCRAFT IMAGES/RAW MANGO MINT 1.jpg",
+                        image60: "/60ml images/RAW MANGO MINT SMALL.jpg",
+
+
+
       },
       {
         name: "Spiced Lychee",
-        description:
-          "Sweet, translucent lychee balanced by the acidic snap of fresh lime and a warm, lingering ginger heat.",
+        description:"Sweet, translucent lychee balanced by the acidic snap of fresh lime and a warm, lingering ginger heat.",
         accent: "#f2c6c9",
-        image: "/spiced-lichy.png",
+        image: "/NEW BARCRAFT IMAGES/spiced-lychee.jpg",
+                        image60: "/60ml images/SPICED LYCHEE & GINGER SMALL.jpg",
+
+
       },
       {
         name: "Kokum Cranberry",
         description:
           "Deep, earthy kokum layered with tart cranberry and aromatic fresh rosemary.",
         accent: "#8e1f4c",
-        image: "/canberry.png",
+                image: "/NEW BARCRAFT IMAGES/Kokum-Cranberry-600ml.jpeg",
+
+                        image60: "/60ml images/Kokum-Cranberry-60ml.jpeg",
+
       },
     ],
   },
@@ -52,65 +64,80 @@ export const COLLECTIONS = [
         name: "Moscow Mule",
         description: "Intense, raw ginger heat sharply balanced with fresh lime.",
         accent: "#d9a520",
-        image: "/Moscow Mule.png",
-        hoverImage: "/home/barcraft-mixers/moscow-mule-glass.png",
+        image: "/NEW BARCRAFT IMAGES/MOSCOW MULE 1.jpg",
+        image60: "/60ml images/MOSCOW MULE SMALL.jpg",
       },
       {
         name: "Mojito",
         description: "Crisp, cooling garden mint paired with a sharp citrus bite.",
         accent: "#9bc53d",
-        image: "/Mojito.png",
-        hoverImage: "/home/barcraft-mixers/mojito-glass.png",
+        image: "/NEW BARCRAFT IMAGES/MOJITO H 1.jpg",
+                image60: "/60ml images/MOJITOO SMALL.jpg",
+
       },
       {
         name: "Cosmopolitan",
         description:
           "Bright citrus and sharp cranberry with a perfectly dry finish.",
         accent: "#c8102e",
-        image: "/Cosmopolitan.png",
-        hoverImage: "/home/barcraft-mixers/cosmopolitan-glass.png",
+        image: "/NEW BARCRAFT IMAGES/COSMOPOLITAN 1.jpg",
+        image60: "/60ml images/cosmopolitan small.jpg",
+
       },
       {
         name: "Daiquiri",
         description:
           "The definitive, master-level balance of sharp lime and clean sweetness.",
         accent: "#c9e27a",
-        image: "/Daiquiri.png",
+        image: "/NEW BARCRAFT IMAGES/LIME AND CANE.jpg",
+                image60: "/60ml images/lime-and-cane.jpg",
+
       },
       {
         name: "Cuba Libre",
         description:
           "Rich, spiced cola notes engineered with a precise lime acidic snap.",
         accent: "#6b3a1f",
-        image: "/Cuba Libre.png",
+        image: "/NEW BARCRAFT IMAGES/cuba-libre.jpg",
+                image60: "/60ml images/CUBA LIBRE.jpg",
+
+
       },
       {
         name: "Piña Colada",
         description:
           "Rich, creamy coconut layered seamlessly with ripe, golden pineapple.",
         accent: "#f5deb3",
-        image: "/Piña Colada.png",
+        image: "/NEW BARCRAFT IMAGES/PINA COLADA 1.jpg",
+                image60: "/60ml images/PINA COLADA.jpg",
+
       },
       {
         name: "Mai Tai",
         description:
           "A tropical, complex collision of almond, citrus, and deep island fruits.",
         accent: "#e07b24",
-        image: "/Mai Tai.png",
+        image: "/NEW BARCRAFT IMAGES/mai-tai.jpg",
+                image60: "/60ml images/MAI TAI SMALL.jpg",
+
       },
       {
         name: "Planter’s Punch",
         description:
           "A bold, heavily spiced blend of dark fruit notes and tropical citrus.",
         accent: "#b3401e",
-        image: "/Planter’s Punch.png",
+        image: "/NEW BARCRAFT IMAGES/PLANTER PUNCH  1.jpg",
+                image60: "/60ml images/PLANTER,S PUNCH SMALL.jpg",
+
       },
       {
         name: "Hurricane",
         description:
           "A chaotic, high-energy mix of passion fruit, orange, and heavy fruit botanicals.",
         accent: "#f0582b",
-        image: "/Hurricane.png",
+        image: "/NEW BARCRAFT IMAGES/HURRICANE  1.jpg",
+                image60: "/60ml images/HURRICANE SMALL.jpg",
+
       },
     ],
   },
@@ -127,29 +154,37 @@ export const COLLECTIONS = [
         description:
           "A dark, complex strike of blood orange and tart pomegranate, finished with sharp lemon and a lingering ginger beer heat.",
         accent: "#7a0f1c",
-        image: "/Witcher Blood.png",
+        image: "/NEW BARCRAFT IMAGES/witcher-blood.jpg",
+                image60: "/60ml images/WITCHER BLOOD small.jpg",
+
+
       },
       {
         name: "Devil’s Lemonade",
         description:
           "A heavy, tart pour of classic lemonade and rich pomegranate, structurally built to carry dark, heavy spirits like bourbon.",
         accent: "#d4202c",
-        // File is named "Devil's Blood" but the label is Devil's Lemonade
-        image: "/Devil's Blood.png",
+        image: "/NEW BARCRAFT IMAGES/DEVILS LEMONADE  1.jpg",
+                image60: "/60ml images/DEVILS LEMONADE SMALL.jpg",
+
       },
       {
         name: "Watermelon Mint",
         description:
           "Cold-pressed summer watermelon spiked heavily with sharp lime and fresh mint.",
         accent: "#f25c6e",
-        image: "/Watermelon Mint.png",
+        image: "/NEW BARCRAFT IMAGES/WATER MELON MINT 1.jpg",
+                image60: "/60ml images/WATERMELON MINT SMALL.jpg",
+
       },
       {
         name: "Sex on the Beach",
         description:
           "Ripe peach and sweet orange, immediately cut by a tart cranberry and cherry finish.",
         accent: "#f7934c",
-        image: "/Sex on the Beach.png",
+        image: "/NEW BARCRAFT IMAGES/SEX ON THE BEACH 1.jpg",
+                image60: "/60ml images/SEX ON THE BEACH SMALL.jpg",
+
       },
       // {
       //   name: "Sex on the Brain",

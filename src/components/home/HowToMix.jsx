@@ -56,7 +56,7 @@ export default function HowToMix() {
       ====================================================== */}
       <div className="absolute inset-0">
         <Image
-          src="/home/how-to-mix/how-to-mix.png"
+          src="/home/how-to-mix/how-to-mix.jpg"
           alt="How to mix a BarCraft cocktail"
           fill
           priority
@@ -174,7 +174,7 @@ export default function HowToMix() {
         {/* =================================================
             HORIZONTAL STEP STRIP
         ================================================== */}
-        <div className="relative mb-[32px] h-[24px] w-[88px] overflow-hidden">
+        <div className="relative mb-[12px] h-[35px] w-[200px] overflow-hidden">
           <div
             className="
               absolute

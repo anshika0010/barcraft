@@ -40,7 +40,6 @@ export default function Footer() {
         w-full
         overflow-hidden
         bg-black
-        pb-[min(29.5vw,310px)]
       "
     >
       {/* =====================================================
@@ -192,25 +191,23 @@ export default function Footer() {
 
       {/* =====================================================
           GIANT BARCRAFT LOGO
-          Width scales with the screen; aspect ratio keeps it
-          proportional. Footer's bottom padding reserves space
-          so text never overlaps it.
+          Sits in normal flow at the very bottom, full width;
+          aspect ratio matches footer.png (7658x1607).
       ====================================================== */}
       <div
         className="
           pointer-events-none
-          absolute bottom-0 left-1/2 z-10
-          aspect-[1050/310]
-          w-[95vw] max-w-[1050px]
-          -translate-x-1/2
+          relative z-10 mt-8
+          aspect-[7658/1607]
+          w-full
         "
       >
         <Image
           src="/home/footer/footer.png"
           alt=""
           fill
-          sizes="(max-width: 1100px) 95vw, 1050px"
-          className="object-contain object-bottom opacity-[0.1]"
+          sizes="100vw"
+          className="object-cover object-bottom "
         />
       </div>
     </footer>

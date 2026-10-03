@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 import { COLLECTIONS } from "./flavors";
 
 const POUR_STEPS = [
@@ -31,7 +35,7 @@ function ArchiveHero() {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-black">
       <Image
-        src="/home/how-to-mix/how-to-mix.png"
+        src="/home/how-to-mix/how-to-mix.jpg"
         alt="BarCraft cocktails on the bar"
         fill
         priority
@@ -174,45 +178,100 @@ function CollectionSection({ collection, number }) {
    flavor's accent colour.
 ========================================================= */
 
+
 function FlavorCard({ flavor, index }) {
+  const [selectedSize, setSelectedSize] = useState("600ml");
+
+  const selectedImage =
+    selectedSize === "60ml" && flavor.image60
+      ? flavor.image60
+      : flavor.image;
+
+  const selectedHoverImage =
+    selectedSize === "60ml"
+      ? flavor.hoverImage60
+      : flavor.hoverImage;
+
   return (
     <article className="min-w-0">
       <div className="group relative aspect-[0.76] w-full overflow-hidden">
-        {flavor.image && !flavor.hoverImage ? (
-          <Image
-            src={flavor.image}
-            alt={`BarCraft ${flavor.name} Mixer`}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
-            style={{ objectPosition: flavor.imagePosition ?? "center" }}
-          />
-        ) : flavor.image ? (
-          <>
-            <Image
-              src={flavor.image}
-              alt={`BarCraft ${flavor.name} Mixer`}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0"
-            />
-            <Image
-              src={flavor.hoverImage}
-              alt=""
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
-            />
-          </>
-        ) : (
-          <LabelArt flavor={flavor} index={index} />
-        )}
+        <AnimatePresence mode="sync">
+          {selectedImage ? (
+            selectedHoverImage ? (
+              <motion.div
+                key={`${selectedSize}-hover`}
+                className="absolute inset-0"
+                initial={{ opacity: 0, scale: 1.03 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  opacity: { duration: 0.45, ease: "easeInOut" },
+                  scale: { duration: 0.6, ease: "easeOut" },
+                }}
+              >
+                <Image
+                  src={selectedImage}
+                  alt={`BarCraft ${flavor.name} Mixer`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                  style={{
+                    objectPosition: flavor.imagePosition ?? "center",
+                  }}
+                />
+
+                <Image
+                  src={selectedHoverImage}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                />
+              </motion.div>
+            ) : (
+              <motion.div
+                key={selectedSize}
+                className="absolute inset-0"
+                initial={{
+                  opacity: 0,
+                  scale: 1.04,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.98,
+                }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                }}
+              >
+                <Image
+                  src={selectedImage}
+                  alt={`BarCraft ${flavor.name} Mixer`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                  style={{
+                    objectPosition: flavor.imagePosition ?? "center",
+                  }}
+                />
+              </motion.div>
+            )
+          ) : (
+            <LabelArt flavor={flavor} index={index} />
+          )}
+        </AnimatePresence>
       </div>
 
       <div className="mt-4 lg:mt-7">
         <h3 className="font-sf-pro text-[16px] font-semibold leading-[17px] text-white">
           BarCraft {flavor.name} Mixer
         </h3>
+
         <p className="mt-[6px] max-w-[430px] font-sf-pro text-[14px] font-normal leading-[18px] text-white/60">
           {flavor.description}
         </p>
@@ -220,13 +279,24 @@ function FlavorCard({ flavor, index }) {
         <div className="mt-[13px] flex gap-[7px]">
           <button
             type="button"
-            className="h-[35px] w-[113px] bg-brand-yellow font-sf-pro text-[17px] font-semibold leading-none text-black"
+            onClick={() => setSelectedSize("600ml")}
+            className={`h-[35px] w-[113px] cursor-pointer font-sf-pro text-[17px] font-semibold leading-none ${
+              selectedSize === "600ml"
+                ? "bg-brand-yellow text-black"
+                : "border border-brand-yellow bg-transparent text-brand-yellow"
+            }`}
           >
             600ml
           </button>
+
           <button
             type="button"
-            className="h-[35px] w-[113px] border border-brand-yellow bg-transparent font-sf-pro text-[17px] font-semibold leading-none text-brand-yellow"
+            onClick={() => setSelectedSize("60ml")}
+            className={`h-[35px] w-[113px] cursor-pointer font-sf-pro text-[17px] font-semibold leading-none ${
+              selectedSize === "60ml"
+                ? "bg-brand-yellow text-black"
+                : "border border-brand-yellow bg-transparent text-brand-yellow"
+            }`}
           >
             60ml
           </button>
