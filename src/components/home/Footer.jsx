@@ -32,6 +32,7 @@ const SOCIAL_LINKS = [
   },
 ];
 
+
 export default function Footer() {
   return (
     <footer
@@ -214,9 +215,7 @@ export default function Footer() {
   );
 }
 
-/* =========================================================
-   SOCIAL ICONS (SVG only — links handled above)
-========================================================= */
+
 
 function PinterestIcon() {
   return (
