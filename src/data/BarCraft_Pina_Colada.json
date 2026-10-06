@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0",
+  "seo": {
+    "title": "BarCraft Piña Colada Mixer | Creamy Tropical Escape – Buy Piña Colada Cocktail Mixer Online India",
+    "description": "Buy BarCraft Piña Colada Mixer (600ml, 60ml). Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+    "canonical_url": "https://www.barcraftmixer.com/mixers/pina-colada",
+    "open_graph": {
+      "type": "product",
+      "title": "BarCraft Piña Colada Mixer | Creamy Tropical Escape – Buy Piña Colada Cocktail Mixer Online India",
+      "description": "Buy BarCraft Piña Colada Mixer (600ml, 60ml). Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+      "url": "https://www.barcraftmixer.com/mixers/pina-colada",
+      "image": "https://www.barcraftmixer.com/images/pina-colada-art.jpg"
+    },
+    "fonts": [
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Hanken+Grotesk:wght@400;600&display=swap"
+    ]
+  },
+  "product": {
+    "image": {
+      "src": "/images/pina-colada-art.jpg",
+      "alt": "BarCraft Piña Colada Mixer: Juicy pineapple with creamy coconut and a mellow, sweet finish",
+      "width": "800",
+      "height": "800"
+    },
+    "category": "Crafted Cocktail Mixer",
+    "badge": "Bartender Inspired",
+    "name": "BarCraft Piña Colada Mixer",
+    "tagline": "Creamy Tropical Escape",
+    "description": "Juicy pineapple with creamy coconut and a mellow, sweet finish. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
+    "facts": {
+      "Flavour": "Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish.",
+      "Serve": "15ml mixer + 45ml spirit + chilled soda + ice",
+      "Spirits": "White rum, Coconut rum, Vodka",
+      "Pairs with": "Coconut curries, grilled prawns, spicy starters and desserts"
+    },
+    "sizes": [
+      {
+        "size": "600ml",
+        "value": "600ml",
+        "selected": true,
+        "price": "",
+        "cart_url": "#",
+        "servings": "About 40 servings of 15ml per bottle"
+      },
+      {
+        "size": "60ml",
+        "value": "60ml",
+        "selected": false,
+        "price": "",
+        "cart_url": "#",
+        "servings": "About 4 servings of 15ml per bottle"
+      }
+    ],
+    "currency": "INR",
+    "actions": [
+      {
+        "text": "Add to cart",
+        "url": "#"
+      },
+      {
+        "text": "See recipes",
+        "url": "#recipes"
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "How to make a Piña Colada",
+    "description": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour.",
+    "steps": [
+      "Fill a hurricane glass with ice.",
+      "Pour in 45ml of your preferred spirit.",
+      "Add 15ml of BarCraft Piña Colada Mixer.",
+      "Finish with chilled soda.",
+      "Stir gently and savour."
+    ],
+    "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
+  },
+  "recipes": {
+    "title": "Piña Colada Mixer Recipes",
+    "description": "Six ways to enjoy BarCraft Piña Colada Mixer, from the label serve to a mocktail and a party jug.",
+    "items": [
+      {
+        "name": "Classic Piña Colada",
+        "url": "/recipes/classic-pina-colada",
+        "details": "100ml | White rum | Hurricane glass",
+        "ingredients": [
+          "Fresh ice",
+          "45ml White rum",
+          "15ml BarCraft Piña Colada Mixer",
+          "40ml chilled soda"
+        ],
+        "recipe_url": "/recipes/classic-pina-colada"
+      },
+      {
+        "name": "Virgin Piña Colada",
+        "url": "/recipes/virgin-pina-colada",
+        "details": "100ml | No spirit | Highball glass",
+        "ingredients": [
+          "Ice",
+          "15ml BarCraft Piña Colada Mixer",
+          "85ml chilled soda",
+          "A pineapple wedge to garnish"
+        ],
+        "recipe_url": "/recipes/virgin-pina-colada"
+      },
+      {
+        "name": "Tall Tropical Colada",
+        "url": "/recipes/tall-tropical-colada",
+        "details": "200ml | Coconut rum | Highball glass",
+        "ingredients": [
+          "Fresh ice",
+          "45ml Coconut rum",
+          "15ml BarCraft Piña Colada Mixer",
+          "140ml chilled soda"
+        ],
+        "recipe_url": "/recipes/tall-tropical-colada"
+      },
+      {
+        "name": "Coconut Rum Fizz",
+        "url": "/recipes/coconut-rum-fizz",
+        "details": "100ml | Vodka | Highball glass",
+        "ingredients": [
+          "Fresh ice",
+          "45ml Vodka",
+          "15ml BarCraft Piña Colada Mixer",
+          "40ml sparkling water"
+        ],
+        "recipe_url": "/recipes/coconut-rum-fizz"
+      },
+      {
+        "name": "Piña Colada Party Pitcher",
+        "url": "/recipes/pina-colada-party-pitcher",
+        "details": "1 litre | White rum | Jug or pitcher",
+        "ingredients": [
+          "Ice",
+          "450ml White rum",
+          "150ml BarCraft Piña Colada Mixer",
+          "About 400ml chilled soda"
+        ],
+        "recipe_url": "/recipes/pina-colada-party-pitcher"
+      },
+      {
+        "name": "Short Colada",
+        "url": "/recipes/short-colada",
+        "details": "75ml | White rum | Rocks glass",
+        "ingredients": [
+          "Fresh ice",
+          "45ml White rum",
+          "15ml BarCraft Piña Colada Mixer",
+          "15ml chilled soda"
+        ],
+        "recipe_url": "/recipes/short-colada"
+      }
+    ],
+    "view_all": {
+      "text": "View all Piña Colada Mixer recipes",
+      "url": "/recipes?mixer=Pi%C3%B1a%20Colada"
+    }
+  },
+  "product_information": {
+    "title": "Ingredients and nutrition",
+    "nutrition_label": "Nutrition information (approximate values, per 100ml)",
+    "nutrition_per_100ml": {
+      "Energy": "160 kcal",
+      "Protein": "0 g",
+      "Carbohydrate": "32 g",
+      "Total Sugars": "28 g",
+      "Added Sugars": "28 g",
+      "Total Fat": "0 g",
+      "Saturated Fat": "0 g",
+      "Trans Fat": "0 g",
+      "Sodium": "400 mg"
+    },
+    "serving_information": "Serving size: 15ml. Servings per 60ml bottle: 4. Servings per 600ml bottle: 40.",
+    "ingredients": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour.",
+    "manufacturer_note": "Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details.",
+    "label_image": {
+      "src": "/images/pina-colada-label.jpg",
+      "alt": "Front and back label of BarCraft Piña Colada Mixer 600ml",
+      "width": "1200",
+      "height": "1040",
+      "loading": "lazy"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What is BarCraft Piña Colada Mixer?",
+        "answer": "BarCraft Piña Colada Mixer is a BarCraft Crafted Cocktail Mixer made to bring the character of a well-crafted cocktail to every pour. It is bartender inspired, with the flavour profile Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish."
+      },
+      {
+        "question": "What does Piña Colada mixer taste like?",
+        "answer": "Creamy Tropical Escape. Juicy pineapple with creamy coconut and a mellow, sweet finish."
+      },
+      {
+        "question": "How do I make a Piña Colada with BarCraft Mixer?",
+        "answer": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour."
+      },
+      {
+        "question": "Which spirit should I use?",
+        "answer": "Use your preferred spirit. White rum is our classic pick, and coconut rum and vodka also work well. The mixer does not include a spirit, so add your own."
+      },
+      {
+        "question": "How many drinks does a bottle make?",
+        "answer": "One serving is 15ml, so the 600ml bottle makes about 40 servings and the 60ml bottle makes 4."
+      },
+      {
+        "question": "Can I make Piña Colada as a mocktail?",
+        "answer": "Yes. Leave out the spirit and use ice, 15ml of BarCraft Piña Colada Mixer and chilled soda."
+      },
+      {
+        "question": "What are the ingredients?",
+        "answer": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour."
+      },
+      {
+        "question": "How much sugar and how many calories does it have?",
+        "answer": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 15ml serve of the mixer that works out to about 24 kcal and 4.2g sugars, before any spirit or soda."
+      },
+      {
+        "question": "Does it contain preservatives or sweeteners?",
+        "answer": "Yes. According to the label it contains the preservatives Potassium Sorbate (INS 202) and Sodium Benzoate (INS 211), and the sweetener Sucralose (INS 955)."
+      },
+      {
+        "question": "Which bottle size should I buy?",
+        "answer": "Choose the 600ml bottle for home bars, parties and regular use. Choose the 60ml bottle to try the flavour, to travel or to gift."
+      }
+    ]
+  },
+  "related_flavors": [
+    {
+      "name": "BarCraft Mojito Mixer",
+      "url": "/mixers/mojito",
+      "description": "Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness."
+    },
+    {
+      "name": "BarCraft Screwdriver Mixer",
+      "url": "/mixers/screwdriver",
+      "description": "Bright Orange Burst: Juicy sweet orange with fresh citrus acidity and subtle peel notes."
+    },
+    {
+      "name": "BarCraft Sex on the Beach Mixer",
+      "url": "/mixers/sex-on-the-beach",
+      "description": "Juicy Peach Paradise: Sweet peach and orange balanced by tart cranberry."
+    },
+    {
+      "name": "BarCraft Appletini Mixer",
+      "url": "/mixers/appletini",
+      "description": "Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish."
+    },
+    {
+      "name": "BarCraft Spicy Mango Mixer",
+      "url": "/mixers/spicy-mango",
+      "description": "Sweet Tropical Heat: Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang."
+    }
+  ],
+  "discovery": {
+    "All Mixers Elevate your home bar": {
+      "url": "/mixers",
+      "description": "Elevate your home bar"
+    },
+    "All Recipes 36 easy recipes to try": {
+      "url": "/recipes",
+      "description": "36 easy recipes to try"
+    }
+  },
+  "footer": "© BarCraft. Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details.",
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "BarCraft Piña Colada Mixer",
+        "description": "Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish.",
+        "image": "https://www.barcraftmixer.com/images/pina-colada-art.jpg",
+        "url": "https://www.barcraftmixer.com/mixers/pina-colada",
+        "brand": {
+          "@type": "Brand",
+          "name": "BarCraft"
+        },
+        "category": "Cocktail Mixer"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is BarCraft Piña Colada Mixer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BarCraft Piña Colada Mixer is a BarCraft Crafted Cocktail Mixer made to bring the character of a well-crafted cocktail to every pour. It is bartender inspired, with the flavour profile Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Piña Colada mixer taste like?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Creamy Tropical Escape. Juicy pineapple with creamy coconut and a mellow, sweet finish."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I make a Piña Colada with BarCraft Mixer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which spirit should I use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use your preferred spirit. White rum is our classic pick, and coconut rum and vodka also work well. The mixer does not include a spirit, so add your own."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many drinks does a bottle make?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "One serving is 15ml, so the 600ml bottle makes about 40 servings and the 60ml bottle makes 4."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I make Piña Colada as a mocktail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Leave out the spirit and use ice, 15ml of BarCraft Piña Colada Mixer and chilled soda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the ingredients?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much sugar and how many calories does it have?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 15ml serve of the mixer that works out to about 24 kcal and 4.2g sugars, before any spirit or soda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it contain preservatives or sweeteners?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. According to the label it contains the preservatives Potassium Sorbate (INS 202) and Sodium Benzoate (INS 211), and the sweetener Sucralose (INS 955)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which bottle size should I buy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Choose the 600ml bottle for home bars, parties and regular use. Choose the 60ml bottle to try the flavour, to travel or to gift."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

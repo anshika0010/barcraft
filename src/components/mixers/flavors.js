@@ -27,7 +27,7 @@ export const COLLECTIONS = [
         description:"A sharp, tangy strike of raw mango paired with crisp mint and deep roasted jeera.",
         accent: "#b5c93a",
         image: "/NEW BARCRAFT IMAGES/RAW MANGO MINT 1.jpg",
-                        image60: "/60ml images/RAW MANGO MINT SMALL.jpg",
+        image60: "/60ml images/RAW MANGO MINT SMALL.jpg",
 
 
 
