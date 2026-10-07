@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0",
+  "seo": {
+    "title": "BarCraft Mojito Mixer | Cool Citrus Crush – Buy Mojito Cocktail Mixer Online India",
+    "description": "Buy BarCraft Mojito Mixer (600ml, 60ml). Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+    "canonical_url": "https://www.barcraftmixer.com/mixers/mojito",
+    "open_graph": {
+      "type": "product",
+      "title": "BarCraft Mojito Mixer | Cool Citrus Crush – Buy Mojito Cocktail Mixer Online India",
+      "description": "Buy BarCraft Mojito Mixer (600ml, 60ml). Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+      "url": "https://www.barcraftmixer.com/mixers/mojito",
+      "image": "https://www.barcraftmixer.com/images/mojito-art.jpg"
+    },
+    "fonts": [
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Hanken+Grotesk:wght@400;600&display=swap"
+    ]
+  },
+  "product": {
+    "image": {
+      "src": "/images/mojito-art.jpg",
+      "alt": "BarCraft Mojito Mixer: Zesty lime and fresh mint with balanced sweetness",
+      "width": "800",
+      "height": "800"
+    },
+    "category": "Crafted Cocktail Mixer",
+    "badge": "Bartender Inspired",
+    "name": "BarCraft Mojito Mixer",
+    "tagline": "Cool Citrus Crush",
+    "description": "Zesty lime and fresh mint with balanced sweetness. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
+    "facts": {
+      "Flavour": "Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness.",
+      "Serve": "15ml mixer + 45ml spirit + chilled soda + ice",
+      "Spirits": "White rum, Vodka, Gin",
+      "Pairs with": "Grilled fish, salads, tacos and light starters"
+    },
+    "sizes": [
+      {
+        "size": "600ml",
+        "value": "600ml",
+        "selected": true,
+        "price": "",
+        "cart_url": "#",
+        "servings": "About 40 servings of 15ml per bottle"
+      },
+      {
+        "size": "60ml",
+        "value": "60ml",
+        "selected": false,
+        "price": "",
+        "cart_url": "#",
+        "servings": "About 4 servings of 15ml per bottle"
+      }
+    ],
+    "currency": "INR",
+    "actions": [
+      {
+        "text": "Add to cart",
+        "url": "#"
+      },
+      {
+        "text": "See recipes",
+        "url": "#recipes"
+      }
+    ]
+  },
+  "how_to_use": {
+    "title": "How to make a Mojito",
+    "description": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour.",
+    "steps": [
+      "Fill a highball glass with ice.",
+      "Pour in 45ml of your preferred spirit.",
+      "Add 15ml of BarCraft Mojito Mixer.",
+      "Finish with chilled soda.",
+      "Stir gently and savour."
+    ],
+    "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
+  },
+  "recipes": {
+    "title": "Mojito Mixer Recipes",
+    "description": "Six ways to enjoy BarCraft Mojito Mixer, from the label serve to a mocktail and a party jug.",
+    "items": [
+      {
+        "name": "Classic Mojito",
+        "url": "/recipes/classic-mojito",
+        "details": "100ml | White rum | Highball glass",
+        "ingredients": [
+          "Fresh ice",
+          "45ml White rum",
+          "15ml BarCraft Mojito Mixer",
+          "40ml chilled soda"
+        ],
+        "recipe_url": "/recipes/classic-mojito"
+      },
+      {
+        "name": "Virgin Mojito",
+        "url": "/recipes/virgin-mojito",
+        "details": "100ml | No spirit | Highball glass",
+        "ingredients": [
+          "Ice",
+          "15ml BarCraft Mojito Mixer",
+          "85ml chilled soda",
+          "A mint sprig to garnish"
+        ],
+        "recipe_url": "/recipes/virgin-mojito"
+      },
+      {
+        "name": "Tall Garden Mojito",
+        "url": "/recipes/tall-garden-mojito",
+        "details": "200ml | Vodka | Highball glass",
+        "ingredients": [
+          "Fresh ice",
+          "45ml Vodka",
+          "15ml BarCraft Mojito Mixer",
+          "140ml chilled soda"
+        ],
+        "recipe_url": "/recipes/tall-garden-mojito"
+      },
+      {
+        "name": "Gin Mint Fizz",
+        "url": "/recipes/gin-mint-fizz",
+        "details": "100ml | Gin | Highball glass",
+        "ingredients": [
+          "Fresh ice",
+          "45ml Gin",
+          "15ml BarCraft Mojito Mixer",
+          "40ml lemon soda"
+        ],
+        "recipe_url": "/recipes/gin-mint-fizz"
+      },
+      {
+        "name": "Mojito Party Pitcher",
+        "url": "/recipes/mojito-party-pitcher",
+        "details": "1 litre | White rum | Jug or pitcher",
+        "ingredients": [
+          "Ice",
+          "450ml White rum",
+          "150ml BarCraft Mojito Mixer",
+          "About 400ml chilled soda"
+        ],
+        "recipe_url": "/recipes/mojito-party-pitcher"
+      },
+      {
+        "name": "Short Mint Smash",
+        "url": "/recipes/short-mint-smash",
+        "details": "75ml | White rum | Rocks glass",
+        "ingredients": [
+          "Fresh ice",
+          "45ml White rum",
+          "15ml BarCraft Mojito Mixer",
+          "15ml chilled soda"
+        ],
+        "recipe_url": "/recipes/short-mint-smash"
+      }
+    ],
+    "view_all": {
+      "text": "View all Mojito Mixer recipes",
+      "url": "/recipes?mixer=Mojito"
+    }
+  },
+  "product_information": {
+    "title": "Ingredients and nutrition",
+    "nutrition_label": "Nutrition information (approximate values, per 100ml)",
+    "nutrition_per_100ml": {
+      "Energy": "160 kcal",
+      "Protein": "0 g",
+      "Carbohydrate": "32 g",
+      "Total Sugars": "28 g",
+      "Added Sugars": "28 g",
+      "Total Fat": "0 g",
+      "Saturated Fat": "0 g",
+      "Trans Fat": "0 g",
+      "Sodium": "400 mg"
+    },
+    "serving_information": "Serving size: 15ml. Servings per 60ml bottle: 4. Servings per 600ml bottle: 40.",
+    "ingredients": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour.",
+    "manufacturer_note": "Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details.",
+    "label_image": {
+      "src": "/images/mojito-label.jpg",
+      "alt": "Front and back label of BarCraft Mojito Mixer 600ml",
+      "width": "1200",
+      "height": "1040",
+      "loading": "lazy"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What is BarCraft Mojito Mixer?",
+        "answer": "BarCraft Mojito Mixer is a BarCraft Crafted Cocktail Mixer made to bring the character of a well-crafted cocktail to every pour. It is bartender inspired, with the flavour profile Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness."
+      },
+      {
+        "question": "What does Mojito mixer taste like?",
+        "answer": "Cool Citrus Crush. Zesty lime and fresh mint with balanced sweetness."
+      },
+      {
+        "question": "How do I make a Mojito with BarCraft Mixer?",
+        "answer": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour."
+      },
+      {
+        "question": "Which spirit should I use?",
+        "answer": "Use your preferred spirit. White rum is our classic pick, and vodka and gin also work well. The mixer does not include a spirit, so add your own."
+      },
+      {
+        "question": "How many drinks does a bottle make?",
+        "answer": "One serving is 15ml, so the 600ml bottle makes about 40 servings and the 60ml bottle makes 4."
+      },
+      {
+        "question": "Can I make Mojito as a mocktail?",
+        "answer": "Yes. Leave out the spirit and use ice, 15ml of BarCraft Mojito Mixer and chilled soda."
+      },
+      {
+        "question": "What are the ingredients?",
+        "answer": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour."
+      },
+      {
+        "question": "How much sugar and how many calories does it have?",
+        "answer": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 15ml serve of the mixer that works out to about 24 kcal and 4.2g sugars, before any spirit or soda."
+      },
+      {
+        "question": "Does it contain preservatives or sweeteners?",
+        "answer": "Yes. According to the label it contains the preservatives Potassium Sorbate (INS 202) and Sodium Benzoate (INS 211), and the sweetener Sucralose (INS 955)."
+      },
+      {
+        "question": "Which bottle size should I buy?",
+        "answer": "Choose the 600ml bottle for home bars, parties and regular use. Choose the 60ml bottle to try the flavour, to travel or to gift."
+      }
+    ]
+  },
+  "related_flavors": [
+    {
+      "name": "BarCraft Screwdriver Mixer",
+      "url": "/mixers/screwdriver",
+      "description": "Bright Orange Burst: Juicy sweet orange with fresh citrus acidity and subtle peel notes."
+    },
+    {
+      "name": "BarCraft Sex on the Beach Mixer",
+      "url": "/mixers/sex-on-the-beach",
+      "description": "Juicy Peach Paradise: Sweet peach and orange balanced by tart cranberry."
+    },
+    {
+      "name": "BarCraft Piña Colada Mixer",
+      "url": "/mixers/pina-colada",
+      "description": "Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish."
+    },
+    {
+      "name": "BarCraft Appletini Mixer",
+      "url": "/mixers/appletini",
+      "description": "Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish."
+    },
+    {
+      "name": "BarCraft Spicy Mango Mixer",
+      "url": "/mixers/spicy-mango",
+      "description": "Sweet Tropical Heat: Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang."
+    }
+  ],
+  "discovery": {
+    "All Mixers Elevate your home bar": {
+      "url": "/mixers",
+      "description": "Elevate your home bar"
+    },
+    "All Recipes 36 easy recipes to try": {
+      "url": "/recipes",
+      "description": "36 easy recipes to try"
+    }
+  },
+  "footer": "© BarCraft. Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details.",
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "BarCraft Mojito Mixer",
+        "description": "Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness.",
+        "image": "https://www.barcraftmixer.com/images/mojito-art.jpg",
+        "url": "https://www.barcraftmixer.com/mixers/mojito",
+        "brand": {
+          "@type": "Brand",
+          "name": "BarCraft"
+        },
+        "category": "Cocktail Mixer"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is BarCraft Mojito Mixer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BarCraft Mojito Mixer is a BarCraft Crafted Cocktail Mixer made to bring the character of a well-crafted cocktail to every pour. It is bartender inspired, with the flavour profile Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Mojito mixer taste like?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cool Citrus Crush. Zesty lime and fresh mint with balanced sweetness."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I make a Mojito with BarCraft Mixer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which spirit should I use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use your preferred spirit. White rum is our classic pick, and vodka and gin also work well. The mixer does not include a spirit, so add your own."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many drinks does a bottle make?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "One serving is 15ml, so the 600ml bottle makes about 40 servings and the 60ml bottle makes 4."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I make Mojito as a mocktail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Leave out the spirit and use ice, 15ml of BarCraft Mojito Mixer and chilled soda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the ingredients?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much sugar and how many calories does it have?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 15ml serve of the mixer that works out to about 24 kcal and 4.2g sugars, before any spirit or soda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it contain preservatives or sweeteners?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. According to the label it contains the preservatives Potassium Sorbate (INS 202) and Sodium Benzoate (INS 211), and the sweetener Sucralose (INS 955)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which bottle size should I buy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Choose the 600ml bottle for home bars, parties and regular use. Choose the 60ml bottle to try the flavour, to travel or to gift."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

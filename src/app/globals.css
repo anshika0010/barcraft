@@ -214,3 +214,27 @@ body {
 }
 
 
+/* hello */
+
+
+@keyframes screwdriverLabelScroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+.screwdriver-label-track {
+  animation: screwdriverLabelScroll 12s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screwdriver-label-track {
+    animation: none;
+    transform: translateX(-33.3333%);
+  }
+}

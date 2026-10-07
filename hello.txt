@@ -1,0 +1,96 @@
+"Bartender Inspired"
+Text: #FFAB98;
+background: #701D02;
+
+"BarCraft Screwdriver Mixer"
+Text: #FFFFFF;
+font-family: Movault;
+text-transform: uppercase;
+
+"Juicy sweet orange with fresh citrus acidity and subtle peel notes. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making."
+Text: #FFFFFF;
+font-family: SF Pro;
+
+"FLAVOUR"
+Text: #FFFFFF;
+font-family: Movault;
+text-transform: uppercase;
+
+"SERVE"
+Text: #FFFFFF;
+font-family: Movault;
+text-transform: uppercase;
+
+"SPIRITS"
+Text: #FFFFFF;
+font-family: Movault;
+text-transform: uppercase;
+
+"PAIRS WITH"
+Text: #FFFFFF;
+font-family: Movault;
+text-transform: uppercase;
+
+"Bottle size"
+Text: #FFAB98;
+text-transform: uppercase;
+
+"600ML" 
+background: #701D02;
+Text : #ffffff
+{ selected will be  #701D02 otherwise background remains transparent as it is in 60ML}
+
+
+
+
+CLASSIC Screwdriver INGREDIENTS
+{
+100ML | VODKA | HIGHBALL GLASS
+FRESH ICE 
+45 ML VODKA
+15ML BarCraft Screwdriver Mixer
+40ML CHILLED SODA
+}
+VIRGIN Screwdriver INGREDIENTS
+{
+100ML | NO SPIRIT | HIGHBALL GLASS
+ICE
+15ML BarCraft Screwdriver Mixer
+85ML CHILLED SODA
+An orange SLICE TO GARNISH
+
+}
+TALL ORANGE COOLER 
+{
+200ML | TEQUILA | HIGHBALL GLASS
+FRESH ICE 
+45ML TEQUILA
+15ML BarCraft Screwdriver Mixer
+140ML CHILLED SODA
+}
+
+TEQUILA ORANGE FIZZ 
+{
+100ML | GIN | HIGHBALL GLASS
+FRESH ICE 
+45ML GIN
+15ML BarCraft Screwdriver Mixer
+40ML TONIC WATER
+}
+
+Screwdriver PARTY PITCHER
+{
+1L | WHITE RUM | JUG OR PITCHER
+ICE 
+450ML VODKA
+150ML BarCraft Screwdriver Mixer
+ABOUT 400ML CHILLED SODA
+}
+SHORT DAIQUIRI
+{
+75ML | WHITE RUM | ROCKS GLASS
+FRESH ICE 
+45ML VODKA
+15ML BarCraft Screwdriver Mixer
+15ML CHILLED SODA
+}

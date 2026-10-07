@@ -4,12 +4,30 @@ import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { COLLECTIONS } from "./flavors";
-
+import Link from "next/link";
 const POUR_STEPS = [
   { title: "Choose your base", image: "/home/how-to-mix/steps/2.png" },
   { title: "Pour the mixer", image: "/home/how-to-mix/steps/3.png" },
   { title: "Bypass the bartender", image: "/home/how-to-mix/steps/4.png" },
 ];
+const AVAILABLE_FLAVORS = [
+  "appletini",
+  "mojito",
+  "piña colada",
+  "sex on the beach",
+  "screwdriver",
+  "spicy mango",
+].map(normalizeName);
+
+function normalizeName(name = "") {
+  return name
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // strips accents: ñ -> n
+    .replace(/\s+/g, " ");
+}
+
 
 export default function FlavorArchive() {
   return (
@@ -181,7 +199,7 @@ function CollectionSection({ collection, number }) {
 
 function FlavorCard({ flavor, index }) {
   const [selectedSize, setSelectedSize] = useState("600ml");
-
+  const isAvailable = AVAILABLE_FLAVORS.includes(normalizeName(flavor.name));
   const selectedImage =
     selectedSize === "60ml" && flavor.image60
       ? flavor.image60
@@ -265,6 +283,31 @@ function FlavorCard({ flavor, index }) {
             <LabelArt flavor={flavor} index={index} />
           )}
         </AnimatePresence>
+
+      {/* this is newly added code  */}
+
+
+      {/* Hover overlay */}
+      <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center bg-black/55 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        {isAvailable ? (
+          <Link
+            href={`/mixers/${flavor.name ?? ""}`}
+            className="pointer-events-auto border border-brand-yellow bg-brand-yellow px-6 py-2 font-sf-pro text-[15px] font-semibold uppercase tracking-wider text-black transition hover:bg-transparent hover:text-brand-yellow"
+          >
+            Read More
+          </Link>
+        ) : (
+          <span className="font-sf-pro text-[15px] font-semibold uppercase tracking-[0.25em] text-white">
+            Coming Soon
+          </span>
+        )}
+      </div>
+
+
+
+      {/* here it ends */}
+
+
       </div>
 
       <div className="mt-4 lg:mt-7">
