@@ -15,6 +15,14 @@ const navItems = [
     href: "/mixers",
   },
   {
+    label: "Recipes",
+    href: "/recipes",
+  },
+    {
+    label: "Booking",
+    href: "/wedding",
+  },
+    {
     label: "Blog",
     href: "/blog",
   },

@@ -11,6 +11,16 @@ export const COLLECTIONS = [
       "Rooted in bold, nostalgic profiles and complex spices. Built for high-contrast drinking.",
     banner: "/home/crafted-to-elevate.png",
     flavors: [
+
+
+
+      {
+        name:"Appletini",
+        description:"NULL",
+        accent:"#21e268",
+        image:"/NEW BARCRAFT IMAGES/appletini.jpg.jpeg",
+        image60:"NULL"
+      },
       {
         name: "Spicy Pink Guava",
         description:
@@ -149,6 +159,23 @@ export const COLLECTIONS = [
     banner: "/evening cocktail.jpeg",
     bannerPosition: "center 55%",
     flavors: [
+
+
+
+      {
+        name:"Screw Driver",
+        description:"NULL",
+        accent:"#d3f83d",
+        image:"/NEW BARCRAFT IMAGES/screwdriver.jpg.jpeg",
+        image60:"NULL"
+      },
+      {
+        name:"Spicy Mango",
+        description:"NULL",
+        accent:"#edf048",
+        image:"/NEW BARCRAFT IMAGES/spicy mango.jpg.jpeg",
+        image60:"NULL"
+      },
       {
         name: "Witcher Blood",
         description:
