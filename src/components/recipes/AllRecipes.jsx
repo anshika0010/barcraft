@@ -12,7 +12,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "HIGHBALL GLASS",
     spirit: "VODKA",
-    image: "/mixers/recipes/classic-screwdriver.jpg",
+    image: "/mixers/recipes/classic-screwdriver.png",
     details: {
       measure: "100ML",
       spirit: "VODKA",
@@ -32,7 +32,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "HIGHBALL GLASS",
     spirit: "NO SPIRIT",
-    image: "/mixers/recipes/virgin-screwdriver.jpg",
+    image: "/mixers/recipes/classic-screwdriver.png",
     details: {
       measure: "100ML",
       spirit: "NO SPIRIT",
@@ -52,7 +52,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "HIGHBALL GLASS",
     spirit: "TEQUILA",
-    image: "/mixers/recipes/tall-orange-cooler.jpg",
+    image: "/mixers/recipes/classic-screwdriver.png",
     details: {
       measure: "200ML",
       spirit: "TEQUILA",
@@ -72,7 +72,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "HIGHBALL GLASS",
     spirit: "GIN",
-    image: "/mixers/recipes/tequila-orange-fizz.jpg",
+    image: "/mixers/recipes/classic-screwdriver.png",
     details: {
       measure: "100ML",
       spirit: "GIN",
@@ -92,7 +92,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "JUG OR PITCHER",
     spirit: "WHITE RUM",
-    image: "/mixers/recipes/screwdriver-party-pitcher.jpg",
+    image: "/mixers/recipes/screwdriver-party-pitcher.png",
     details: {
       measure: "1L",
       spirit: "WHITE RUM",
@@ -112,7 +112,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "ROCKS GLASS",
     spirit: "WHITE RUM",
-    image: "/mixers/recipes/short-daiquiri.jpg",
+    image: "/mixers/recipes/short-daiquiri.png",
     details: {
       measure: "75ML",
       spirit: "WHITE RUM",
@@ -125,7 +125,176 @@ const RECIPES = [
       "15ML CHILLED SODA",
     ],
   },
+    {
+    id: 7,
+    name: "CLASSIC MOJITO",
+    product: "MOJITO",
+    glassware: "HIGHBALL GLASS",
+    spirit: "VODKA",
+    image: "/mixers/recipes/classic-mojito.png",
+    details: {
+      measure: "100ML",
+      spirit: "VODKA",
+      glass: "HIGHBALL GLASS",
+    },
+    ingredients: [
+      "FRESH ICE",
+      "45ML TEQUILA",
+      "15ML BarCraft Screwdriver Mixer",
+      "140ML CHILLED SODA",
+    ],
+    directions :[
+      'Fill a Highball glass with ice',
+      'Pour in 45ML of White Rum',
+      'Add 15ML of Barcraft Mojito Mixer',
+      'Top up with 40ML of chilled Soda',
+      'Stir Gently and Garnish with a mint sprig'
+    ]
+  },
+
+  {
+    id: 8,
+    name: "VIRGIN MOJITO",
+    product: "MOJITO",
+    glassware: "HIGHBALL GLASS",
+    spirit: "NO SPIRIT",
+    image: "/mixers/recipes/classic-mojito.png",
+    details: {
+      measure: "100ML",
+      spirit: "NO SPIRIT",
+      glass: "HIGHBALL GLASS",
+    },
+    ingredients: [
+      "ICE",
+      "15ML BarCraft Mojito Mixer",
+      "85ML CHILLED SODA",
+      "AN MINT SPRIG TO GARNISH",
+    ],
+    
+    directions :[
+      'Fill a Highball glass with ice',
+      'Add 15ML of Barcraft Mojito Mixer',
+      'Top up with 85ML of chilled Soda',
+      'Stir and Garnish with a mint sprig'
+    ]
+  },
+
+  {
+    id: 9,
+    name: "TALL GARDEN MOJITO",
+    product: "MOJITO",
+    glassware: "HIGHBALL GLASS",
+    spirit: "TEQUILA",
+    image: "/mixers/recipes/classic-mojito.png",
+    details: {
+      measure: "200ML",
+      spirit: "TEQUILA",
+      glass: "HIGHBALL GLASS",
+    },
+    ingredients: [
+      "FRESH ICE",
+      "45ML TEQUILA",
+      "15ML BarCraft Mojito Mixer",
+      "140ML CHILLED SODA",
+    ],
+    directions :[
+      'Fill a Highball glass with ice',
+      'Pour in 45ML of Vodka',
+      'Add 15ML of Barcraft Mojito Mixer',
+      'Top up with 140ML of chilled Soda',
+      'Stir Gently and Garnish with a mint sprig'
+    ]
+  },
+
+  {
+    id: 10,
+    name: "GIN MINT FIZZ",
+    product: "MOJITO",
+    glassware: "HIGHBALL GLASS",
+    spirit: "GIN",
+    image: "/mixers/recipes/classic-mojito.png",
+    details: {
+      measure: "100ML",
+      spirit: "GIN",
+      glass: "HIGHBALL GLASS",
+    },
+    ingredients: [
+      "FRESH ICE",
+      "45ML GIN",
+      "15ML BarCraft Mojito Mixer",
+      "40ML LEMON SODA",
+    ],
+    directions :[
+      'Fill a Highball glass with ice',
+      'Pour in 45ML of Gin',
+      'Add 15ML of Barcraft Mojito Mixer',
+      'Top up with 40ML of Lemon Soda',
+      'Stir Gently and Garnish with a mint sprig'
+    ]
+  },
+
+  {
+    id:11,
+    name: "MOJITO PARTY PITCHER",
+    product: "MOJITO",
+    glassware: "JUG OR PITCHER",
+    spirit: "WHITE RUM",
+    image: "/mixers/recipes/mojito-party-pitcher.png",
+    details: {
+      measure: "1L",
+      spirit: "WHITE RUM",
+      glass: "JUG OR PITCHER",
+    },
+    ingredients: [
+      "ICE",
+      "450ML WHITE RUM",
+      "150ML BarCraft Mojito Mixer",
+      "ABOUT 400ML CHILLED SODA",
+    ],
+    directions :[
+      'Fill a Large Jug with ice',
+      'Pour in 450ML of White Rum',
+      'Add 150ML of Barcraft Mojito Mixer and Stir Well',
+      'just before serving , Top up with 400ML of Lemon Soda',
+      'Pour Over fresh ice in Glasses and Garnish with a mint sprig'
+    ]
+  },
+
+  {
+    id: 12,
+    name: "SHORT MINT SMASH",
+    product: "MOJITO",
+    glassware: "ROCKS GLASS",
+    spirit: "WHITE RUM",
+    image: "/mixers/recipes/short-mint-smash.png",
+    details: {
+      measure: "75ML",
+      spirit: "WHITE RUM",
+      glass: "ROCKS GLASS",
+    },
+    ingredients: [
+      "FRESH ICE",
+      "45ML WHITE RUM",
+      "15ML BarCraft MOJITO Mixer",
+      "15ML CHILLED SODA",
+    ],
+    directions :[
+      'Fill a Rocks glass with ice',
+      'Pour in 45ML of White Rum',
+      'Add 15ML of Barcraft Mojito Mixer',
+      'Top up with 15ML of Chilled Soda',
+      'Stir Gently and Garnish with a lime wheel'
+    ]
+  },
 ];
+function RecipeCard({ recipe }) {
+  if (recipe.product === "MOJITO") {
+    return <MojitoRecipeCard recipe={recipe} />;
+  }
+
+  return <ScrewdriverRecipeCard recipe={recipe} />;
+}
+
 
 export default function AllRecipes() {
 const [product, setProduct] = useState("All products");
@@ -516,7 +685,7 @@ function FilterSelect({
    Same interaction/style as ScrewdriverRecipes
 =========================================================== */
 
-function RecipeCard({ recipe }) {
+function ScrewdriverRecipeCard({ recipe }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -952,5 +1121,333 @@ function RecipePagination({
       </button>
 
     </div>
+  );
+}
+
+function MojitoRecipeCard({ recipe }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <article
+      className="
+        group
+        relative
+        aspect-[0.9]
+        overflow-hidden
+        rounded-[20px]
+        bg-[#0A1108]
+        cursor-pointer
+      "
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+
+      {/* =====================================================
+          IMAGE
+      ====================================================== */}
+
+      <Image
+        src={recipe.image}
+        alt={recipe.name}
+        fill
+        sizes="
+          (max-width: 640px) 100vw,
+          (max-width: 900px) 50vw,
+          33vw
+        "
+        className="
+          object-cover
+          object-center
+          transition-transform
+          duration-[1200ms]
+          ease-out
+          group-hover:scale-[1.015]
+        "
+      />
+
+
+      {/* =====================================================
+          IMAGE OVERLAY
+      ====================================================== */}
+
+      <div
+        className={`
+          absolute
+          inset-0
+          bg-black
+          transition-opacity
+          duration-[1200ms]
+
+          ${
+            hovered
+              ? "opacity-[0.28]"
+              : "opacity-0"
+          }
+        `}
+      />
+
+
+      {/* =====================================================
+          DEFAULT GREEN WAVE
+      ====================================================== */}
+
+      <div
+        className={`
+          absolute
+          inset-x-0
+          bottom-0
+          z-20
+          h-[96px]
+          overflow-hidden
+          transition-opacity
+          duration-[1100ms]
+
+          ${
+            hovered
+              ? "opacity-0"
+              : "opacity-100"
+          }
+        `}
+      >
+
+        <svg
+          className="
+            absolute
+            bottom-0
+            left-0
+            h-[125px]
+            w-full
+          "
+          viewBox="0 0 1000 180"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="
+              M 0 115
+              C 125 75, 230 42, 365 52
+              C 500 62, 600 92, 700 105
+              C 820 118, 910 88, 1000 62
+              L 1000 180
+              L 0 180
+              Z
+            "
+            fill="#C4D900"
+          />
+        </svg>
+
+
+        <h3
+          className="
+            absolute
+            bottom-[18px]
+            left-[18px]
+            z-10
+            font-movault
+            text-[30px]
+            uppercase
+            leading-[0.9]
+            text-black
+
+            max-[1100px]:text-[26px]
+
+            max-[640px]:text-[30px]
+          "
+        >
+          {recipe.name}
+        </h3>
+
+      </div>
+
+
+      {/* =====================================================
+          HOVER PANEL
+      ====================================================== */}
+
+      <div
+        className={`
+          absolute
+          inset-x-0
+          bottom-0
+          z-30
+          overflow-hidden
+          bg-[#475000]
+
+          transition-all
+          duration-[1200ms]
+          ease-[cubic-bezier(0.22,1,0.36,1)]
+
+          ${
+            hovered
+              ? "h-full"
+              : "h-0"
+          }
+        `}
+      >
+
+        {/* =================================================
+            GREEN TOP WAVE
+        ================================================== */}
+
+        <svg
+          className="
+            absolute
+            left-0
+            top-0
+            h-[105px]
+            w-full
+          "
+          viewBox="0 0 1000 180"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="
+              M 0 0
+              L 1000 0
+              L 1000 55
+              C 875 72, 780 108, 650 125
+              C 500 145, 360 155, 225 125
+              C 125 103, 55 75, 0 45
+              Z
+            "
+            fill="#C4D900"
+          />
+        </svg>
+
+
+        {/* =================================================
+            CONTENT
+        ================================================== */}
+
+        <div
+          className="
+            relative
+            z-10
+            flex
+            h-full
+            flex-col
+            px-[27px]
+            pb-[20px]
+            pt-[18px]
+
+            max-[1100px]:px-[20px]
+          "
+        >
+
+          {/* Recipe name */}
+
+          <h3
+            className="
+              font-movault
+              text-[34px]
+              uppercase
+              leading-[0.85]
+              text-black
+
+              max-[1100px]:text-[28px]
+
+              max-[640px]:text-[34px]
+            "
+          >
+            {recipe.name}
+          </h3>
+
+
+          {/* =================================================
+              INGREDIENTS
+          ================================================== */}
+
+          <div className="mt-[52px]">
+
+            <h4
+              className="
+                font-movault
+                text-[34px]
+                uppercase
+                leading-none
+                text-white
+
+                max-[1100px]:text-[30px]
+              "
+            >
+              INGREDIENTS
+            </h4>
+
+            <ul className="mt-[14px] space-y-[10px]">
+              {recipe.ingredients.map((ingredient) => (
+                <li
+                  key={ingredient}
+                  className="
+                    flex
+                    items-start
+                    gap-[9px]
+                    font-sf-pro
+                    text-[16px]
+                    leading-[1.15]
+                    text-white
+
+                    max-[1100px]:text-[15px]
+                  "
+                >
+                  <span className="mt-[6px] h-[4px] w-[4px] shrink-0 rounded-full bg-white" />
+
+                  <span>
+                    {ingredient}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+          </div>
+
+
+          {/* =================================================
+              DIRECTIONS
+          ================================================== */}
+
+          <div className="mt-[16px]">
+
+            <h4
+              className="
+                font-movault
+                text-[34px]
+                uppercase
+                leading-none
+                text-white
+
+                max-[1100px]:text-[30px]
+              "
+            >
+              DIRECTIONS
+            </h4>
+
+            <ol
+              className="
+                mt-[12px]
+                space-y-[7px]
+                pl-[18px]
+                font-sf-pro
+                text-[15px]
+                leading-[1.18]
+                text-white
+
+                list-decimal
+              "
+            >
+              {recipe.directions?.map((direction, index) => (
+                <li key={`${recipe.id}-direction-${index}`}>
+                  {direction}
+                </li>
+              ))}
+            </ol>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
   );
 }

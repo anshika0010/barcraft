@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
   "source": {
-    "title": "BarCraft Appletini Mixer | Crisp Apple Bite – Buy Appletini Cocktail Mixer Online India\\",
+    "title": "BarCraft Appletini Mixer | Crisp Apple Bite – Buy Appletini Cocktail Mixer Online India ",
     "description": "Buy BarCraft Appletini Mixer (600ml, 60ml). Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
-    "canonical_url": "https\\://www\\.barcraftmixer.com/mixers/appletini",
+    "canonical_url": "https ://www .barcraftmixer.com/mixers/appletini",
     "open_graph": {
       "type": "product",
       "title": "BarCraft Appletini Mixer | Crisp Apple Bite – Buy Appletini Cocktail Mixer Online India",
       "description": "Buy BarCraft Appletini Mixer (600ml, 60ml). Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
-      "url": "https\\://www\\.barcraftmixer.com/mixers/appletini",
-      "image": "https\\://www\\.barcraftmixer.com/images/appletini-art.jpg"
+      "url": "https ://www .barcraftmixer.com/mixers/appletini",
+      "image": "https ://www .barcraftmixer.com/images/appletini-art.jpg"
     }
   },
   "product": {
@@ -19,20 +19,20 @@
       "width": "800",
       "height": "800"
     },
-    "category": "Crafted Cocktail Mixer\\",
-    "badge": "Bartender Inspired\\",
-    "name": "BarCraft Appletini Mixer\\",
-    "tagline": "Crisp Apple Bite\\",
-    "description": "Tart green apple with juicy sweetness and a crisp finish. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.\\",
+    "category": "Crafted Cocktail Mixer ",
+    "badge": "Bartender Inspired ",
+    "name": "BarCraft Appletini Mixer ",
+    "tagline": "Crisp Apple Bite ",
+    "description": "Tart green apple with juicy sweetness and a crisp finish. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making. ",
     "facts": {
-      "Flavour\\": "Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish.\\",
-      "Serve\\": "15ml mixer + 45ml spirit + chilled soda + ice\\",
-      "Spirits\\": "Vodka, Gin, White rum\\",
-      "Pairs with\\": "Cheese platters, light starters, salads and seafood\\"
+      "Flavour ": "Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish. ",
+      "Serve ": "15ml mixer + 45ml spirit + chilled soda + ice ",
+      "Spirits ": "Vodka, Gin, White rum ",
+      "Pairs with ": "Cheese platters, light starters, salads and seafood "
     },
     "sizes": [
       {
-        "size": "600ml\\",
+        "size": "600ml ",
         "value": "600ml",
         "selected": true,
         "price": "",
@@ -40,7 +40,7 @@
         "servings": "About 40 servings of 15ml per bottle"
       },
       {
-        "size": "60ml\\",
+        "size": "60ml ",
         "value": "60ml",
         "selected": false,
         "price": "",
@@ -51,116 +51,116 @@
     "currency": "INR",
     "actions": [
       {
-        "text": "Add to cart\\",
+        "text": "Add to cart ",
         "url": "#"
       },
       {
-        "text": "See recipes\\",
+        "text": "See recipes ",
         "url": "#recipes"
       }
     ]
   },
   "how_to_use": {
-    "title": "How to make a Appletini\\",
-    "description": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour.\\",
+    "title": "How to make a Appletini ",
+    "description": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour. ",
     "steps": [
-      "Fill a rocks glass with ice.\\",
-      "Pour in 45ml of your preferred spirit.\\",
-      "Add 15ml of BarCraft Appletini Mixer.\\",
-      "Finish with chilled soda.\\",
-      "Stir gently and savour.\\"
+      "Fill a rocks glass with ice. ",
+      "Pour in 45ml of your preferred spirit. ",
+      "Add 15ml of BarCraft Appletini Mixer. ",
+      "Finish with chilled soda. ",
+      "Stir gently and savour. "
     ],
-    "mocktail_note": "For a mocktail, leave out the spirit. \\Precision in every pour. Pleasure in every sip.\\\\"
+    "mocktail_note": "For a mocktail, leave out the spirit.  Precision in every pour. Pleasure in every sip.  "
   },
   "recipes": [
     {
-      "name": "Classic Appletini\\",
+      "name": "Classic Appletini ",
       "url": "/recipes/classic-appletini",
-      "details": "100ml | Vodka | Rocks glass\\",
+      "details": "100ml | Vodka | Rocks glass ",
       "ingredients": [
-        "Fresh ice\\",
-        "45ml Vodka\\",
-        "15ml BarCraft Appletini Mixer\\",
-        "40ml chilled soda\\"
+        "Fresh ice ",
+        "45ml Vodka ",
+        "15ml BarCraft Appletini Mixer ",
+        "40ml chilled soda "
       ],
       "recipe_url": "/recipes/classic-appletini"
     },
     {
-      "name": "Virgin Appletini\\",
+      "name": "Virgin Appletini ",
       "url": "/recipes/virgin-appletini",
-      "details": "100ml | No spirit | Highball glass\\",
+      "details": "100ml | No spirit | Highball glass ",
       "ingredients": [
-        "Ice\\",
-        "15ml BarCraft Appletini Mixer\\",
-        "85ml chilled soda\\",
-        "A green apple slice to garnish\\"
+        "Ice ",
+        "15ml BarCraft Appletini Mixer ",
+        "85ml chilled soda ",
+        "A green apple slice to garnish "
       ],
       "recipe_url": "/recipes/virgin-appletini"
     },
     {
-      "name": "Tall Green Apple Cooler\\",
+      "name": "Tall Green Apple Cooler ",
       "url": "/recipes/tall-green-apple-cooler",
-      "details": "200ml | Gin | Highball glass\\",
+      "details": "200ml | Gin | Highball glass ",
       "ingredients": [
-        "Fresh ice\\",
-        "45ml Gin\\",
-        "15ml BarCraft Appletini Mixer\\",
-        "140ml chilled soda\\"
+        "Fresh ice ",
+        "45ml Gin ",
+        "15ml BarCraft Appletini Mixer ",
+        "140ml chilled soda "
       ],
       "recipe_url": "/recipes/tall-green-apple-cooler"
     },
     {
-      "name": "Gin Apple Fizz\\",
+      "name": "Gin Apple Fizz ",
       "url": "/recipes/gin-apple-fizz",
-      "details": "100ml | White rum | Highball glass\\",
+      "details": "100ml | White rum | Highball glass ",
       "ingredients": [
-        "Fresh ice\\",
-        "45ml White rum\\",
-        "15ml BarCraft Appletini Mixer\\",
-        "40ml tonic water\\"
+        "Fresh ice ",
+        "45ml White rum ",
+        "15ml BarCraft Appletini Mixer ",
+        "40ml tonic water "
       ],
       "recipe_url": "/recipes/gin-apple-fizz"
     },
     {
-      "name": "Appletini Party Pitcher\\",
+      "name": "Appletini Party Pitcher ",
       "url": "/recipes/appletini-party-pitcher",
-      "details": "1 litre | Vodka | Jug or pitcher\\",
+      "details": "1 litre | Vodka | Jug or pitcher ",
       "ingredients": [
-        "Ice\\",
-        "450ml Vodka\\",
-        "150ml BarCraft Appletini Mixer\\",
-        "About 400ml chilled soda\\"
+        "Ice ",
+        "450ml Vodka ",
+        "150ml BarCraft Appletini Mixer ",
+        "About 400ml chilled soda "
       ],
       "recipe_url": "/recipes/appletini-party-pitcher"
     },
     {
-      "name": "Short Appletini\\",
+      "name": "Short Appletini ",
       "url": "/recipes/short-appletini",
-      "details": "75ml | Vodka | Rocks glass\\",
+      "details": "75ml | Vodka | Rocks glass ",
       "ingredients": [
-        "Fresh ice\\",
-        "45ml Vodka\\",
-        "15ml BarCraft Appletini Mixer\\",
-        "15ml chilled soda\\"
+        "Fresh ice ",
+        "45ml Vodka ",
+        "15ml BarCraft Appletini Mixer ",
+        "15ml chilled soda "
       ],
       "recipe_url": "/recipes/short-appletini"
     }
   ],
   "product_information": {
     "nutrition_per_100ml": {
-      "Energy\\": "160 kcal\\",
-      "Protein\\": "0 g\\",
-      "Carbohydrate\\": "32 g\\",
-      "Total Sugars\\": "28 g\\",
-      "Added Sugars\\": "28 g\\",
-      "Total Fat\\": "0 g\\",
-      "Saturated Fat\\": "0 g\\",
-      "Trans Fat\\": "0 g\\",
-      "Sodium\\": "400 mg\\"
+      "Energy ": "160 kcal ",
+      "Protein ": "0 g ",
+      "Carbohydrate ": "32 g ",
+      "Total Sugars ": "28 g ",
+      "Added Sugars ": "28 g ",
+      "Total Fat ": "0 g ",
+      "Saturated Fat ": "0 g ",
+      "Trans Fat ": "0 g ",
+      "Sodium ": "400 mg "
     },
-    "serving_information": "Serving size: 15ml. Servings per 60ml bottle: 4. Servings per 600ml bottle: 40.\\",
-    "ingredients": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour.\\",
-    "manufacturer_note": "Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details.\\",
+    "serving_information": "Serving size: 15ml. Servings per 60ml bottle: 4. Servings per 600ml bottle: 40. ",
+    "ingredients": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour. ",
+    "manufacturer_note": "Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details. ",
     "label_image": {
       "src": "/images/appletini-label.jpg",
       "alt": "Front and back label of BarCraft Appletini Mixer 600ml",
@@ -170,76 +170,76 @@
   },
   "faq": [
     {
-      "question": "What is BarCraft Appletini Mixer?\\",
-      "answer": "BarCraft Appletini Mixer is a BarCraft Crafted Cocktail Mixer made to bring the character of a well-crafted cocktail to every pour. It is bartender inspired, with the flavour profile Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish.\\"
+      "question": "What is BarCraft Appletini Mixer? ",
+      "answer": "BarCraft Appletini Mixer is a BarCraft Crafted Cocktail Mixer made to bring the character of a well-crafted cocktail to every pour. It is bartender inspired, with the flavour profile Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish. "
     },
     {
-      "question": "What does Appletini mixer taste like?\\",
-      "answer": "Crisp Apple Bite. Tart green apple with juicy sweetness and a crisp finish.\\"
+      "question": "What does Appletini mixer taste like? ",
+      "answer": "Crisp Apple Bite. Tart green apple with juicy sweetness and a crisp finish. "
     },
     {
-      "question": "How do I make a Appletini with BarCraft Mixer?\\",
-      "answer": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour.\\"
+      "question": "How do I make a Appletini with BarCraft Mixer? ",
+      "answer": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour. "
     },
     {
-      "question": "Which spirit should I use?\\",
-      "answer": "Use your preferred spirit. Vodka is our classic pick, and gin and white rum also work well. The mixer does not include a spirit, so add your own.\\"
+      "question": "Which spirit should I use? ",
+      "answer": "Use your preferred spirit. Vodka is our classic pick, and gin and white rum also work well. The mixer does not include a spirit, so add your own. "
     },
     {
-      "question": "How many drinks does a bottle make?\\",
-      "answer": "One serving is 15ml, so the 600ml bottle makes about 40 servings and the 60ml bottle makes 4.\\"
+      "question": "How many drinks does a bottle make? ",
+      "answer": "One serving is 15ml, so the 600ml bottle makes about 40 servings and the 60ml bottle makes 4. "
     },
     {
-      "question": "Can I make Appletini as a mocktail?\\",
-      "answer": "Yes. Leave out the spirit and use ice, 15ml of BarCraft Appletini Mixer and chilled soda.\\"
+      "question": "Can I make Appletini as a mocktail? ",
+      "answer": "Yes. Leave out the spirit and use ice, 15ml of BarCraft Appletini Mixer and chilled soda. "
     },
     {
-      "question": "What are the ingredients?\\",
-      "answer": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour.\\"
+      "question": "What are the ingredients? ",
+      "answer": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour. "
     },
     {
-      "question": "How much sugar and how many calories does it have?\\",
-      "answer": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 15ml serve of the mixer that works out to about 24 kcal and 4.2g sugars, before any spirit or soda.\\"
+      "question": "How much sugar and how many calories does it have? ",
+      "answer": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 15ml serve of the mixer that works out to about 24 kcal and 4.2g sugars, before any spirit or soda. "
     },
     {
-      "question": "Does it contain preservatives or sweeteners?\\",
-      "answer": "Yes. According to the label it contains the preservatives Potassium Sorbate (INS 202) and Sodium Benzoate (INS 211), and the sweetener Sucralose (INS 955).\\"
+      "question": "Does it contain preservatives or sweeteners? ",
+      "answer": "Yes. According to the label it contains the preservatives Potassium Sorbate (INS 202) and Sodium Benzoate (INS 211), and the sweetener Sucralose (INS 955). "
     },
     {
-      "question": "Which bottle size should I buy?\\",
-      "answer": "Choose the 600ml bottle for home bars, parties and regular use. Choose the 60ml bottle to try the flavour, to travel or to gift.\\"
+      "question": "Which bottle size should I buy? ",
+      "answer": "Choose the 600ml bottle for home bars, parties and regular use. Choose the 60ml bottle to try the flavour, to travel or to gift. "
     }
   ],
   "related_flavors": [
     {
-      "name": "BarCraft Mojito Mixer\\",
+      "name": "BarCraft Mojito Mixer ",
       "url": "/mixers/mojito",
-      "description": "r\\ Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness.\\"
+      "description": "r  Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness. "
     },
     {
-      "name": "BarCraft Screwdriver Mixer\\",
+      "name": "BarCraft Screwdriver Mixer ",
       "url": "/mixers/screwdriver",
-      "description": "r\\ Bright Orange Burst: Juicy sweet orange with fresh citrus acidity and subtle peel notes.\\"
+      "description": "r  Bright Orange Burst: Juicy sweet orange with fresh citrus acidity and subtle peel notes. "
     },
     {
-      "name": "BarCraft Sex on the Beach Mixer\\",
+      "name": "BarCraft Sex on the Beach Mixer ",
       "url": "/mixers/sex-on-the-beach",
-      "description": "r\\ Juicy Peach Paradise: Sweet peach and orange balanced by tart cranberry.\\"
+      "description": "r  Juicy Peach Paradise: Sweet peach and orange balanced by tart cranberry. "
     },
     {
-      "name": "BarCraft Piña Colada Mixer\\",
+      "name": "BarCraft Piña Colada Mixer ",
       "url": "/mixers/pina-colada",
-      "description": "r\\ Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish.\\"
+      "description": "r  Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish. "
     },
     {
-      "name": "BarCraft Spicy Mango Mixer\\",
+      "name": "BarCraft Spicy Mango Mixer ",
       "url": "/mixers/spicy-mango",
-      "description": "r\\ Sweet Tropical Heat: Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang.\\"
+      "description": "r  Sweet Tropical Heat: Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang. "
     }
   ],
   "discovery": {
-    "All Mixers\\Elevate your home bar\\\\": "/mixers",
-    "All Recipes\\36 easy recipes to try\\\\": "/recipes"
+    "All Mixers Elevate your home bar  ": "/mixers",
+    "All Recipes 36 easy recipes to try  ": "/recipes"
   },
-  "footer": "© BarCraft. Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details.\\"
+  "footer": "© BarCraft. Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details. "
 }

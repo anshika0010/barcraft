@@ -81,7 +81,7 @@ export const COLLECTIONS = [
         name: "Mojito",
         description: "Crisp, cooling garden mint paired with a sharp citrus bite.",
         accent: "#9bc53d",
-        image: "/NEW BARCRAFT IMAGES/MOJITO H 1.jpg",
+        image: "/NEW BARCRAFT IMAGES/MOJITO H 1.jpeg",
                 image60: "/60ml images/MOJITOO SMALL.jpg",
 
       },
@@ -118,7 +118,7 @@ export const COLLECTIONS = [
         description:
           "Rich, creamy coconut layered seamlessly with ripe, golden pineapple.",
         accent: "#f5deb3",
-        image: "/NEW BARCRAFT IMAGES/PINA COLADA 1.jpg",
+        image: "/NEW BARCRAFT IMAGES/PINA COLADA 1.jpeg",
                 image60: "/60ml images/PINA COLADA.jpg",
 
       },
@@ -209,7 +209,7 @@ export const COLLECTIONS = [
         description:
           "Ripe peach and sweet orange, immediately cut by a tart cranberry and cherry finish.",
         accent: "#f7934c",
-        image: "/NEW BARCRAFT IMAGES/SEX ON THE BEACH 1.jpg",
+        image: "/NEW BARCRAFT IMAGES/SEX ON THE BEACH 1.jpeg",
                 image60: "/60ml images/SEX ON THE BEACH SMALL.jpg",
 
       },
