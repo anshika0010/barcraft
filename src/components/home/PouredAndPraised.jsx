@@ -291,7 +291,7 @@ function ReviewPage({ review, className = "", onAnimationEnd }) {
       {/* CONTENT */}
       <div className="absolute inset-0 flex flex-col items-center text-center">
         {/* LOGO */}
-        <div className="absolute top-[58px] h-[32px] w-[100px] opacity-[0.12]">
+        <div className="absolute top-[60px] h-[50px] w-[200px] opacity-[0.12]">
           <Image
             src="/home/poured-praised/logo.png"
             alt=""
@@ -309,7 +309,7 @@ function ReviewPage({ review, className = "", onAnimationEnd }) {
             right-[35px]
             top-[102px]
             font-movault
-            text-[27px]
+            text-[35px]
             font-normal
             uppercase
             leading-[0.95]
@@ -392,7 +392,7 @@ function ReviewPage({ review, className = "", onAnimationEnd }) {
             left-[30px]
             right-[30px]
             font-movault
-            text-[25px]
+            text-[35px]
             font-normal
             uppercase
             leading-none
