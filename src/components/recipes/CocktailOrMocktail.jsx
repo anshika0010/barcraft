@@ -321,73 +321,7 @@ function RecipeOption({ option }) {
           CTA
       ================================================== */}
 
-      <Link
-        href={option.href}
-        className={`
-          mt-auto
-          flex
-          min-h-[60px]
-          w-full
-          items-center
-          justify-between
-          px-[15px]
-
-          transition-transform
-          duration-300
-          hover:scale-[0.995]
-
-          max-[640px]:mt-[40px]
-          max-[640px]:min-h-[56px]
-
-          ${
-            isActive
-              ? "bg-black text-[#FFD400]"
-              : "bg-[#FFD400] text-black"
-          }
-        `}
-      >
-
-        <span
-          className="
-            font-movault
-            text-[31px]
-            uppercase
-            leading-none
-
-            md:text-[28px]
-
-            max-[640px]:text-[27px]
-          "
-        >
-          SEE FULL RECIPES
-        </span>
-
-
-        <span
-          className={`
-            flex
-            h-[48px]
-            w-[48px]
-            shrink-0
-            items-center
-            justify-center
-
-            max-[640px]:h-[44px]
-            max-[640px]:w-[44px]
-
-            ${
-              isActive
-                ? "bg-[#FFD400] text-black"
-                : "bg-black text-white"
-            }
-          `}
-        >
-          <span className="font-sf-pro text-[27px] leading-none">
-            →
-          </span>
-        </span>
-
-      </Link>
+     
 
     </article>
   );

@@ -40,7 +40,7 @@ export default function Navbar() {
                     backdrop-blur-md
                     sm:px-6 md:h-[86px] lg:px-[28px]">
         {/* Navigation */}
-        <div className="hidden items-center gap-8 md:flex lg:gap-[76px]">
+        <div className="hidden items-center lg:flex lg:gap-10 xl:gap-14 2xl:gap-[76px]">
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -71,7 +71,7 @@ export default function Navbar() {
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
-          className="flex h-10 w-10 items-center justify-center text-white md:hidden"
+          className="flex h-10 w-10 items-center justify-center text-white lg:hidden"
         >
           <svg
             viewBox="0 0 24 24"
@@ -149,7 +149,7 @@ export default function Navbar() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="flex flex-col border-t border-white/10 bg-black/90 px-4 py-2 backdrop-blur-md sm:px-6 md:hidden"
+          className="flex flex-col border-t border-white/10 bg-black/90 px-4 py-2 backdrop-blur-md sm:px-6 lg:hidden"
         >
           {navItems.map((item) => (
             <Link

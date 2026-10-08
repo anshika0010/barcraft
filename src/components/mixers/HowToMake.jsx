@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 
+// Illustrations available in /public/mixers/steps (1.png … 4.png)
+const STEP_IMAGE_COUNT = 4;
+
 export default function HowToMake({ data }) {
   const howToUse = data?.how_to_use;
 
@@ -72,58 +75,52 @@ export default function HowToMake({ data }) {
           STEPS
       ====================================================== */}
       <div
+        style={{ "--step-count": steps.length }}
         className="
-          mt-[55px]
+          mt-[45px]
           grid
-          grid-cols-4
+          grid-cols-1
+
+          sm:mt-[55px]
+          sm:grid-cols-2
+
+          lg:grid-cols-[repeat(var(--step-count),minmax(0,1fr))]
 
           lg:mt-[65px]
-
-          max-[900px]:grid-cols-2
-
-          max-[640px]:mt-[45px]
-          max-[640px]:grid-cols-1
         "
       >
         {steps.map((text, index) => (
           <div
             key={`step-${index}`}
-            className={`
+            className="
               relative
               flex
               min-w-0
               flex-col
               items-center
-              px-[25px]
+              px-[20px]
+              py-[40px]
 
-              lg:px-[35px]
+              max-sm:border-b
+              max-sm:border-white/30
+              max-sm:last:border-b-0
 
-              max-[900px]:py-[35px]
+              sm:py-[35px]
+              sm:max-lg:even:border-l
+              sm:border-white/60
 
-              max-[640px]:border-b
-              max-[640px]:border-white/30
-              max-[640px]:py-[40px]
-              max-[640px]:last:border-b-0
+              lg:py-0
+              lg:not-first:border-l
 
-              ${
-                index !== 0
-                  ? "border-l border-white/60 max-[900px]:border-l-0"
-                  : ""
-              }
-
-              ${
-                index === 2
-                  ? "max-[900px]:border-l max-[640px]:border-l-0"
-                  : ""
-              }
-            `}
+              xl:px-[35px]
+            "
           >
 
             {/* =================================================
                 ILLUSTRATION
             ================================================== */}
             <div
-              className="
+              className={`
                 relative
                 flex
                 h-[190px]
@@ -134,19 +131,27 @@ export default function HowToMake({ data }) {
                 md:h-[205px]
 
                 lg:h-[220px]
-              "
+
+                ${
+                  index < STEP_IMAGE_COUNT
+                    ? ""
+                    : "max-lg:hidden"
+                }
+              `}
             >
-              <Image
-                src={`/mixers/steps/${index + 1}.png`}
-                alt={text}
-                width={300}
-                height={230}
-                className="
-                  h-full
-                  w-full
-                  object-contain
-                "
-              />
+              {index < STEP_IMAGE_COUNT && (
+                <Image
+                  src={`/mixers/steps/${index + 1}.png`}
+                  alt={text}
+                  width={300}
+                  height={230}
+                  className="
+                    h-full
+                    w-full
+                    object-contain
+                  "
+                />
+              )}
             </div>
 
             {/* =================================================
@@ -157,7 +162,7 @@ export default function HowToMake({ data }) {
                 mt-[5px]
                 flex
                 h-[35px]
-                min-w-[135px]
+                min-w-[120px]
                 items-center
                 justify-center
                 bg-[#FF3F00]
