@@ -196,20 +196,20 @@ export default function WeddingHowItWorks() {
 
             {/* Vertical line */}
 
-            <div
-              className="
-                absolute
-                left-[92px]
-                top-[15px]
-                bottom-[8px]
-                w-[2px]
-                bg-[#FFD400]
+              <div
+                className="
+                  absolute
+                  left-[129px]
+                  top-[15px]
+                  bottom-[8px]
+                  w-[2px]
+                  bg-[#FFD400]
 
-                max-[700px]:left-[71px]
+                  max-[700px]:left-[108px]
 
-                max-[500px]:left-[55px]
-              "
-            />
+                  max-[500px]:left-[92px]
+                "
+              />
 
 
             <div className="flex flex-col gap-[52px]">
@@ -218,23 +218,46 @@ export default function WeddingHowItWorks() {
                 const Icon = step.Icon;
 
                 return (
-                  <div
-                    key={`${step.number}-${step.title}`}
-                    className="
-                      relative
-                      grid
-                      grid-cols-[140px_1fr]
-                      items-start
-                      gap-[38px]
+                      <div
+                        key={`${step.number}-${step.title}`}
 
-                      max-[700px]:grid-cols-[110px_1fr]
-                      max-[700px]:gap-[28px]
+                        className="
+                          relative
+                          grid
+                          grid-cols-[108px_1fr]
+                          items-start
+                          gap-[46px]
 
-                      max-[500px]:grid-cols-[84px_1fr]
-                      max-[500px]:gap-[24px]
-                    "
-                  >
+                          max-[700px]:grid-cols-[88px_1fr]
+                          max-[700px]:gap-[38px]
 
+                          max-[500px]:grid-cols-[72px_1fr]
+                          max-[500px]:gap-[32px]
+                        "
+                      >
+
+             {/* DOTS */}
+                         <span
+                        className="
+                          absolute
+                          left-[130px]
+                          top-[24px]
+                          z-20
+                          h-[12px]
+                          w-[12px]
+                          -translate-x-1/2
+                          rounded-full
+                          bg-[#FFD400]
+
+                          max-[700px]:left-[108px]
+                          max-[700px]:h-[11px]
+                          max-[700px]:w-[11px]
+
+                          max-[500px]:left-[92px]
+                          max-[500px]:h-[10px]
+                          max-[500px]:w-[10px]
+                        "
+                      />
                     {/* =================================================
                         ICON
                     ================================================== */}
