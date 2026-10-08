@@ -12,6 +12,7 @@
       "image": "https ://www .barcraftmixer.com/images/appletini-art.jpg"
     }
   },
+  
   "product": {
     "image": {
       "src": "/images/appletini-art.jpg",
@@ -30,6 +31,8 @@
       "Spirits ": "Vodka, Gin, White rum ",
       "Pairs with ": "Cheese platters, light starters, salads and seafood "
     },
+    "bg":"/background-images/appletini-big-1.jpg",
+
     "sizes": [
       {
         "size": "600ml ",

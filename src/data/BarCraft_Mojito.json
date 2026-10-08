@@ -34,6 +34,8 @@
       "Spirits": "White rum, Vodka, Gin",
       "Pairs with": "Grilled fish, salads, tacos and light starters"
     },
+            "bg":"/background-images/mojito big  1.jpg",
+
     "sizes": [
       {
         "size": "600ml",

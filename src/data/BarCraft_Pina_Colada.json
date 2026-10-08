@@ -34,6 +34,9 @@
       "Spirits": "White rum, Coconut rum, Vodka",
       "Pairs with": "Coconut curries, grilled prawns, spicy starters and desserts"
     },
+
+    "bg":"/background-images/pina colada big  1.jpg",
+
     "sizes": [
       {
         "size": "600ml",

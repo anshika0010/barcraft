@@ -61,7 +61,7 @@ export default function ProductHero({ data }) {
             BACKGROUND
         ================================================= */}
         <Image
-          src="/mixers/screws.png"
+          src={product?.bg || "/not-found.png"}
           alt={product?.image?.alt || product?.name || "BarCraft Mixer"}
           fill
           priority

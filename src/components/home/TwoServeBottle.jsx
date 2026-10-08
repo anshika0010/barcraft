@@ -23,7 +23,7 @@ export default function TwoServeBottle() {
         ====================================================== */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/home/2-serve-bottle/2-serve-bottle.png"
+            src="/home/2-serve-bottle/2-serve-bottle.jpg"
             alt="BarCraft bar scene"
             fill
             priority
@@ -54,7 +54,7 @@ export default function TwoServeBottle() {
             GREEN BOTTLE
             BEHIND MARQUEE — pulled in closer to center
         ====================================================== */}
-        <div
+        {/* <div
           className="absolute bottom-[-5px] left-[calc(50%-18vw)] z-10 md:left-[calc(50%-9vw)]"
           style={{
             transform: "translateX(-50%)",
@@ -67,7 +67,7 @@ export default function TwoServeBottle() {
             alt="BarCraft Mojito mixer"
             className="h-full w-full object-contain object-bottom"
           />
-        </div>
+        </div> */}
 
         {/* =====================================================
             MARQUEE
@@ -92,7 +92,7 @@ export default function TwoServeBottle() {
             RED BOTTLE
             IN FRONT OF MARQUEE — pulled in closer to center
         ====================================================== */}
-        <div
+        {/* <div
           className="absolute bottom-[-5px] left-[calc(50%+14vw)] z-30 md:left-[calc(50%+6vw)]"
           style={{
             transform: "translateX(-50%)",
@@ -105,7 +105,7 @@ export default function TwoServeBottle() {
             alt="BarCraft Cosmopolitan mixer"
             className="h-full w-full object-contain object-bottom"
           />
-        </div>
+        </div> */}
 
         {/* =====================================================
             DESCRIPTION

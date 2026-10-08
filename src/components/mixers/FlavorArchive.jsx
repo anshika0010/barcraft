@@ -15,7 +15,7 @@ const AVAILABLE_FLAVORS = [
   "mojito",
   "piña colada",
   "sex on the beach",
-  "screwdriver",
+  "screw driver",
   "spicy mango",
 ].map(normalizeName);
 

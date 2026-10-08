@@ -1,38 +1,50 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
-const BLOGS = [
-  {
-    id: 1,
-    title: "The Art Behind Every Pour",
-    description:
-      "Every great cocktail begins with more than just ingredients—it begins with craft, precision, and a passion for the perfect pour. Behind every shake, stir, and garnish is a story of creativity and dedication. Discover the art of bartending and the little details that transform an ordinary drink into an unforgettable experience.",
-    image: "/home/Blogs/1.png",
-  },
-  {
-    id: 2,
-    title: "A Toast to Crafted Perfection",
-    description:
-      "A great cocktail is more than a drink; it’s an experience built through balance, flavor, and attention to detail.",
-    image: "/home/Blogs/2.png",
-  },
-  {
-    id: 3,
-    title: "Behind Every Great Cocktail",
-    description:
-      "Crafting a memorable cocktail takes precision, creativity, and an eye for detail. From selecting the right ingredients to adding the perfect garnish, every step contributes to the final experience.",
-    image: "/home/Blogs/3.png",
-  },
-];
+const BLOGS_API =
+  "https://admin.barcraftmixer.com/barcraft/api/blogs/";
 
-export default function BlogsAndArticles() {
+async function getBlogs() {
+  try {
+    const response = await fetch(BLOGS_API, {
+      next: {
+        revalidate: 60,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch blogs");
+    }
+
+    const data = await response.json();
+
+    if (!data.success) {
+      return [];
+    }
+
+    return data.blogs
+      .filter((blog) => blog.status)
+      .map((blog) => ({
+        id: blog._id,
+        slug: blog.slug,
+        title: blog.title,
+        excerpt: blog.description,
+        image: blog.image || "/not-found.png",
+      }))
+      .slice(0, 3);
+  } catch (error) {
+    console.error("BLOG API ERROR:", error);
+    return [];
+  }
+}
+
+export default async function BlogsAndArticles() {
+  const blogs = await getBlogs();
+
   return (
     <section className="w-full bg-black px-4 py-[60px] sm:px-6 md:py-[70px] lg:px-[28px] lg:py-[85px]">
-      {/* =====================================================
-          SECTION TITLE
-      ====================================================== */}
+      
+      {/* SECTION TITLE */}
       <div className="flex flex-wrap items-end justify-between gap-4">
         <h2
           className="
@@ -73,9 +85,7 @@ export default function BlogsAndArticles() {
         </Link>
       </div>
 
-      {/* =====================================================
-          BLOG GRID
-      ====================================================== */}
+      {/* BLOG GRID */}
       <div
         className="
           mt-8
@@ -88,45 +98,53 @@ export default function BlogsAndArticles() {
           lg:grid-cols-3
         "
       >
-        {BLOGS.map((blog) => (
+        {blogs.map((blog) => (
           <article key={blog.id} className="min-w-0">
+            
             {/* IMAGE */}
-            <div
-              className="
-                relative
-                aspect-[1.43]
-                w-full
-                overflow-hidden
-              "
-            >
-              <Image
-                src={blog.image}
-                alt={blog.title}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            <Link href={`/blog/${blog.slug}`}>
+              <div
                 className="
-                  object-cover
-                  transition-transform
-                  duration-500
-                  ease-out
-                  hover:scale-[1.02]
+                  relative
+                  aspect-[1.43]
+                  w-full
+                  overflow-hidden
                 "
-              />
-            </div>
+              >
+                <Image
+                  src={blog.image || "/not-found.png"}
+                  alt={blog.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="
+                    object-cover
+                    transition-transform
+                    duration-500
+                    ease-out
+                    hover:scale-[1.02]
+                  "
+                />
+              </div>
+            </Link>
 
             {/* TITLE */}
-            <h3
-              className="
-                mt-[15px]
-                font-sf-pro
-                text-[14px]
-                font-bold
-                leading-[17px]
-                text-white
-              "
-            >
-              {blog.title}
-            </h3>
+            <Link href={`/blog/${blog.slug}`}>
+              <h3
+                className="
+                  mt-[15px]
+                  font-sf-pro
+                  text-[14px]
+                  font-bold
+                  leading-[17px]
+                  text-white
+                  transition-opacity
+                  duration-200
+                  hover:opacity-70
+                "
+              >
+                {blog.title}
+              </h3>
+            </Link>
 
             {/* DESCRIPTION */}
             <p
@@ -140,11 +158,20 @@ export default function BlogsAndArticles() {
                 text-white/65
               "
             >
-              {blog.description}
+              {blog.excerpt.slice(0,150)}..read more
             </p>
           </article>
         ))}
       </div>
+
+      {/* NO BLOGS */}
+      {blogs.length === 0 && (
+        <div className="py-16 text-center">
+          <p className="font-sf-pro text-[16px] text-white/60">
+            No blogs available at the moment.
+          </p>
+        </div>
+      )}
     </section>
   );
 }

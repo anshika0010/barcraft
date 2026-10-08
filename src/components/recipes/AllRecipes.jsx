@@ -800,14 +800,14 @@ function ScrewdriverRecipeCard({ recipe }) {
           className="
             absolute
             bottom-[18px]
-            left-[18px]
+            left-[30px]
             z-10
             font-movault
-            text-[30px]
+            text-[38px]
             uppercase
             leading-[0.9]
             text-black
-
+            tracking-wide
             max-[1100px]:text-[26px]
 
             max-[640px]:text-[30px]
@@ -880,13 +880,13 @@ function ScrewdriverRecipeCard({ recipe }) {
           <h3
             className="
               font-movault
-              text-[34px]
+              text-[42px]
               uppercase
               leading-[0.85]
               text-black
-
+              text-center
               max-[1100px]:text-[28px]
-
+              tracking-wide
               max-[640px]:text-[34px]
             "
           >
@@ -903,7 +903,7 @@ function ScrewdriverRecipeCard({ recipe }) {
                 uppercase
                 leading-none
                 text-white
-
+                tracking-wider
                 max-[1100px]:text-[31px]
               "
             >
@@ -954,48 +954,6 @@ function ScrewdriverRecipeCard({ recipe }) {
 
           {/* CTA */}
 
-          <Link
-            href={`/recipes/${recipe.id}`}
-            onClick={(event) => event.stopPropagation()}
-            className="
-              mt-auto
-              flex
-              h-[59px]
-              w-full
-              items-center
-              justify-between
-              bg-[#FF7504]
-              px-[15px]
-            "
-          >
-            <span
-              className="
-                font-movault
-                text-[30px]
-                uppercase
-                leading-none
-                text-white
-              "
-            >
-              SEE FULL RECIPES
-            </span>
-
-            <span
-              className="
-                flex
-                h-[47px]
-                w-[47px]
-                items-center
-                justify-center
-                bg-black
-                font-sf-pro
-                text-[27px]
-                text-white
-              "
-            >
-              →
-            </span>
-          </Link>
 
         </div>
 
@@ -1237,25 +1195,25 @@ function MojitoRecipeCard({ recipe }) {
         </svg>
 
 
-        <h3
+        <h1
           className="
             absolute
             bottom-[18px]
             left-[18px]
             z-10
             font-movault
-            text-[30px]
+            text-[38px]
             uppercase
             leading-[0.9]
             text-black
-
+            tracking-wide
             max-[1100px]:text-[26px]
 
             max-[640px]:text-[30px]
           "
         >
           {recipe.name}
-        </h3>
+        </h1>
 
       </div>
 
@@ -1340,13 +1298,14 @@ function MojitoRecipeCard({ recipe }) {
           <h3
             className="
               font-movault
-              text-[34px]
+              text-[45px]
               uppercase
               leading-[0.85]
               text-black
-
+              tracking-wide
+              uppercase
               max-[1100px]:text-[28px]
-
+              text-center
               max-[640px]:text-[34px]
             "
           >
