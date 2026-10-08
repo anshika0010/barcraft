@@ -74,12 +74,12 @@ export default function WeddingHero() {
           z-10
           flex
           min-h-screen
-          items-center
+          items-start
           justify-end
 
           px-[44px]
           pb-[35px]
-          pt-[115px]
+          pt-[150px]
 
           max-[1100px]:px-[32px]
 
@@ -103,9 +103,9 @@ export default function WeddingHero() {
           "
         >
           {/* =================================================
-              HEADING
+              HEADING 
           ================================================== */}
-          <h1
+          <div
             className="
               font-movault
               text-[76px]
@@ -123,12 +123,13 @@ export default function WeddingHero() {
               max-[640px]:text-[52px]
 
               max-[430px]:text-[43px]
+             
             "
           >
-            10 WEDDINGS
-            <br />
-            1000 SERVINGS. FREE
-          </h1>
+            <h3 className="text-align-right tracking-wide">10 WEDDINGS</h3>
+        
+            <h1 className="text-[60px] md:text-[100px]">1000 SERVINGS. FREE</h1>
+          </div>
 
           {/* =================================================
               DESCRIPTION
@@ -182,10 +183,10 @@ export default function WeddingHero() {
                 max-[640px]:h-[50px]
                 max-[640px]:text-[24px]
 
-                max-[430px]:text-[21px]
+                max-[430px]:text-[24px]
               "
             >
-              <span>
+              <span className="tracking-wide">
                 REGISTER YOUR WEDDING
               </span>
 

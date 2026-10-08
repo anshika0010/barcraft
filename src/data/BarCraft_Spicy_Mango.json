@@ -34,6 +34,8 @@
       "Spirits": "Tequila, Vodka (neutral), Mango flavoured vodka",
       "Pairs with": "Tacos, grilled chicken, chaat and nachos"
     },
+            "bg":"/background-images/spicy mango big  1.jpg",
+
     "sizes": [
       {
         "size": "600ml",

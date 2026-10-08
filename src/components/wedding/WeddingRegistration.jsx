@@ -173,7 +173,7 @@ export default function WeddingRegistration() {
           className="
             mt-[82px]
             w-full
-
+            
             max-[700px]:mt-[55px]
           "
         >
@@ -235,6 +235,7 @@ export default function WeddingRegistration() {
               value={formData.fullAddress}
               onChange={handleChange}
               required
+              labelStyle="text-xl"
             />
 
           </div>
@@ -575,11 +576,12 @@ function FieldLabel({ children }) {
     <label
       className="
         block
-        font-movault
-        text-[28px]
+        font-sf-pro
+        text-[27px]
         uppercase
         leading-none
         text-white
+        tracking-wide
 
         md:text-[27px]
 

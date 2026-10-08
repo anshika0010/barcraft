@@ -190,9 +190,9 @@ function PostGrid({ posts }) {
             </h3>
           </Link>
 
-          {/* <p className="mt-[14px] max-w-[430px] font-sf-pro text-[13px] leading-[16px] text-white/65">
-            {post.excerpt}
-          </p> */}
+          <p className="mt-[14px] max-w-[430px] font-sf-pro text-[13px] leading-[16px] text-white/65">
+            {post.excerpt.slice(0,150)}...read more
+          </p>
 
         </article>
       ))}

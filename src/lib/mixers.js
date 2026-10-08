@@ -7,7 +7,7 @@ import appletini from "@/data/BarCraft_Appletini.json";
 
 const mixers = {
   mojito,
-  screwdriver,
+  "screw-driver":screwdriver,
   "pina-colada": pinaColada,
   "spicy-mango": spicyMango,
   "sex-on-the-beach": sexOnTheBeach,

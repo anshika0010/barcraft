@@ -198,13 +198,13 @@ export default function Footer() {
       <div
         className="
           pointer-events-none
-          relative z-10 mt-8
-          aspect-[7658/1607]
+          relative z-10 mt-13
+          aspect-[7658/1740]
           w-full
         "
       >
         <Image
-          src="/home/footer/footer.png"
+          src="/home/footer/footer.jpeg"
           alt=""
           fill
           sizes="100vw"
