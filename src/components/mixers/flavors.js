@@ -140,15 +140,15 @@ export const COLLECTIONS = [
                 image60: "/60ml images/PLANTER,S PUNCH SMALL.jpg",
 
       },
-      {
-        name: "Hurricane",
-        description:
-          "A chaotic, high-energy mix of passion fruit, orange, and heavy fruit botanicals.",
-        accent: "#f0582b",
-        image: "/NEW BARCRAFT IMAGES/HURRICANE 1.jpg",
-                image60: "/60ml images/HURRICANE SMALL.jpg",
+      // {
+      //   name: "Hurricane",
+      //   description:
+      //     "A chaotic, high-energy mix of passion fruit, orange, and heavy fruit botanicals.",
+      //   accent: "#f0582b",
+      //   image: "/NEW BARCRAFT IMAGES/HURRICANE  1.jpg",
+      //           image60: "/60ml images/HURRICANE SMALL.jpg",
 
-      },
+      // },
     ],
   },
   {

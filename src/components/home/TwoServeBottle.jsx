@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+
 import { motion } from "framer-motion";
 
 const MARQUEE_TEXT = "2 SERVE BOTTLE";
@@ -149,30 +151,33 @@ export default function TwoServeBottle() {
           >
             Crafted for intimate moments and effortless entertaining, our
             2-serve cocktail mixer bottles bring bar-inspired flavour to your
-            glass. Just pour, mix, and enjoy a perfectly balanced cocktail
-            made for sharing.
+            glass. Just pour, mix, and enjoy a perfectly balanced cocktail made
+            for sharing.
           </p>
 
-          <button
-            type="button"
+          <Link
+            href="/mixers"
             className="
-              mt-[18px]
-              h-[32px]
-              min-w-[88px]
-              bg-brand-yellow
-              px-[16px]
-              font-sf-pro
-              text-[13px]
-              font-bold
-              leading-none
-              text-black
-              transition-transform
-              duration-200
-              hover:scale-105
-            "
+    mt-[18px]
+    inline-flex
+    h-[32px]
+    min-w-[88px]
+    items-center
+    justify-center
+    bg-brand-yellow
+    px-[16px]
+    font-sf-pro
+    text-[13px]
+    font-bold
+    leading-none
+    text-black
+    transition-transform
+    duration-200
+    hover:scale-105
+  "
           >
             View all
-          </button>
+          </Link>
         </div>
       </div>
     </section>
