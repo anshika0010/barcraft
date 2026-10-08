@@ -54,7 +54,7 @@ export default async function MixerPage({params}) {
       <HowToMake data={mixer}/>
       <MixerRecipes data={mixer} />
       <IngredientsNutrition data={mixer}/>
-      <MoreMixers data={mixer} />
+      {/* <MoreMixers data={mixer} /> */}
       <FAQs />
       <Footer />
     </>

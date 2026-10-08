@@ -24,6 +24,7 @@ export default function WeddingRegistration() {
     name: "",
     phone: "",
     venue: "",
+    fullAddress : "",
     guests: "",
     weddingDate: "",
     email: "",
@@ -211,19 +212,27 @@ export default function WeddingRegistration() {
             />
 
             <FormField
-              label="VENUE NAME AND CITY"
+              label="VENUE"
               name="venue"
               value={formData.venue}
               onChange={handleChange}
               required
             />
-
             <FormField
               label="NUMBER OF GUESTS"
               name="guests"
               type="number"
               min="1"
               value={formData.guests}
+              onChange={handleChange}
+              required
+            />
+
+            
+            <FormField
+              label="FULL ADDRESS"
+              name="fullAddress"
+              value={formData.fullAddress}
               onChange={handleChange}
               required
             />
@@ -236,6 +245,7 @@ export default function WeddingRegistration() {
           ================================================== */}
 
           <div className="mt-[43px] max-[700px]:mt-[30px]">
+
 
             <FieldLabel>
               WEDDING DATE

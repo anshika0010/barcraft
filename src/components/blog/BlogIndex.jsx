@@ -1,19 +1,202 @@
+// import Image from "next/image";
+// import Link from "next/link";
+
+// // No articles are published yet. Add entries here and the grid below
+// // renders automatically in place of the empty state:
+// // { slug, title, excerpt, image, date: "2026-10-01" }
+// export const POSTS = [];
+
+// export default function BlogIndex() {
+//   return (
+//     <>
+//       <BlogHero />
+//       <section className="w-full bg-black px-4 py-[60px] sm:px-6 md:py-[70px] lg:px-[28px] lg:py-[85px]">
+//         {POSTS.length > 0 ? <PostGrid posts={POSTS} /> : <EmptyState />}
+//       </section>
+//     </>
+//   );
+// }
+
+
+
+// /* =========================================================
+//    POST GRID
+//    Same card style as the home page Blogs & Articles section.
+// ========================================================= */
+
+// function PostGrid({ posts }) {
+//   return (
+//     <div className="grid grid-cols-1 gap-x-[16px] gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+//       {posts.map((post) => (
+//         <article key={post.slug} className="min-w-0">
+//           <div className="relative aspect-[1.43] w-full overflow-hidden">
+//             <Image
+//               src={post.image}
+//               alt={post.title}
+//               fill
+//               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+//               className="object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
+//             />
+//           </div>
+//           {post.date && (
+//             <time
+//               dateTime={post.date}
+//               className="mt-[15px] block font-sf-pro text-[12px] uppercase tracking-[0.15em] text-white/45"
+//             >
+//               {new Date(post.date).toLocaleDateString("en-IN", {
+//                 day: "numeric",
+//                 month: "long",
+//                 year: "numeric",
+//               })}
+//             </time>
+//           )}
+//           <h3 className="mt-[10px] font-sf-pro text-[14px] font-bold leading-[17px] text-white">
+//             {post.title}
+//           </h3>
+//           <p className="mt-[14px] max-w-[430px] font-sf-pro text-[13px] leading-[16px] text-white/65">
+//             {post.excerpt}
+//           </p>
+//         </article>
+//       ))}
+//     </div>
+//   );
+// }
+
+
+"use client";
+
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// No articles are published yet. Add entries here and the grid below
-// renders automatically in place of the empty state:
-// { slug, title, excerpt, image, date: "2026-10-01" }
-export const POSTS = [];
+export default function BlogIndex({
+  posts = [],
+  categories = [],
+}) {
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
-export default function BlogIndex() {
+  const filteredPosts = useMemo(() => {
+    if (selectedCategory === "all") {
+      return posts;
+    }
+
+    return posts.filter(
+      (post) => post.categoryId === selectedCategory
+    );
+  }, [posts, selectedCategory]);
+
   return (
     <>
       <BlogHero />
+
       <section className="w-full bg-black px-4 py-[60px] sm:px-6 md:py-[70px] lg:px-[28px] lg:py-[85px]">
-        {POSTS.length > 0 ? <PostGrid posts={POSTS} /> : <EmptyState />}
+
+        {posts.length > 0 && (
+          <CategoryFilter
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+          />
+        )}
+
+        {filteredPosts.length > 0 ? (
+          <PostGrid posts={filteredPosts} />
+        ) : (
+          <EmptyState />
+        )}
+
       </section>
     </>
+  );
+}
+
+function CategoryFilter({
+  categories,
+  selectedCategory,
+  onCategoryChange,
+}) {
+  return (
+    <div className="mb-[45px] flex flex-wrap gap-[8px]">
+      <button
+        onClick={() => onCategoryChange("all")}
+        className={`h-[40px] px-[20px] font-sf-pro text-[14px] font-semibold uppercase transition-colors ${
+          selectedCategory === "all"
+            ? "bg-brand-yellow text-black"
+            : "border border-white/20 text-white hover:border-brand-yellow hover:text-brand-yellow"
+        }`}
+      >
+        All
+      </button>
+
+      {categories.map((category) => (
+        <button
+          key={category.id}
+          onClick={() => onCategoryChange(category.id)}
+          className={`h-[40px] px-[20px] font-sf-pro text-[14px] font-semibold uppercase transition-colors ${
+            selectedCategory === category.id
+              ? "bg-brand-yellow text-black"
+              : "border border-white/20 text-white hover:border-brand-yellow hover:text-brand-yellow"
+          }`}
+        >
+          {category.name}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function PostGrid({ posts }) {
+  return (
+    <div className="grid grid-cols-1 gap-x-[16px] gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+      {posts.map((post) => (
+        <article key={post.id} className="min-w-0">
+
+          <Link href={`/blog/${post.slug}`}>
+            <div className="relative aspect-[1.43] w-full overflow-hidden">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
+              />
+            </div>
+          </Link>
+
+          <div className="mt-[15px] flex items-center gap-3">
+            {post.category && (
+              <span className="font-sf-pro text-[11px] font-bold uppercase tracking-[0.15em] text-brand-yellow">
+                {post.category}
+              </span>
+            )}
+
+            {post.date && (
+              <time
+                dateTime={post.date}
+                className="font-sf-pro text-[12px] uppercase tracking-[0.15em] text-white/45"
+              >
+                {new Date(post.date).toLocaleDateString("en-IN", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}
+              </time>
+            )}
+          </div>
+
+          <Link href={`/blog/${post.slug}`}>
+            <h3 className="mt-[10px] font-sf-pro text-[14px] font-bold leading-[17px] text-white transition-colors hover:text-brand-yellow">
+              {post.title}
+            </h3>
+          </Link>
+
+          <p className="mt-[14px] max-w-[430px] font-sf-pro text-[13px] leading-[16px] text-white/65">
+            {post.excerpt}
+          </p>
+
+        </article>
+      ))}
+    </div>
   );
 }
 
@@ -120,49 +303,6 @@ function EmptyState() {
           Back to home
         </Link>
       </div>
-    </div>
-  );
-}
-
-/* =========================================================
-   POST GRID
-   Same card style as the home page Blogs & Articles section.
-========================================================= */
-
-function PostGrid({ posts }) {
-  return (
-    <div className="grid grid-cols-1 gap-x-[16px] gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-      {posts.map((post) => (
-        <article key={post.slug} className="min-w-0">
-          <div className="relative aspect-[1.43] w-full overflow-hidden">
-            <Image
-              src={post.image}
-              alt={post.title}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
-            />
-          </div>
-          {post.date && (
-            <time
-              dateTime={post.date}
-              className="mt-[15px] block font-sf-pro text-[12px] uppercase tracking-[0.15em] text-white/45"
-            >
-              {new Date(post.date).toLocaleDateString("en-IN", {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              })}
-            </time>
-          )}
-          <h3 className="mt-[10px] font-sf-pro text-[14px] font-bold leading-[17px] text-white">
-            {post.title}
-          </h3>
-          <p className="mt-[14px] max-w-[430px] font-sf-pro text-[13px] leading-[16px] text-white/65">
-            {post.excerpt}
-          </p>
-        </article>
-      ))}
     </div>
   );
 }
