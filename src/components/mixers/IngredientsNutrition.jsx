@@ -4,7 +4,11 @@ import Image from "next/image";
 
 export default function IngredientsNutrition({ data }) {
   const productInfo = data?.product_information;
-
+  const accent = data?.product.accent ;
+  const accent2 = data?.product.accent2 ; 
+  const bottleImage = data?.product.bottleImage ;
+  const wrapper = data?.product.wrapper ; 
+  console.log(accent);
   if (!productInfo) {
     return null;
   }
@@ -48,13 +52,14 @@ export default function IngredientsNutrition({ data }) {
           <div className="relative z-10">
 
             <h2
+               style={{ color: accent }} // 🛠️ Safely handles runtime colors
+
               className="
                 font-movault
                 text-[92px]
                 uppercase
                 leading-[0.84]
                 tracking-[-1px]
-                text-[#FF7504]
 
                 xl:text-[98px]
 
@@ -108,18 +113,18 @@ export default function IngredientsNutrition({ data }) {
                 >
                   {/* Label */}
 
-                  <div
-                    className="
-                      flex
-                      h-[61px]
-                      items-center
-                      bg-[#FF3F00]
-                      px-[18px]
+              <div
+                style={{ backgroundColor: accent }} // 🛠️ Safely handles runtime colors
+                className={`
+                  flex
+                  h-[61px]
+                  items-center
+                  px-[18px]
+                  max-[500px]:h-[53px]
+                  max-[500px]:px-[14px]
+                `}
+              >
 
-                      max-[500px]:h-[53px]
-                      max-[500px]:px-[14px]
-                    "
-                  >
                     <span
                       className="
                         font-movault
@@ -140,11 +145,12 @@ export default function IngredientsNutrition({ data }) {
                   {/* Value */}
 
                   <div
+                  style={{background : accent2}}
                     className="
                       flex
                       h-[61px]
                       items-center
-                      bg-[#A92F05]
+                      
                       px-[34px]
 
                       max-[500px]:h-[53px]
@@ -176,7 +182,7 @@ export default function IngredientsNutrition({ data }) {
               RIGHT — BOTTLE
           ================================================== */}
 
-          <BottleAnimation productName={data?.product?.name} />
+          <BottleAnimation productName={data?.product?.name} bottleImage={bottleImage} wrapper={wrapper}/>
         </div>
 
         {/* =====================================================
@@ -216,13 +222,14 @@ export default function IngredientsNutrition({ data }) {
             {/* Ingredients heading */}
 
             <h3
+              style={{ color: accent }} // 🛠️ Safely handles runtime colors
+
               className="
                 mt-[30px]
                 font-movault
                 text-[58px]
                 uppercase
                 leading-[0.85]
-                text-[#FF7504]
 
                 max-[800px]:text-[48px]
 
@@ -275,7 +282,7 @@ export default function IngredientsNutrition({ data }) {
    BOTTLE ANIMATION
 =========================================================== */
 
-function BottleAnimation({ productName }) {
+function BottleAnimation({ productName , bottleImage , wrapper}) {
   return (
     <div
       className="
@@ -314,7 +321,7 @@ function BottleAnimation({ productName }) {
         ================================================== */}
 
         <Image
-          src="/mixers/IngredientsNutrition/NNN-1.png"
+          src={bottleImage}
           alt={productName || "BarCraft Mixer"}
           fill
           priority
@@ -335,7 +342,7 @@ function BottleAnimation({ productName }) {
             z-10
 
             h-[50%]
-            w-[43%]
+            w-[44%]
 
             overflow-hidden
 
@@ -358,7 +365,7 @@ function BottleAnimation({ productName }) {
                 "
                 style={{
                   backgroundImage:
-                    "url('/mixers/IngredientsNutrition/wrapper.png')",
+                    `url(${wrapper})`,
                 }}
               />
             ))}

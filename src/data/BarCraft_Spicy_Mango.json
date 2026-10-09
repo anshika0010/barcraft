@@ -35,7 +35,13 @@
       "Pairs with": "Tacos, grilled chicken, chaat and nachos"
     },
             "bg":"/background-images/spicy mango big  1.jpg",
+            "bg60" : "/background-images/barcraft60ml/big spicy mango .jpg",
 
+        "accent":"#edf048",
+        "accent2":"#2B2D42",
+        "wrapper" : "/mixers/IngredientsNutrition/wrappers/spicy-mango.png",
+    "step2":"/mixers/steps/2-spicy-mango.png",
+    "bottleImage":"/mixers/IngredientsNutrition/spicy-mango.png",
     "sizes": [
       {
         "size": "600ml",
@@ -73,8 +79,7 @@
       "Rim a rocks glass with chilli salt and fill it with fresh ice.",
       "Pour in 45ml of tequila, neutral vodka or mango flavoured vodka.",
       "Add 15ml of BarCraft Spicy Mango Mixer.",
-      "Add 15ml of chilled water or soda.",
-      "Stir gently and serve."
+      "Add 15ml of chilled water or soda."
     ],
     "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
   },

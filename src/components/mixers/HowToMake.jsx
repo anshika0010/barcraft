@@ -7,7 +7,8 @@ const STEP_IMAGE_COUNT = 4;
 
 export default function HowToMake({ data }) {
   const howToUse = data?.how_to_use;
-
+  const step2 = data?.product.step2 ;
+  const accent = data?.product.accent ; 
   if (!howToUse) {
     return null;
   }
@@ -27,13 +28,15 @@ export default function HowToMake({ data }) {
       ====================================================== */}
       <div className="max-w-[650px]">
         <h2
+            style={{ color: accent }} // 🛠️ Safely handles runtime colors
+
           className="
             font-movault
             text-[68px]
             uppercase
             leading-[0.84]
             tracking-[-1px]
-            text-[#FF3F00]
+            
 
             md:text-[82px]
 
@@ -131,33 +134,44 @@ export default function HowToMake({ data }) {
                 md:h-[205px]
 
                 lg:h-[220px]
+              "
+            >{ index==1?
+              
 
-                ${
-                  index < STEP_IMAGE_COUNT
-                    ? ""
-                    : "max-lg:hidden"
-                }
-              `}
-            >
-              {index < STEP_IMAGE_COUNT && (
-                <Image
-                  src={`/mixers/steps/${index + 1}.png`}
-                  alt={text}
-                  width={300}
-                  height={230}
-                  className="
-                    h-full
-                    w-full
-                    object-contain
-                  "
-                />
-              )}
+              <Image
+                src={`${step2}`}
+                alt={text}
+                width={300}
+                height={230}
+                className="
+                  h-full
+                  w-full
+                  object-contain
+                "
+              />
+
+              
+              :
+              <Image
+                src={`/mixers/steps/${index + 1}.png`}
+                alt={text}
+                width={300}
+                height={230}
+                className="
+                  h-full
+                  w-full
+                  object-contain
+                "
+              />
+              }
             </div>
 
             {/* =================================================
                 STEP LABEL
             ================================================== */}
             <div
+              style={{ backgroundColor: accent }} // 🛠️ Safely handles runtime colors
+
               className="
                 mt-[5px]
                 flex
@@ -165,7 +179,6 @@ export default function HowToMake({ data }) {
                 min-w-[120px]
                 items-center
                 justify-center
-                bg-[#FF3F00]
                 px-[18px]
               "
             >

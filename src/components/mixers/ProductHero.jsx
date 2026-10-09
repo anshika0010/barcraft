@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 
 export default function ProductHero({ data }) {
   const product = data?.product;
-
+  const accent =  data?.product.accent ;
+  const accent2 = data?.product.accent2 ; 
   // Convert JSON facts object into the structure your UI already uses
   const details = Object.entries(product?.facts || {}).map(
     ([title, content]) => ({
@@ -61,12 +62,17 @@ export default function ProductHero({ data }) {
             BACKGROUND
         ================================================= */}
         <Image
-          src={product?.bg || "/not-found.png"}
+          key={selectedSize}
+          src={
+            String(selectedSize).trim().toLowerCase() === "60ml"
+              ? product?.bg60 || product?.bg || "/not-found.png"
+              : product?.bg || "/not-found.png"
+          }
           alt={product?.image?.alt || product?.name || "BarCraft Mixer"}
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-center transition-opacity duration-300"
         />
 
         {/* subtle overall darkening */}
@@ -130,21 +136,23 @@ export default function ProductHero({ data }) {
             ================================================= */}
             {product.badge && (
               <div
+              style={{background : accent}}
                 className="
                   mb-[18px]
                   inline-flex
                   items-center
-                  bg-[#701D02]
+                  
                   px-[14px]
                   py-[7px]
                 "
               >
-                <span
+                <span 
+                style={{color : accent2}}
                   className="
                     font-movault
                     text-[18px]
                     leading-none
-                    text-[#FFAB98]
+                  
                     uppercase
                     tracking-wide
                     md:text-[28px]
@@ -363,7 +371,7 @@ export default function ProductHero({ data }) {
 
                           ${
                             selected
-                              ? "bg-[#701D02] text-white"
+                              ? "bg-black text-white"
                               : "bg-transparent text-white"
                           }
                         `}

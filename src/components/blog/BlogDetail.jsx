@@ -186,7 +186,7 @@ export default function BlogDetail({ post }) {
             "
           >
             <Image
-              src={imageUrl}
+              src={imageUrl=="NULL"?'/not-found.png':imageUrl}
               alt={post.title}
               fill
               priority

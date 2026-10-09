@@ -35,7 +35,13 @@
       "Pairs with": "Brunch dishes, egg dishes, light sandwiches and salads"
     },
             "bg":"/background-images/screwdriver big 1.jpg",
+                "bg60" : "/background-images/barcraft60ml/big screwdriver.jpg",
+        "wrapper" : "/mixers/IngredientsNutrition/wrappers/screwdriver.png",
 
+        "accent":"#f76227",
+             "accent2":"#E0A96D",
+    "step2":"/mixers/steps/2-screwdriver.png",
+    "bottleImage":"/mixers/IngredientsNutrition/screwdriver.png",
     "sizes": [
       {
         "size": "600ml",
@@ -73,9 +79,8 @@
       "Fill a highball glass with ice.",
       "Pour in 45ml of your preferred spirit.",
       "Add 15ml of BarCraft Screwdriver Mixer.",
-      "Finish with chilled soda.",
-      "Stir gently and savour."
-    ],
+      "Finish with chilled soda."
+        ],
     "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
   },
   "recipes": {
