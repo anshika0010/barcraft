@@ -75,6 +75,58 @@ export default function Footer() {
           </nav>
         )}
 
+        {/* NEWSLETTER */}
+        <div
+          className="
+            w-full
+            md:ml-auto md:mr-[23px] md:w-[400px]
+            lg:w-[500px]
+          "
+        >
+          <p
+            className="
+              mb-[17px] font-sf-pro text-[11px] font-bold uppercase
+              leading-none text-white/65
+            "
+          >
+            Your next cocktail awaits
+          </p>
+
+          <form
+            className="flex h-[44px] w-full"
+            onSubmit={(event) => event.preventDefault()}
+          >
+            <input
+              type="email"
+              required
+              placeholder="Email"
+              aria-label="Email address"
+              className="
+                min-w-0 flex-1
+                border border-white/65 bg-transparent
+                px-[11px]
+                font-sf-pro text-[16px] text-white
+                outline-none placeholder:text-white
+                focus:border-white
+                md:text-[11px]
+              "
+            />
+
+            <button
+              type="submit"
+              className="
+                ml-[5px] w-[90px] shrink-0
+                bg-brand-yellow
+                font-sf-pro text-[11px] font-medium text-black
+                transition-transform duration-200
+                hover:scale-[1.02]
+                sm:w-[100px]
+              "
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
       </div>
 
       {/* =====================================================

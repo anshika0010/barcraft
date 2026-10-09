@@ -532,14 +532,13 @@ function FormField({
   min,
 }) {
   return (
-    <div className="flex flex-col justify-end">
+    <div>
 
-      <FieldLabel htmlFor={name}>
+      <FieldLabel>
         {label}
       </FieldLabel>
 
       <input
-        id={name}
         type={type}
         name={name}
         value={value}
@@ -572,10 +571,9 @@ function FormField({
    FIELD LABEL
 =========================================================== */
 
-function FieldLabel({ children, htmlFor }) {
+function FieldLabel({ children }) {
   return (
     <label
-      htmlFor={htmlFor}
       className="
         block
         font-sf-pro
@@ -585,7 +583,11 @@ function FieldLabel({ children, htmlFor }) {
         text-white
         tracking-wide
 
-        max-[1023px]:text-[23px]
+        md:text-[27px]
+
+        max-[700px]:text-[25px]
+
+        max-[500px]:text-[23px]
       "
     >
       {children}
