@@ -147,15 +147,16 @@ export default function Footer() {
           lg:px-[30px]
         "
       >
-        <p
+        <h1
           className="
-            font-sf-pro text-[11px] font-normal leading-[1.4]
+            font-sf-pro
+             font-normal leading-[1.4]
             text-white/40
-            sm:text-[12px]
+            
           "
         >
           © 2026| All rights reserved
-        </p>
+        </h1>
 
         {/* SOCIAL ICONS */}
         <div className="flex items-center gap-6 sm:gap-8 md:mr-[23px]">
@@ -180,7 +181,7 @@ export default function Footer() {
       <div className="relative z-20 px-4 sm:px-6 lg:px-[30px] md:pt-[5px]">
         <p
           className="
-            max-w-[220px] font-sf-pro text-[10px] font-normal
+            max-w-[220px] font-sf-pro text-[20px] font-normal
             leading-[13px] text-white/40
           "
         >

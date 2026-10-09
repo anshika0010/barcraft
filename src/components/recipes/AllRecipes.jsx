@@ -403,9 +403,8 @@ useEffect(() => {
             text-[68px]
             uppercase
             leading-[0.82]
-            tracking-[-1px]
             text-[#FFD400]
-
+            tracking-wide
             lg:text-[72px]
 
             max-[640px]:text-[55px]

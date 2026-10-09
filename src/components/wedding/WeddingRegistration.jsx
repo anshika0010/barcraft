@@ -122,7 +122,7 @@ export default function WeddingRegistration() {
               text-[106px]
               uppercase
               leading-[0.8]
-              tracking-[-1.5px]
+              tracking-wide
               text-[#FFD400]
 
               xl:text-[115px]

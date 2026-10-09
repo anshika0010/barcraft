@@ -67,10 +67,11 @@ export default function CocktailOrMocktail() {
           <h2
             className="
               font-movault
+              tracking-wide
               text-[92px]
               uppercase
               leading-[0.82]
-              tracking-[-1px]
+              
               text-white
 
               xl:text-[100px]
@@ -220,7 +221,7 @@ function RecipeOption({ option }) {
           text-[64px]
           uppercase
           leading-[0.82]
-          tracking-[-1px]
+          tracking-wide
 
           xl:text-[72px]
 
@@ -350,6 +351,7 @@ function RecipeOption({ option }) {
         <span
           className="
             font-movault
+            tracking-wide
             text-[31px]
             uppercase
             leading-none

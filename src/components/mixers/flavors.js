@@ -16,7 +16,7 @@ export const COLLECTIONS = [
 
       {
         name:"Appletini",
-        description:"NULL",
+        description:"Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour. ",
         accent:"#21e268",
         image:"/NEW BARCRAFT IMAGES/appletini600ml.jpeg",
         image60:"/60ml images/appletini 60ml.jpg",
@@ -168,7 +168,7 @@ export const COLLECTIONS = [
 
       {
         name:"Screw Driver",
-        description:"NULL",
+        description:"Juicy sweet orange with fresh citrus acidity and subtle peel notes. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
         accent:"#f76227",
         image:"/NEW BARCRAFT IMAGES/screwdriver600ml.jpeg",
         image60:"/60ml images/screwdriver 60ml.jpg",
@@ -177,7 +177,7 @@ export const COLLECTIONS = [
       },
       {
         name:"Spicy Mango",
-        description:"NULL",
+        description:"Simply pour 15ml BarCraft mixer, add 45ml of tequila, vodka (neutral) or mango flavoured vodka, add 15ml chilled water or soda with ice, and serve over fresh ice in a chilli-salt-rimmed glass.",
         accent:"#edf048",
         image:"/NEW BARCRAFT IMAGES/spicy mango600ml.jpeg",
         image60:"/60ml images/spicy mango 60ml.jpg",

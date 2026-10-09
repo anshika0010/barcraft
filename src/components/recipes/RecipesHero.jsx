@@ -91,6 +91,7 @@ export default function RecipesHero() {
             className="
               max-w-[850px]
               font-movault
+              tracking-wide
               text-[106px]
               uppercase
               leading-[0.82]

@@ -106,7 +106,7 @@ export default function WeddingHowItWorks() {
               text-[82px]
               uppercase
               leading-[0.82]
-              tracking-[-1px]
+              tracking-wide
               text-[#FFD400]
 
               xl:text-[88px]
@@ -311,7 +311,7 @@ export default function WeddingHowItWorks() {
                           text-[31px]
                           uppercase
                           leading-[0.86]
-                          tracking-[-0.3px]
+                          tracking-wide
                           text-[#FFD400]
 
                           lg:text-[29px]

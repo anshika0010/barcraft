@@ -16,7 +16,7 @@ const BOTTLE_ASPECT = "1024 / 1536";
 
 export default function TwoServeBottle() {
   return (
-    <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-black">
+    <section className="relative h-screen min-h-[400px] w-full overflow-hidden bg-black">
       <div className="relative h-full w-full overflow-hidden">
         {/* =====================================================
             BACKGROUND
@@ -115,7 +115,7 @@ export default function TwoServeBottle() {
             absolute
             left-0
             right-0
-            top-[100px]
+            top-[200px]
             z-50
             px-4
             py-[16px]
