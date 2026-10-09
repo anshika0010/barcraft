@@ -76,7 +76,7 @@ export default function PouredAndPraised() {
       {/* =====================================================
           SECTION
       ====================================================== */}
-      <div className="relative flex min-h-screen w-full flex-col bg-black">
+    <div className="relative flex min-h-[50vh] md:min-h-[100dvh] w-full flex-col bg-black">
         {/* ===================================================
             SECTION TITLE
         ==================================================== */}
