@@ -154,7 +154,7 @@ function PostGrid({ posts }) {
           <Link href={`/blog/${post.slug}`}>
             <div className="relative aspect-[1.43] w-full overflow-hidden">
               <Image
-                src={post.image}
+                src={post.image==""?'/not-found.png':post.image}
                 alt={post.title}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

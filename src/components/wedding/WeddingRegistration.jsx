@@ -648,7 +648,7 @@ function SelectionBox({
       >
         <span
           className="
-            font-movault
+            font-sf-pro
             text-[28px]
             uppercase
             leading-none

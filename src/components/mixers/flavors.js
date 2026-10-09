@@ -19,7 +19,7 @@ export const COLLECTIONS = [
         description:"NULL",
         accent:"#21e268",
         image:"/NEW BARCRAFT IMAGES/appletini600ml.jpeg",
-        image60:"NULL",
+        image60:"/60ml images/appletini 60ml.jpg",
         bg:"/background-images/appletini-big-1.jpg",
 
       },
@@ -169,9 +169,9 @@ export const COLLECTIONS = [
       {
         name:"Screw Driver",
         description:"NULL",
-        accent:"#d3f83d",
+        accent:"#f76227",
         image:"/NEW BARCRAFT IMAGES/screwdriver600ml.jpeg",
-        image60:"NULL",
+        image60:"/60ml images/screwdriver 60ml.jpg",
         bg:"/background-images/screwdriver big 1.jpg",
 
       },
@@ -180,7 +180,7 @@ export const COLLECTIONS = [
         description:"NULL",
         accent:"#edf048",
         image:"/NEW BARCRAFT IMAGES/spicy mango600ml.jpeg",
-        image60:"NULL",
+        image60:"/60ml images/spicy mango 60ml.jpg",
         bg:"/background-images/spicy mango big  1.jpg",
 
       },

@@ -34,8 +34,15 @@
       "Spirits": "Vodka, White rum, Gin",
       "Pairs with": "Pizza, finger food, light snacks and fruit platters"
     },
-            "bg":"/background-images/sex on the beach big  1.jpg",
+              "wrapper" : "/mixers/IngredientsNutrition/wrappers/sex-on-the-beach.png",
 
+            "bg":"/background-images/sex on the beach big  1.jpg",
+            "bg60" :"/background-images/barcraft60ml/big sex on the beach .jpg",
+        "accent": "#f7934c",
+         "accent2":"#3D0C11",
+
+    "step2":"/mixers/steps/2-sex-on-the-beach.png",
+    "bottleImage":"/mixers/IngredientsNutrition/sex-on-the-beach.png",
     "sizes": [
       {
         "size": "600ml",
@@ -73,9 +80,8 @@
       "Fill a highball glass with ice.",
       "Pour in 45ml of your preferred spirit.",
       "Add 15ml of BarCraft Sex on the Beach Mixer.",
-      "Finish with chilled soda.",
-      "Stir gently and savour."
-    ],
+      "Finish with chilled soda."
+        ],
     "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
   },
   "recipes": {

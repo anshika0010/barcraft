@@ -204,7 +204,7 @@ export default function WeddingHowItWorks() {
                   bottom-[8px]
                   w-[2px]
                   bg-[#FFD400]
-
+                  md:h-[400px]
                   max-[700px]:left-[108px]
 
                   max-[500px]:left-[92px]

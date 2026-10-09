@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function MixerRecipes({ data }) {
   const recipes = data?.recipes?.items || [];
-
+  const accent = data?.product.accent ;
   if (!recipes.length) {
     return null;
   }
@@ -36,14 +36,14 @@ export default function MixerRecipes({ data }) {
       ====================================================== */}
 
       <div className="max-w-[900px]">
-        <h2
+        <h2 style={{color :accent}}
           className="
             font-movault
             text-[92px]
             uppercase
             leading-[0.82]
             tracking-[-1px]
-            text-[#FF7504]
+            
 
             xl:text-[98px]
 
@@ -99,6 +99,7 @@ export default function MixerRecipes({ data }) {
             key={recipe.name || index}
             recipe={recipe}
             index={index}
+            data={data.product}
           />
         ))}
       </div>
@@ -110,9 +111,10 @@ export default function MixerRecipes({ data }) {
    RECIPE CARD
 =========================================================== */
 
-function RecipeCard({ recipe, index }) {
+function RecipeCard({ recipe, index , data}) {
   const [hovered, setHovered] = useState(false);
-
+const accent = data.accent;
+const accent2 =  data.accent2 ;
   /*
     Your JSON currently stores:
 
@@ -247,7 +249,7 @@ function RecipeCard({ recipe, index }) {
               L 0 180
               Z
             "
-            fill="#FF7504"
+            fill={accent}
           />
         </svg>
 
@@ -279,13 +281,14 @@ function RecipeCard({ recipe, index }) {
       ====================================================== */}
 
       <div
+      style={{background : accent2}}
         className={`
           absolute
           inset-x-0
           bottom-0
           z-30
           overflow-hidden
-          bg-[#963D00]
+          
 
           transition-all
           duration-[1100ms]
@@ -324,7 +327,7 @@ function RecipeCard({ recipe, index }) {
               C 125 103, 55 75, 0 45
               Z
             "
-            fill="#FF7504"
+            fill={accent}
           />
         </svg>
 
@@ -471,54 +474,7 @@ function RecipeCard({ recipe, index }) {
               mt-auto
             "
           >
-            <Link
-              href={recipe.recipe_url || recipe.url || "#"}
-              onClick={(event) => event.stopPropagation()}
-              className="
-                flex
-                h-[59px]
-                w-full
-                items-center
-                justify-between
-                bg-[#FF7504]
-                px-[15px]
 
-                transition-transform
-                duration-300
-
-                hover:scale-[0.99]
-              "
-            >
-              <span
-                className="
-                  font-movault
-                  text-[31px]
-                  uppercase
-                  leading-none
-                  text-white
-
-                  max-[1100px]:text-[26px]
-                "
-              >
-                SEE FULL RECIPE
-              </span>
-
-              <span
-                className="
-                  flex
-                  h-[47px]
-                  w-[47px]
-                  items-center
-                  justify-center
-                  bg-black
-                  font-sf-pro
-                  text-[27px]
-                  text-white
-                "
-              >
-                →
-              </span>
-            </Link>
           </div>
         </div>
       </div>

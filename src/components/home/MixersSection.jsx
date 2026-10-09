@@ -2,37 +2,38 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-
+import Link from 'next/link' ;
 const flavor = [
   {
     id: 1,
     name: "Mojito",
-    description: "Crisp, cooling garden mint paired with a sharp citrus bite.",
-    image: "/NEW BARCRAFT IMAGES/MOJITO H 1.jpg",
+    description: "Zesty lime and fresh mint with balanced sweetness. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
+    image: "/NEW BARCRAFT IMAGES/MOJITO H600ml.jpeg",
     image60: "/60ml images/MOJITOO SMALL.jpg",
     accent: "#c8102e",
-
-    hoverImage: "/NEW BARCRAFT IMAGES/MOJITO H 1.jpg",
+    href:'/mixers/Mojito',
+    hoverImage: "/home/barcraft-mixers/mojito-glass.png",
   },
 
   {
     id: 2,
-    name: "Cosmopolitan",
-    description: "Cranberry & Citrus Cocktail Mixer",
-    accent: "#c8102e",
-    image: "/NEW BARCRAFT IMAGES/COSMOPOLITAN 1.jpg",
-    image60: "/60ml images/cosmopolitan small.jpg",
-    hoverImage: "/home/barcraft-mixers/cosmopolitan-glass.png",
+    name: "Screw Driver",
+    description: "Juicy sweet orange with fresh citrus acidity and subtle peel notes. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
+    accent: "#d3f83d",
+    image: "/NEW BARCRAFT IMAGES/screwdriver600ml.jpeg",
+    image60: "/60ml images/screwdriver 60ml.jpg",
+    hoverImage: "/home/barcraft-mixers/screwdriver.png",
+    href:"/mixers/Screw Driver"
   },
   {
     id: 3,
-    name: "Moscow Mule",
-    description: "Real Ginger & Lime Cocktail Mixer",
-    hoverImage: "/home/barcraft-mixers/moscow-mule-glass.png",
-            accent: "#d9a520",
-        image: "/NEW BARCRAFT IMAGES/MOSCOW MULE 1.jpg",
-        image60: "/60ml images/MOSCOW MULE SMALL.jpg",
-
+    name: "Spicy Mango",
+    description: "Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
+    hoverImage: "/home/barcraft-mixers/spicy-mango.png",
+            accent: "#edf048",
+        image: "/NEW BARCRAFT IMAGES/spicy mango600ml.jpeg",
+        image60: "/60ml images/spicy mango 60ml.jpg",
+    href:"/mixers/Spicy Mango"
   },
 ];
 
@@ -89,6 +90,7 @@ function MixerCard({ flavor, index }) {
 
   return (
     <article className="min-w-0">
+      <Link href={`${flavor.href}`}>
       <div className="group relative aspect-[0.76] w-full overflow-hidden">
         <AnimatePresence mode="sync">
           {selectedImage ? (
@@ -161,7 +163,7 @@ function MixerCard({ flavor, index }) {
           )}
         </AnimatePresence>
       </div>
-
+    </Link>
       <div className="mt-4 lg:mt-7">
         <h3 className="font-sf-pro text-[16px] font-semibold leading-[17px] text-white">
           BarCraft {flavor.name} Mixer

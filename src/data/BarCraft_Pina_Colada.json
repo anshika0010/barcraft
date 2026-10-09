@@ -36,7 +36,14 @@
     },
 
     "bg":"/background-images/pina colada big  1.jpg",
+        "bg60" : "/background-images/barcraft60ml/big-pina-colada.jpg",
+        "wrapper" : "/mixers/IngredientsNutrition/wrappers/pina-collada.png",
 
+    "accent": "#f5deb3",
+     "accent2":"#4A3728",
+
+    "step2":"/mixers/steps/2-pina-collada.png",
+    "bottleImage":"/mixers/IngredientsNutrition/pina-collada.png",
     "sizes": [
       {
         "size": "600ml",
@@ -74,8 +81,7 @@
       "Fill a hurricane glass with ice.",
       "Pour in 45ml of your preferred spirit.",
       "Add 15ml of BarCraft Piña Colada Mixer.",
-      "Finish with chilled soda.",
-      "Stir gently and savour."
+      "Finish with chilled soda."
     ],
     "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
   },
