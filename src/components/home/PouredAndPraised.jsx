@@ -128,7 +128,6 @@ export default function PouredAndPraised() {
             src="/home/poured-praised/poured-praised.jpg"
             alt="BarCraft cocktail being prepared"
             fill
-            priority
             sizes="(max-width: 768px) calc(100vw - 32px), 1200px"
             className="object-cover object-center"
           />

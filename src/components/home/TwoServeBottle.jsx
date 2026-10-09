@@ -26,7 +26,6 @@ export default function TwoServeBottle() {
             src="/home/2-serve-bottle/2-serve-bottle.jpg"
             alt="BarCraft bar scene"
             fill
-            priority
             sizes="100vw"
             className="object-cover object-center"
           />

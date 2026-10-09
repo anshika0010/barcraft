@@ -30,7 +30,7 @@ const FAQS = [
   },
 ];
 
-export default function FAQs() {
+export default function FAQs({ items = FAQS }) {
   const [openIndex, setOpenIndex] = useState(1);
 
   const toggleFAQ = (index) => {
@@ -72,7 +72,7 @@ export default function FAQs() {
         "
       >
         <div className="flex flex-col gap-[25px]">
-          {FAQS.map((faq, index) => {
+          {items.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (

@@ -59,7 +59,6 @@ export default function HowToMix() {
           src="/home/how-to-mix/how-to-mix.jpg"
           alt="How to mix a BarCraft cocktail"
           fill
-          priority
           sizes="100vw"
           className="object-cover object-center"
         />

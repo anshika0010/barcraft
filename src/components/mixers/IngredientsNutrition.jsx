@@ -324,7 +324,6 @@ function BottleAnimation({ productName , bottleImage , wrapper}) {
           src={bottleImage}
           alt={productName || "BarCraft Mixer"}
           fill
-          priority
           sizes="(max-width: 800px) 430px, 500px"
           className="pointer-events-none object-contain"
         />

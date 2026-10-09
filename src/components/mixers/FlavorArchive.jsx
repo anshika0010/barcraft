@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { COLLECTIONS } from "./flavors";
 import Link from "next/link";
+import { slugify } from "@/lib/slugify";
 const POUR_STEPS = [
   { title: "Choose your base", image: "/home/how-to-mix/steps/2.png" },
   { title: "Pour the mixer", image: "/home/how-to-mix/steps/3.png" },
@@ -309,7 +310,7 @@ function FlavorCard({ flavor, index }) {
       <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center bg-black/55 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         {isAvailable ? (
           <Link
-            href={`/mixers/${flavor.name ?? ""}`}
+            href={`/mixers/${slugify(flavor.name ?? "")}`}
             className="pointer-events-auto border border-brand-yellow bg-brand-yellow px-6 py-2 font-sf-pro text-[15px] font-semibold uppercase tracking-wider text-black transition hover:bg-transparent hover:text-brand-yellow"
           >
             Read More

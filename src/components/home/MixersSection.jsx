@@ -11,7 +11,7 @@ const flavor = [
     image: "/NEW BARCRAFT IMAGES/MOJITO H600ml.jpeg",
     image60: "/60ml images/MOJITOO SMALL.jpg",
     accent: "#c8102e",
-    href:'/mixers/Mojito',
+    href:'/mixers/mojito',
     hoverImage: "/home/barcraft-mixers/mojito-glass.png",
   },
 
@@ -23,7 +23,7 @@ const flavor = [
     image: "/NEW BARCRAFT IMAGES/screwdriver600ml.jpeg",
     image60: "/60ml images/screwdriver 60ml.jpg",
     hoverImage: "/home/barcraft-mixers/screwdriver.png",
-    href:"/mixers/Screw Driver"
+    href:"/mixers/screw-driver"
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const flavor = [
             accent: "#edf048",
         image: "/NEW BARCRAFT IMAGES/spicy mango600ml.jpeg",
         image60: "/60ml images/spicy mango 60ml.jpg",
-    href:"/mixers/Spicy Mango"
+    href:"/mixers/spicy-mango"
   },
 ];
 

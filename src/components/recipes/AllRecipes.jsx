@@ -1195,7 +1195,7 @@ function MojitoRecipeCard({ recipe }) {
         </svg>
 
 
-        <h1
+        <h3
           className="
             absolute
             bottom-[18px]
@@ -1213,7 +1213,7 @@ function MojitoRecipeCard({ recipe }) {
           "
         >
           {recipe.name}
-        </h1>
+        </h3>
 
       </div>
 

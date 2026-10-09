@@ -231,7 +231,6 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
             alt="BarCraft cocktail"
             width={910}
             height={1028}
-            priority
             className="block h-auto w-full"
           />
         </div>

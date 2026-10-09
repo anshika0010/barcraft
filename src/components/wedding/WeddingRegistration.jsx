@@ -116,7 +116,7 @@ export default function WeddingRegistration() {
 
         <div className="max-w-[900px]">
 
-          <h1
+          <h2
             className="
               font-movault
               text-[106px]
@@ -139,7 +139,7 @@ export default function WeddingRegistration() {
             "
           >
             REGISTER YOUR WEDDING
-          </h1>
+          </h2>
 
           <p
             className="

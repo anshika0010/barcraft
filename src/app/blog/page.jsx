@@ -22,12 +22,14 @@
 import Navbar from "../../components/Navbar";
 import BlogIndex from "../../components/blog/BlogIndex";
 import Footer from "../../components/home/Footer";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Blogs & Articles | BarCraft",
+export const metadata = buildMetadata({
+  title: "Blogs & Articles",
   description:
     "Stories from behind the bar: cocktail recipes, techniques and the craft of the perfect pour.",
-};
+  path: "/blog",
+});
 
 const BLOGS_API =
   "https://admin.barcraftmixer.com/barcraft/api/blogs/";
@@ -123,15 +125,3 @@ export default async function BlogPage() {
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
