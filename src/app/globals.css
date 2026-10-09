@@ -249,18 +249,17 @@ body {
 .blog-content h4 {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-family: "Movault", sans-serif;
   text-transform: uppercase;
   line-height: 0.9;
   color: #ffd400;
 }
 
 .blog-content h2 {
-  font-size: 2.5rem;
+  font-size: 5.5rem;
 }
 
 .blog-content h3 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 .blog-content p {

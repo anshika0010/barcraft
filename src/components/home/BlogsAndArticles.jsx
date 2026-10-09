@@ -158,7 +158,13 @@ export default async function BlogsAndArticles() {
                 text-white/65
               "
             >
-              {blog.excerpt.slice(0,150)}..read more
+              {blog.excerpt?.slice(0, 150)}..{" "}
+              <Link
+                href={`/blog/${blog.slug}`}
+                className="font-bold text-red-500 transition-opacity duration-200 hover:opacity-70"
+              >
+                read more
+              </Link>
             </p>
           </article>
         ))}
