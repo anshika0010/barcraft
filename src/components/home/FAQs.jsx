@@ -1,48 +1,32 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { FAQS } from "@/data/faqs";
 
-const FAQS = [
-  {
-    question: "What are Barcraft Mocktail Mixers?",
-    answer:
-      "Barcraft Mocktail Mixers are crafted beverage mixers designed to help you create delicious, refreshing mocktails and cocktail-style drinks at home. They bring balanced flavours and a bar-inspired experience to every glass.",
-  },
-  {
-    question: "How do I use the mocktail mixer?",
-    answer:
-      "Simply pour your preferred mixer into a glass, add ice, and top it with soda, sparkling water, or your favourite spirit if desired. Garnish and enjoy a refreshing drink in minutes.",
-  },
-  {
-    question: "Can I use these mixers to make cocktails too?",
-    answer:
-      "Yes! Our mixers can be used for both zero-proof mocktails and cocktails. Add your preferred spirit, such as vodka, gin, rum, or tequila, to create your favourite cocktail.",
-  },
-  {
-    question: "Do I need any special equipment to prepare a drink?",
-    answer:
-      "Not at all. A glass, ice, and a spoon or stirrer are usually enough. You can also add garnishes such as lemon, mint, orange, or berries for an elevated presentation.",
-  },
-  {
-    question: "How many drinks can I make with one bottle?",
-    answer:
-      "The number of servings depends on the bottle size and how much mixer you use per drink. Please check the serving information on the product label for the exact quantity.",
-  },
-];
-
-export default function FAQs({ items = FAQS }) {
+export default function FAQs({
+  items = FAQS,
+  limit,
+  viewMoreHref,
+  as: Heading = "h2",
+  className = "",
+}) {
   const [openIndex, setOpenIndex] = useState(1);
+  const visibleItems = limit ? items.slice(0, limit) : items;
+  const showViewMore = Boolean(viewMoreHref) && items.length > visibleItems.length;
 
   const toggleFAQ = (index) => {
     setOpenIndex((current) => (current === index ? null : index));
   };
 
   return (
-    <section className="w-full bg-black px-4 py-[60px] sm:px-6 lg:px-[28px] lg:py-[70px]">
+    <section
+      className={`w-full bg-black px-4 py-[60px] sm:px-6 lg:px-[28px] lg:py-[70px] ${className}`}
+    >
       {/* =====================================================
           HEADING
       ====================================================== */}
-      <h2
+      <Heading
         className="
           text-center
           font-movault
@@ -57,7 +41,7 @@ export default function FAQs({ items = FAQS }) {
         "
       >
         Frequently Asked Questions.
-      </h2>
+      </Heading>
 
       {/* =====================================================
           FAQ LIST
@@ -72,7 +56,7 @@ export default function FAQs({ items = FAQS }) {
         "
       >
         <div className="flex flex-col gap-[25px]">
-          {items.map((faq, index) => {
+          {visibleItems.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (
@@ -86,6 +70,34 @@ export default function FAQs({ items = FAQS }) {
             );
           })}
         </div>
+
+        {/* VIEW MORE */}
+        {showViewMore && (
+          <div className="mt-10 flex justify-center lg:mt-[50px]">
+            <Link
+              href={viewMoreHref}
+              className="
+                flex
+                h-[40px]
+                min-w-[130px]
+                items-center
+                justify-center
+                bg-brand-yellow
+                px-[22px]
+                font-sf-pro
+                text-[14px]
+                font-bold
+                leading-none
+                text-black
+                transition-transform
+                duration-200
+                hover:scale-105
+              "
+            >
+              View more
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -226,6 +238,7 @@ function FAQItem({ faq, index, isOpen, onClick }) {
                 text-[15px]
                 font-normal
                 leading-[19px]
+                whitespace-pre-line
                 text-[#555]
 
                 max-[600px]:text-[13px]

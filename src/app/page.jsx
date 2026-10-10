@@ -28,7 +28,7 @@ export default function Home() {
       <PouredAndPraised />
       <TwoServeBottle />
       <BlogsAndArticles />
-      <FAQs />
+      <FAQs limit={5} viewMoreHref="/faqs" />
       <Footer />
     </main>
   );

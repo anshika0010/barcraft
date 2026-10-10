@@ -30,7 +30,7 @@ export default function WeddingPage() {
         <WeddingIncluded/>
         <WeddingAddOns/>    
         {/* Wedding registration/details sections */}
-      <FAQs/>
+      <FAQs limit={5} viewMoreHref="/faqs" />
       </main>
 
       <Footer />

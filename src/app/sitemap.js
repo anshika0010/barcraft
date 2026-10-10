@@ -36,6 +36,7 @@ export default async function sitemap() {
     { path: "/recipes", priority: 0.8, changeFrequency: "weekly" },
     { path: "/wedding", priority: 0.7, changeFrequency: "monthly" },
     { path: "/blog", priority: 0.7, changeFrequency: "daily" },
+    { path: "/faqs", priority: 0.6, changeFrequency: "monthly" },
   ].map(({ path, ...rest }) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
