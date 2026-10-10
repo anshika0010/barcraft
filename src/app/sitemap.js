@@ -37,6 +37,9 @@ export default async function sitemap() {
     { path: "/wedding", priority: 0.7, changeFrequency: "monthly" },
     { path: "/blog", priority: 0.7, changeFrequency: "daily" },
     { path: "/faqs", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
+    { path: "/cookie-policy", priority: 0.3, changeFrequency: "yearly" },
+    { path: "/terms-of-service", priority: 0.3, changeFrequency: "yearly" },
   ].map(({ path, ...rest }) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,

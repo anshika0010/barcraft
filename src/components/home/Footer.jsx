@@ -4,7 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const FOOTER_LINKS = [
-  // { label: "Terms of Service", href: "#" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Cookie Policy", href: "/cookie-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
   // { label: "FAQs", href: "#" },
   // { label: "Contact us", href: "#" },
 ];
