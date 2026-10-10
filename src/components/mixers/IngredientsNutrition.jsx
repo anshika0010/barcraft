@@ -59,7 +59,7 @@ export default function IngredientsNutrition({ data }) {
                 text-[92px]
                 uppercase
                 leading-[0.84]
-                tracking-[-1px]
+                tracking-wide
 
                 xl:text-[98px]
 
@@ -230,7 +230,7 @@ export default function IngredientsNutrition({ data }) {
                 text-[58px]
                 uppercase
                 leading-[0.85]
-
+tracking-wide
                 max-[800px]:text-[48px]
 
                 max-[500px]:text-[42px]

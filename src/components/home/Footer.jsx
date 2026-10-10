@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUp } from "lucide-react";
 
 const FOOTER_LINKS = [
   { label: "Privacy Policy", href: "/privacy-policy" },
@@ -77,6 +78,25 @@ export default function Footer() {
           </nav>
         )}
 
+        {/* BACK TO TOP */}
+        <button
+          type="button"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Back to top"
+          className="
+            group flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center
+            self-end rounded-full border border-white/35
+            text-white/55 transition-colors duration-200
+            hover:border-white hover:text-white
+            md:self-start
+          "
+        >
+          <ArrowUp
+            size={20}
+            strokeWidth={1.8}
+            className="transition-transform duration-200 group-hover:-translate-y-0.5"
+          />
+        </button>
       </div>
 
       {/* =====================================================

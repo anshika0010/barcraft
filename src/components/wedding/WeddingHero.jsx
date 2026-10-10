@@ -79,7 +79,7 @@ export default function WeddingHero() {
 
           px-[44px]
           pb-[35px]
-          pt-[150px]
+          pt-[350px]
 
           max-[1100px]:px-[32px]
 
@@ -99,6 +99,7 @@ export default function WeddingHero() {
             max-w-[585px]
             text-center
 
+
             max-[640px]:max-w-[520px]
           "
         >
@@ -109,6 +110,7 @@ export default function WeddingHero() {
             className="
               font-movault
               text-[76px]
+              
               uppercase
               leading-[0.82]
               tracking-[-1px]
