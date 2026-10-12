@@ -117,7 +117,7 @@ export default async function BlogsAndArticles() {
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="
-                    object-cover
+                    object-contain
                     transition-transform
                     duration-500
                     ease-out
