@@ -54,7 +54,7 @@ function ArchiveHero() {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-black">
       <Image
-        src="/home/how-to-mix/how-to-mix.jpg"
+        src="/mixers/mixers.webp"
         alt="BarCraft cocktails on the bar"
         fill
         priority

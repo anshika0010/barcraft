@@ -10,7 +10,7 @@ export default function WeddingHero() {
           BACKGROUND IMAGE
       ====================================================== */}
       <Image
-        src="/wedding/wedding-hero.png"
+        src="/wedding/wedding-hero.webp"
         alt="BarCraft wedding cocktails"
         fill
         priority

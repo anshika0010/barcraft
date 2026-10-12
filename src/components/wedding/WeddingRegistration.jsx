@@ -578,14 +578,13 @@ function FieldLabel({ children, htmlFor }) {
       htmlFor={htmlFor}
       className="
         block
-        font-sf-pro
-        text-[27px]
+        text-[18px]
         uppercase
         leading-none
         text-white
         tracking-wide
 
-        max-[1023px]:text-[23px]
+        max-[1023px]:text-[20px]
       "
     >
       {children}

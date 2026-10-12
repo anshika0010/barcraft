@@ -6,13 +6,13 @@ import Link from 'next/link' ;
 const flavor = [
   {
     id: 1,
-    name: "Mojito",
+    name: "Appletini",
     description: "Zesty lime and fresh mint with balanced sweetness. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
-    image: "/NEW BARCRAFT IMAGES/MOJITO H600ml.jpeg",
-    image60: "/60ml images/MOJITOO SMALL.jpg",
+    image: "/NEW BARCRAFT IMAGES/appletini600ml.jpeg",
+    image60: "/60ml images/appletini 60ml.jpg",
     accent: "#c8102e",
     href:'/mixers/mojito',
-    hoverImage: "/home/barcraft-mixers/mojito-glass.png",
+    hoverImage: "/home/barcraft-mixers/appletini.webp",
   },
 
   {
@@ -22,14 +22,14 @@ const flavor = [
     accent: "#d3f83d",
     image: "/NEW BARCRAFT IMAGES/screwdriver600ml.jpeg",
     image60: "/60ml images/screwdriver 60ml.jpg",
-    hoverImage: "/home/barcraft-mixers/screwdriver.png",
+    hoverImage: "/home/barcraft-mixers/screw-driver.webp",
     href:"/mixers/screw-driver"
   },
   {
     id: 3,
     name: "Spicy Mango",
     description: "Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
-    hoverImage: "/home/barcraft-mixers/spicy-mango.png",
+    hoverImage: "/home/barcraft-mixers/spicy-mango.webp",
             accent: "#edf048",
         image: "/NEW BARCRAFT IMAGES/spicy mango600ml.jpeg",
         image60: "/60ml images/spicy mango 60ml.jpg",

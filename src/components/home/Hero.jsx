@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-black lg:aspect-[16/9] lg:min-h-0">
       {/* Background */}
       <Image
-        src="/Hero/hero-bg.jpg"
+        src="/home/barcraft-img.webp"
         alt="BarCraft Mojito Cocktail Mixer"
         fill
         priority

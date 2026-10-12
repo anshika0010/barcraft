@@ -259,10 +259,10 @@ const accent2 =  data.accent2 ;
           className="
             absolute
             bottom-[18px]
-            left-[18px]
+            left-[50px]
             z-10
             font-movault
-            text-[40px]
+            text-[45px]
             uppercase
             leading-[0.9]
             text-black
@@ -359,10 +359,13 @@ const accent2 =  data.accent2 ;
               relative
               z-10
               font-movault
-              text-[34px]
+              text-[50px]
+               bottom-[18px]
+            left-[50px]
               uppercase
               leading-[0.85]
               text-black
+              tracking-wide
 
               max-[1100px]:text-[29px]
 

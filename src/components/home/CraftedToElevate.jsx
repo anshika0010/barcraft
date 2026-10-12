@@ -227,7 +227,7 @@ const paragraphOneEnter = clamp(mapRange(progress, 0.40, 0.65), 0, 1);
           }}
         >
           <Image
-            src="/home/crafted-to-elevate.png"
+            src="/home/barcraft-img-2.webp"
             alt="BarCraft cocktail"
             width={910}
             height={1028}

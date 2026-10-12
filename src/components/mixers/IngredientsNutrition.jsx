@@ -4,23 +4,20 @@ import Image from "next/image";
 
 export default function IngredientsNutrition({ data }) {
   const productInfo = data?.product_information;
-  const accent = data?.product.accent ;
-  const accent2 = data?.product.accent2 ; 
-  const bottleImage = data?.product.bottleImage ;
-  const wrapper = data?.product.wrapper ; 
+  const accent = data?.product.accent;
+  const accent2 = data?.product.accent2;
+  const bottleImage = data?.product.bottleImage;
+  const wrapper = data?.product.wrapper;
   console.log(accent);
   if (!productInfo) {
     return null;
   }
 
-  const nutrition = Object.entries(
-    productInfo.nutrition_per_100ml || {}
-  );
+  const nutrition = Object.entries(productInfo.nutrition_per_100ml || {});
 
   return (
     <>
       <section className="relative w-full overflow-hidden bg-black text-white">
-
         {/* =====================================================
             TOP PRODUCT / NUTRITION AREA
         ====================================================== */}
@@ -44,16 +41,13 @@ export default function IngredientsNutrition({ data }) {
             max-[800px]:pt-[80px]
           "
         >
-
           {/* =================================================
               LEFT CONTENT
           ================================================== */}
 
           <div className="relative z-10">
-
             <h2
-               style={{ color: accent }} // 🛠️ Safely handles runtime colors
-
+              style={{ color: accent }} // 🛠️ Safely handles runtime colors
               className="
                 font-movault
                 text-[92px]
@@ -113,9 +107,9 @@ export default function IngredientsNutrition({ data }) {
                 >
                   {/* Label */}
 
-              <div
-                style={{ backgroundColor: accent }} // 🛠️ Safely handles runtime colors
-                className={`
+                  <div
+                    style={{ backgroundColor: accent }} // 🛠️ Safely handles runtime colors
+                    className={`
                   flex
                   h-[61px]
                   items-center
@@ -123,18 +117,16 @@ export default function IngredientsNutrition({ data }) {
                   max-[500px]:h-[53px]
                   max-[500px]:px-[14px]
                 `}
-              >
-
+                  >
                     <span
                       className="
                         font-movault
-                        text-[29px]
+                        text-[40px]
                         uppercase
                         leading-none
                         text-white
-
-                        max-[1100px]:text-[26px]
-
+                        tracking-wide
+                        max-[1100px]:text-[30px]
                         max-[500px]:text-[23px]
                       "
                     >
@@ -145,14 +137,12 @@ export default function IngredientsNutrition({ data }) {
                   {/* Value */}
 
                   <div
-                  style={{background : accent2}}
+                    style={{ background: accent2 }}
                     className="
                       flex
                       h-[61px]
                       items-center
-                      
                       px-[34px]
-
                       max-[500px]:h-[53px]
                       max-[500px]:px-[20px]
                     "
@@ -160,13 +150,11 @@ export default function IngredientsNutrition({ data }) {
                     <span
                       className="
                         font-movault
-                        text-[29px]
+                        text-[40px]
                         uppercase
                         leading-none
                         text-white
-
                         max-[1100px]:text-[26px]
-
                         max-[500px]:text-[23px]
                       "
                     >
@@ -182,7 +170,11 @@ export default function IngredientsNutrition({ data }) {
               RIGHT — BOTTLE
           ================================================== */}
 
-          <BottleAnimation productName={data?.product?.name} bottleImage={bottleImage} wrapper={wrapper}/>
+          <BottleAnimation
+            productName={data?.product?.name}
+            bottleImage={bottleImage}
+            wrapper={wrapper}
+          />
         </div>
 
         {/* =====================================================
@@ -196,14 +188,11 @@ export default function IngredientsNutrition({ data }) {
             max-w-[1440px]
             px-[84px]
             pb-[110px]
-
             max-[1100px]:px-[50px]
-
             max-[800px]:px-6
           "
         >
           <div>
-
             {/* Serving information */}
 
             <p
@@ -223,14 +212,13 @@ export default function IngredientsNutrition({ data }) {
 
             <h3
               style={{ color: accent }} // 🛠️ Safely handles runtime colors
-
               className="
                 mt-[30px]
                 font-movault
                 text-[58px]
                 uppercase
                 leading-[0.85]
-tracking-wide
+                tracking-wide
                 max-[800px]:text-[48px]
 
                 max-[500px]:text-[42px]
@@ -270,7 +258,6 @@ tracking-wide
             >
               {productInfo.manufacturer_note}
             </p>
-
           </div>
         </div>
       </section>
@@ -282,7 +269,7 @@ tracking-wide
    BOTTLE ANIMATION
 =========================================================== */
 
-function BottleAnimation({ productName , bottleImage , wrapper}) {
+function BottleAnimation({ productName, bottleImage, wrapper }) {
   return (
     <div
       className="
@@ -363,8 +350,7 @@ function BottleAnimation({ productName , bottleImage , wrapper}) {
                   bg-[length:100%_100%]
                 "
                 style={{
-                  backgroundImage:
-                    `url(${wrapper})`,
+                  backgroundImage: `url(${wrapper})`,
                 }}
               />
             ))}

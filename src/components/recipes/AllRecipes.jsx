@@ -304,6 +304,8 @@ const [search, setSearch] = useState("");
 
 const [currentPage, setCurrentPage] = useState(1);
 
+const [touchStartX, setTouchStartX] = useState(null);
+
 const RECIPES_PER_PAGE = 12;
 
 
@@ -351,13 +353,41 @@ const totalPages = Math.max(
   Math.ceil(filteredRecipes.length / RECIPES_PER_PAGE)
 );
 
-const startIndex =
-  (currentPage - 1) * RECIPES_PER_PAGE;
+/* Split recipes into slides of 9 */
 
-const currentRecipes = filteredRecipes.slice(
-  startIndex,
-  startIndex + RECIPES_PER_PAGE
-);
+const slides = useMemo(() => {
+  const chunks = [];
+
+  for (let i = 0; i < filteredRecipes.length; i += RECIPES_PER_PAGE) {
+    chunks.push(filteredRecipes.slice(i, i + RECIPES_PER_PAGE));
+  }
+
+  return chunks;
+}, [filteredRecipes]);
+
+const goToPrevious = () =>
+  setCurrentPage((page) => Math.max(1, page - 1));
+
+const goToNext = () =>
+  setCurrentPage((page) => Math.min(totalPages, page + 1));
+
+
+/* Swipe support on touch devices */
+
+const handleTouchStart = (event) => {
+  setTouchStartX(event.touches[0].clientX);
+};
+
+const handleTouchEnd = (event) => {
+  if (touchStartX === null) return;
+
+  const deltaX = event.changedTouches[0].clientX - touchStartX;
+
+  if (deltaX > 50) goToPrevious();
+  if (deltaX < -50) goToNext();
+
+  setTouchStartX(null);
+};
 
 
 /* =====================================================
@@ -442,6 +472,7 @@ useEffect(() => {
             options={[
               "All products",
               "Screwdriver",
+              "MOJITO",
             ]}
           />
 
@@ -548,51 +579,72 @@ useEffect(() => {
             {filteredRecipes.length > 0 ? (
             <>
                 {/* =====================================================
-                    RECIPE GRID
+                    RECIPE SLIDER (9 cards per slide)
                 ====================================================== */}
 
                 <div
                 className="
                     mt-[112px]
-                    grid
-                    grid-cols-3
-                    gap-x-[15px]
-                    gap-y-[25px]
+                    overflow-hidden
 
                     max-[900px]:mt-[80px]
-                    max-[900px]:grid-cols-2
-                    max-[900px]:gap-[15px]
 
                     max-[640px]:mt-[55px]
-                    max-[640px]:grid-cols-1
                 "
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
                 >
-                {currentRecipes.map((recipe) => (
-                    <RecipeCard
-                    key={recipe.id}
-                    recipe={recipe}
-                    />
-                ))}
+                <div
+                    className="
+                    flex
+                    items-start
+                    transition-transform
+                    duration-[800ms]
+                    ease-[cubic-bezier(0.22,1,0.36,1)]
+                    "
+                    style={{
+                    transform: `translateX(-${(currentPage - 1) * 100}%)`,
+                    }}
+                >
+                    {slides.map((slide, slideIndex) => (
+                    <div
+                        key={slideIndex}
+                        aria-hidden={slideIndex !== currentPage - 1}
+                        className="
+                        grid
+                        w-full
+                        shrink-0
+                        grid-cols-3
+                        gap-x-[15px]
+                        gap-y-[25px]
+
+                        max-[900px]:grid-cols-2
+                        max-[900px]:gap-[15px]
+
+                        max-[640px]:grid-cols-1
+                        "
+                    >
+                        {slide.map((recipe) => (
+                        <RecipeCard
+                            key={recipe.id}
+                            recipe={recipe}
+                        />
+                        ))}
+                    </div>
+                    ))}
+                </div>
                 </div>
 
                 {/* =====================================================
-                    PAGINATION
+                    SLIDER CONTROLS
                 ====================================================== */}
 
                 {totalPages > 1 && (
                 <RecipePagination
                     currentPage={currentPage}
                     totalPages={totalPages}
-                    onPrevious={() =>
-                    setCurrentPage((page) =>
-                        Math.max(1, page - 1)
-                    )
-                    }
-                    onNext={() =>
-                    setCurrentPage((page) =>
-                        Math.min(totalPages, page + 1)
-                    )
-                    }
+                    onPrevious={goToPrevious}
+                    onNext={goToNext}
                 />
                 )}
             </>

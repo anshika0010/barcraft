@@ -9,7 +9,7 @@ export const COLLECTIONS = [
     title: "The Craft Botanical Collection",
     tagline:
       "Rooted in bold, nostalgic profiles and complex spices. Built for high-contrast drinking.",
-    banner: "/home/crafted-to-elevate.png",
+    banner: "/mixers/collection-1.webp",
     flavors: [
 
 
@@ -70,7 +70,7 @@ export const COLLECTIONS = [
     title: "The High-Fidelity Classics",
     tagline:
       "The global lounge standards, re-engineered for a flawless, 15-second pour.",
-    banner: "/home/poured-praised/poured-praised.jpg",
+    banner: "/mixers/collection-2.webp",
     flavors: [
       {
         name: "Moscow Mule",
@@ -160,7 +160,7 @@ export const COLLECTIONS = [
     title: "The Signature Syndicate",
     tagline:
       "Aggressive, multi-layered fusions designed for high-end nightlife and high-volume parties.",
-    banner: "/evening cocktail.jpeg",
+    banner: "/mixers/collection-3.webp",
     bannerPosition: "center 55%",
     flavors: [
 

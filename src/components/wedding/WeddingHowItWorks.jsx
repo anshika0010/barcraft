@@ -173,7 +173,7 @@ export default function WeddingHowItWorks() {
             "
           >
             <Image
-              src="/wedding/how-it-works.png"
+              src="/wedding/how-it-works.webp"
               alt="BarCraft wedding cocktails"
               fill
               sizes="
@@ -308,13 +308,13 @@ export default function WeddingHowItWorks() {
                       <h3
                         className="
                           font-movault
-                          text-[31px]
+                          text-[40px]
                           uppercase
                           leading-[0.86]
-                          tracking-[-0.3px]
+                          tracking-wide
                           text-[#FFD400]
 
-                          lg:text-[29px]
+                          lg:text-[40px]
 
                           max-[700px]:text-[27px]
 
