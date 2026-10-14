@@ -22,7 +22,7 @@ const BOTS = [
   "DuckAssistBot",
 ];
 
-// Crawlers only follow their own group, so every group gets these rules
+// Shared by every crawler: all user-agents are listed in a single group
 const DISALLOW = [
   "/api/",
   "/*?utm_",
@@ -36,11 +36,7 @@ const DISALLOW = [
 
 export default function robots() {
   return {
-    rules: [
-      { userAgent: "*", allow: "/", disallow: DISALLOW },
-      ...BOTS.map((userAgent) => ({ userAgent, allow: "/", disallow: DISALLOW })),
-    ],
+    rules: [{ userAgent: ["*", ...BOTS], allow: "/", disallow: DISALLOW }],
     sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
   };
 }
