@@ -174,7 +174,7 @@ export default function Footer() {
         "
       >
         <Image
-          src="/home/footer/footer.jpeg"
+          src="/home/footer/footer.png"
           alt=""
           fill
           sizes="100vw"
