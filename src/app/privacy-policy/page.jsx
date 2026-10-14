@@ -1,12 +1,14 @@
 import Link from "next/link";
 import LegalPage from "@/components/legal/LegalPage";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, LOGO_IMAGE } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Privacy Policy",
+  title: { absolute: "BarCraft Privacy Policy | Data Protection & Privacy" },
   description:
-    "How BarCraft collects, uses and protects your personal information when you visit barcraftmixer.com or register for our wedding offer.",
+    "Read the BarCraft privacy policy to understand how personal information is collected, used, stored and protected when you visit our website.",
   path: "/privacy-policy",
+  image: LOGO_IMAGE,
+  noIndex: true,
 });
 
 const LAST_UPDATED = "10 October 2026";

@@ -1,12 +1,14 @@
 import Link from "next/link";
 import LegalPage from "@/components/legal/LegalPage";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, LOGO_IMAGE } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Terms of Service",
+  title: { absolute: "BarCraft Terms of Service | Website Terms & Conditions" },
   description:
-    "The terms that apply when you use barcraftmixer.com, including use of our content, recipes, offers and third-party links.",
+    "Read the BarCraft terms of service for information about website use, applicable conditions, user responsibilities and the terms governing our services.",
   path: "/terms-of-service",
+  image: LOGO_IMAGE,
+  noIndex: true,
 });
 
 const LAST_UPDATED = "10 October 2026";
@@ -66,7 +68,7 @@ const SECTIONS = [
         offer. Submitting a registration on the Website is an expression of
         interest, not a confirmed booking. Each offer has its own terms and
         conditions, which are shown on the relevant page (for example, the{" "}
-        <Link href="/wedding" className={linkClass}>
+        <Link href="/booking" className={linkClass}>
           wedding page
         </Link>
         ) and apply in addition to these Terms. We may change, pause or end any

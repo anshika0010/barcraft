@@ -15,6 +15,13 @@ const nextConfig = {
     ],
   },
 
+  // Wedding page moved to /booking; keep old links and search rankings working
+  async redirects() {
+    return [
+      { source: "/wedding", destination: "/booking", permanent: true },
+    ];
+  },
+
   async headers() {
     return [
       {

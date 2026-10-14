@@ -288,7 +288,7 @@ const RECIPES = [
   },
 ];
 function RecipeCard({ recipe }) {
-  if (recipe.product === "MOJITO") {
+  if (recipe.product.toUpperCase() === "MOJITO") {
     return <MojitoRecipeCard recipe={recipe} />;
   }
 
@@ -296,7 +296,16 @@ function RecipeCard({ recipe }) {
 }
 
 
-export default function AllRecipes() {
+// Builds a filter's option list from the values present in the recipes
+const optionsFor = (recipes, key, allLabel) => [
+  allLabel,
+  ...new Set(recipes.map((recipe) => recipe[key]).filter(Boolean)),
+];
+
+// `recipes` comes from the admin API; the built-in list is only a fallback
+// for when the API can't be reached
+export default function AllRecipes({ recipes }) {
+const allRecipes = recipes ?? RECIPES;
 const [product, setProduct] = useState("All products");
 const [glassware, setGlassware] = useState("All glassware");
 const [spirit, setSpirit] = useState("All spirits");
@@ -316,7 +325,7 @@ const RECIPES_PER_PAGE = 12;
 const filteredRecipes = useMemo(() => {
   const query = search.trim().toLowerCase();
 
-  return RECIPES.filter((recipe) => {
+  return allRecipes.filter((recipe) => {
     const matchesProduct =
       product === "All products" ||
       recipe.product === product;
@@ -341,7 +350,7 @@ const filteredRecipes = useMemo(() => {
       matchesSearch
     );
   });
-}, [product, glassware, spirit, search]);
+}, [allRecipes, product, glassware, spirit, search]);
 
 
 /* =====================================================
@@ -469,35 +478,19 @@ useEffect(() => {
           <FilterSelect
             value={product}
             onChange={setProduct}
-            options={[
-              "All products",
-              "Screwdriver",
-              "MOJITO",
-            ]}
+            options={optionsFor(allRecipes, "product", "All products")}
           />
 
           <FilterSelect
             value={glassware}
             onChange={setGlassware}
-            options={[
-              "All glassware",
-              "HIGHBALL GLASS",
-              "ROCKS GLASS",
-              "JUG OR PITCHER",
-            ]}
+            options={optionsFor(allRecipes, "glassware", "All glassware")}
           />
 
           <FilterSelect
             value={spirit}
             onChange={setSpirit}
-            options={[
-              "All spirits",
-              "VODKA",
-              "GIN",
-              "TEQUILA",
-              "WHITE RUM",
-              "NO SPIRIT",
-            ]}
+            options={optionsFor(allRecipes, "spirit", "All spirits")}
           />
 
           {/* Search */}
@@ -927,7 +920,7 @@ function ScrewdriverRecipeCard({ recipe }) {
 
         {/* Hover content */}
 
-        <div className="relative z-10 flex h-full flex-col px-[23px] pb-[20px] pt-[18px]">
+        <div className="relative z-10 flex h-full flex-col overflow-y-auto px-[23px] pb-[20px] pt-[18px]">
 
           <h3
             className="
@@ -1002,6 +995,51 @@ function ScrewdriverRecipeCard({ recipe }) {
             </ul>
 
           </div>
+
+
+          {/* =================================================
+              DIRECTIONS
+          ================================================== */}
+
+          {recipe.directions?.length > 0 && (
+            <div className="mt-[16px]">
+
+              <h4
+                className="
+                  font-movault
+                  text-[37px]
+                  uppercase
+                  leading-none
+                  text-white
+                  tracking-wider
+                  max-[1100px]:text-[31px]
+                "
+              >
+                DIRECTIONS
+              </h4>
+
+              <ol
+                className="
+                  mt-[12px]
+                  space-y-[7px]
+                  pl-[18px]
+                  font-sf-pro
+                  text-[15px]
+                  leading-[1.18]
+                  text-white
+
+                  list-decimal
+                "
+              >
+                {recipe.directions.map((direction, index) => (
+                  <li key={`${recipe.id}-direction-${index}`}>
+                    {direction}
+                  </li>
+                ))}
+              </ol>
+
+            </div>
+          )}
 
 
           {/* CTA */}
@@ -1337,6 +1375,7 @@ function MojitoRecipeCard({ recipe }) {
             flex
             h-full
             flex-col
+            overflow-y-auto
             px-[27px]
             pb-[20px]
             pt-[18px]
@@ -1417,6 +1456,7 @@ function MojitoRecipeCard({ recipe }) {
               DIRECTIONS
           ================================================== */}
 
+          {recipe.directions?.length > 0 && (
           <div className="mt-[16px]">
 
             <h4
@@ -1446,7 +1486,7 @@ function MojitoRecipeCard({ recipe }) {
                 list-decimal
               "
             >
-              {recipe.directions?.map((direction, index) => (
+              {recipe.directions.map((direction, index) => (
                 <li key={`${recipe.id}-direction-${index}`}>
                   {direction}
                 </li>
@@ -1454,6 +1494,7 @@ function MojitoRecipeCard({ recipe }) {
             </ol>
 
           </div>
+          )}
 
         </div>
 

@@ -1,4 +1,15 @@
 {
+  "seo": {
+    "title": "BarCraft Appletini Mixer | Cocktail & Mocktail Mixer in India",
+    "description": "Create an apple-inspired Appletini-style drink with BarCraft Appletini Mixer. Enjoy an easy way to prepare a vibrant cocktail or a personalised mocktail at home.",
+    "canonical_url": "https://www.barcraftmixer.com/mixers/appletini",
+    "open_graph": {
+      "type": "product",
+      "title": "BarCraft Appletini Mixer | Cocktail & Mocktail Mixer in India",
+      "description": "Create an apple-inspired Appletini-style drink with BarCraft Appletini Mixer. Enjoy an easy way to prepare a vibrant cocktail or a personalised mocktail at home.",
+      "url": "https://www.barcraftmixer.com/mixers/appletini"
+    }
+  },
   "schema_version": "1.0",
   "source": {
     "title": "BarCraft Appletini Mixer | Crisp Apple Bite – Buy Appletini Cocktail Mixer Online India ",
@@ -12,7 +23,6 @@
       "image": "https ://www .barcraftmixer.com/images/appletini-art.jpg"
     }
   },
-  
   "product": {
     "image": {
       "src": "/images/appletini-art.jpg",
@@ -31,14 +41,13 @@
       "Spirits ": "Vodka, Gin, White rum ",
       "Pairs with ": "Cheese platters, light starters, salads and seafood "
     },
-    "bg":"/background-images/appletini-big-1.jpg",
-    "bg60" : "/background-images/barcraft60ml/big 60ml.jpg",
-    "accent":"#21e268",
-            "wrapper" : "/mixers/IngredientsNutrition/wrappers/appletini.png",
-
-    "accent2":"#054A29",
-    "step2":"/mixers/steps/2-appletini.png",
-    "bottleImage":"/mixers/IngredientsNutrition/appletini.png",
+    "bg": "/background-images/appletini-big-1.jpg",
+    "bg60": "/background-images/barcraft60ml/big 60ml.jpg",
+    "accent": "#21e268",
+    "wrapper": "/mixers/IngredientsNutrition/wrappers/appletini.png",
+    "accent2": "#054A29",
+    "step2": "/mixers/steps/2-appletini.png",
+    "bottleImage": "/mixers/IngredientsNutrition/appletini.png",
     "sizes": [
       {
         "size": "600ml ",
@@ -77,7 +86,7 @@
       "Pour in 45ml of your preferred spirit. ",
       "Add 15ml of BarCraft Appletini Mixer. ",
       "Finish with chilled soda. "
-        ],
+    ],
     "mocktail_note": "For a mocktail, leave out the spirit.  Precision in every pour. Pleasure in every sip.  "
   },
   "recipes": [

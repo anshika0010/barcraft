@@ -1,13 +1,12 @@
 {
-  "schema_version": "1.0",
   "seo": {
-    "title": "BarCraft Piña Colada Mixer | Creamy Tropical Escape – Buy Piña Colada Cocktail Mixer Online India",
-    "description": "Buy BarCraft Piña Colada Mixer (600ml, 60ml). Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+    "title": "BarCraft Piña Colada Mixer | Tropical Cocktail & Mocktail Mixer in India",
+    "description": "Bring tropical flavour to your glass with BarCraft Piña Colada Mixer. Prepare an easy pineapple-inspired drink for summer gatherings, celebrations and relaxed evenings.",
     "canonical_url": "https://www.barcraftmixer.com/mixers/pina-colada",
     "open_graph": {
       "type": "product",
-      "title": "BarCraft Piña Colada Mixer | Creamy Tropical Escape – Buy Piña Colada Cocktail Mixer Online India",
-      "description": "Buy BarCraft Piña Colada Mixer (600ml, 60ml). Creamy Tropical Escape: Juicy pineapple with creamy coconut and a mellow, sweet finish. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+      "title": "BarCraft Piña Colada Mixer | Tropical Cocktail & Mocktail Mixer in India",
+      "description": "Bring tropical flavour to your glass with BarCraft Piña Colada Mixer. Prepare an easy pineapple-inspired drink for summer gatherings, celebrations and relaxed evenings.",
       "url": "https://www.barcraftmixer.com/mixers/pina-colada",
       "image": "https://www.barcraftmixer.com/images/pina-colada-art.jpg"
     },
@@ -16,6 +15,7 @@
       "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Hanken+Grotesk:wght@400;600&display=swap"
     ]
   },
+  "schema_version": "1.0",
   "product": {
     "image": {
       "src": "/images/pina-colada-art.jpg",
@@ -34,16 +34,13 @@
       "Spirits": "White rum, Coconut rum, Vodka",
       "Pairs with": "Coconut curries, grilled prawns, spicy starters and desserts"
     },
-
-    "bg":"/background-images/pina colada big  1.jpg",
-        "bg60" : "/background-images/barcraft60ml/big-pina-colada.jpg",
-        "wrapper" : "/mixers/IngredientsNutrition/wrappers/pina-collada.png",
-
+    "bg": "/background-images/pina colada big  1.jpg",
+    "bg60": "/background-images/barcraft60ml/big-pina-colada.jpg",
+    "wrapper": "/mixers/IngredientsNutrition/wrappers/pina-collada.png",
     "accent": "#f5deb3",
-     "accent2":"#4A3728",
-
-    "step2":"/mixers/steps/2-pina-collada.png",
-    "bottleImage":"/mixers/IngredientsNutrition/pina-collada.png",
+    "accent2": "#4A3728",
+    "step2": "/mixers/steps/2-pina-collada.png",
+    "bottleImage": "/mixers/IngredientsNutrition/pina-collada.png",
     "sizes": [
       {
         "size": "600ml",

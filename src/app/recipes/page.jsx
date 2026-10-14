@@ -3,16 +3,23 @@ import Footer from "@/components/home/Footer";
 import RecipesHero from "@/components/recipes/RecipesHero";
 import CocktailOrMocktail from "@/components/recipes/CocktailOrMocktail";
 import AllRecipes from "@/components/recipes/AllRecipes";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, LOGO_IMAGE } from "@/lib/seo";
+import { getRecipes } from "@/lib/recipes";
 
 export const metadata = buildMetadata({
-  title: "Cocktail & Mocktail Recipes",
+  title: { absolute: "Easy Cocktail & Mocktail Recipes at Home | BarCraft" },
   description:
-    "Easy cocktail and mocktail recipes made with BarCraft mixers. Step-by-step drinks you can make at home in under a minute.",
+    "Find easy cocktail and mocktail recipes with simple ingredients and refreshing flavours. Explore drink ideas, mixing tips and garnishes for every occasion.",
+  socialTitle: "Cocktail & Mocktail Recipes | Easy Home Drinks | BarCraft",
+  socialDescription:
+    "Easy cocktail and mocktail recipes with BarCraft mixers. Make a Mojito, Screwdriver or party jug at home in India in under a minute.",
   path: "/recipes",
+  image: LOGO_IMAGE,
 });
 
-export default function RecipesPage() {
+export default async function RecipesPage() {
+  const recipes = await getRecipes();
+
   return (
     <>
       <Navbar />
@@ -20,7 +27,7 @@ export default function RecipesPage() {
       <main>
         <RecipesHero />
         <CocktailOrMocktail />
-        <AllRecipes />
+        <AllRecipes recipes={recipes} />
         {/* Other recipe sections will come here */}
       </main>
 

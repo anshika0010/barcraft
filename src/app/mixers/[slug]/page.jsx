@@ -55,6 +55,8 @@ export async function generateMetadata({ params }) {
       : `${name}${tagline ? ` | ${tagline}` : ""}`,
     description:
       mixer.seo?.description || toPlainText(mixer.product?.description),
+    socialTitle: mixer.seo?.open_graph?.title,
+    socialDescription: mixer.seo?.open_graph?.description,
     path: `/mixers/${slugify(slug)}`,
     image: mixer.product?.bottleImage,
   });

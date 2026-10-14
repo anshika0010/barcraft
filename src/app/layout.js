@@ -4,6 +4,7 @@ import {
   SITE_URL,
   SITE_NAME,
   DEFAULT_OG_IMAGE,
+  OG_SITE_NAME,
   JsonLd,
 } from "@/lib/seo";
 
@@ -30,7 +31,7 @@ export const metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: SITE_NAME,
+    siteName: OG_SITE_NAME,
     locale: "en_IN",
     url: SITE_URL,
     title: "BarCraft | Crafted Cocktail & Mocktail Mixers",
@@ -53,6 +54,13 @@ export const metadata = {
       "max-snippet": -1,
       "max-video-preview": -1,
     },
+  },
+  authors: [{ name: "BarCraft Mixer" }],
+  other: {
+    "geo.region": "IN-DL",
+    "geo.placename": "Delhi, India",
+    country: "India",
+    language: "English",
   },
   formatDetection: { telephone: false, email: false, address: false },
 

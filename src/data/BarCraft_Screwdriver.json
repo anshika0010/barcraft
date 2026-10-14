@@ -1,14 +1,13 @@
 {
-  "schema_version": "1.0",
   "seo": {
-    "title": "BarCraft Screwdriver Mixer | Bright Orange Burst – Buy Screwdriver Cocktail Mixer Online India",
-    "description": "Buy BarCraft Screwdriver Mixer (600ml, 60ml). Bright Orange Burst: Juicy sweet orange with fresh citrus acidity and subtle peel notes. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
-    "canonical_url": "https://www.barcraftmixer.com/mixers/screwdriver",
+    "title": "BarCraft Screwdriver Mixer | Orange Cocktail & Mocktail Mix",
+    "description": "Make a refreshing Screwdriver-style drink with BarCraft Screwdriver Mixer. Discover an orange-inspired flavour for easy cocktail preparation at home and parties.",
+    "canonical_url": "https://www.barcraftmixer.com/mixers/screw-driver",
     "open_graph": {
       "type": "product",
-      "title": "BarCraft Screwdriver Mixer | Bright Orange Burst – Buy Screwdriver Cocktail Mixer Online India",
-      "description": "Buy BarCraft Screwdriver Mixer (600ml, 60ml). Bright Orange Burst: Juicy sweet orange with fresh citrus acidity and subtle peel notes. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
-      "url": "https://www.barcraftmixer.com/mixers/screwdriver",
+      "title": "BarCraft Screwdriver Mixer | Orange Cocktail & Mocktail Mix",
+      "description": "Make a refreshing Screwdriver-style drink with BarCraft Screwdriver Mixer. Discover an orange-inspired flavour for easy cocktail preparation at home and parties.",
+      "url": "https://www.barcraftmixer.com/mixers/screw-driver",
       "image": "https://www.barcraftmixer.com/images/screwdriver-art.jpg"
     },
     "fonts": [
@@ -16,6 +15,7 @@
       "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Hanken+Grotesk:wght@400;600&display=swap"
     ]
   },
+  "schema_version": "1.0",
   "product": {
     "image": {
       "src": "/images/screwdriver-art.jpg",
@@ -34,14 +34,13 @@
       "Spirits": "Vodka, Tequila, Gin",
       "Pairs with": "Brunch dishes, egg dishes, light sandwiches and salads"
     },
-            "bg":"/background-images/screwdriver big 1.jpg",
-                "bg60" : "/background-images/barcraft60ml/big screwdriver.jpg",
-        "wrapper" : "/mixers/IngredientsNutrition/wrappers/screwdriver.png",
-
-        "accent":"#f76227",
-             "accent2":"#E0A96D",
-    "step2":"/mixers/steps/2-screwdriver.png",
-    "bottleImage":"/mixers/IngredientsNutrition/screwdriver.png",
+    "bg": "/background-images/screwdriver big 1.jpg",
+    "bg60": "/background-images/barcraft60ml/big screwdriver.jpg",
+    "wrapper": "/mixers/IngredientsNutrition/wrappers/screwdriver.png",
+    "accent": "#f76227",
+    "accent2": "#E0A96D",
+    "step2": "/mixers/steps/2-screwdriver.png",
+    "bottleImage": "/mixers/IngredientsNutrition/screwdriver.png",
     "sizes": [
       {
         "size": "600ml",
@@ -80,7 +79,7 @@
       "Pour in 45ml of your preferred spirit.",
       "Add 15ml of BarCraft Screwdriver Mixer.",
       "Finish with chilled soda."
-        ],
+    ],
     "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
   },
   "recipes": {

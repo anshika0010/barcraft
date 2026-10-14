@@ -1,12 +1,14 @@
 import Link from "next/link";
 import LegalPage from "@/components/legal/LegalPage";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, LOGO_IMAGE } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Cookie Policy",
+  title: { absolute: "BarCraft Cookie Policy | Website Cookie Information" },
   description:
-    "What cookies barcraftmixer.com uses, why we use them and how you can control or turn them off in your browser.",
+    "Learn how BarCraft uses cookies and similar technologies, why they are used on our website and how you can manage your cookie preferences.",
   path: "/cookie-policy",
+  image: LOGO_IMAGE,
+  noIndex: true,
 });
 
 const LAST_UPDATED = "10 October 2026";

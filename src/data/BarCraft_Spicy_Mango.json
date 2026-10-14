@@ -1,13 +1,12 @@
 {
-  "schema_version": "1.0",
   "seo": {
-    "title": "BarCraft Spicy Mango Mixer | Sweet Tropical Heat – Buy Spicy Mango Cocktail Mixer Online India",
-    "description": "Buy BarCraft Spicy Mango Mixer (600ml, 60ml). Sweet Tropical Heat: Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+    "title": "BarCraft Spicy Mango Mixer | Mango Cocktail & Mocktail Mixer in India",
+    "description": "Add a bold tropical twist to your drinks with BarCraft Spicy Mango Mixer. Explore mango-inspired cocktail and mocktail ideas for parties, celebrations and home entertaining.",
     "canonical_url": "https://www.barcraftmixer.com/mixers/spicy-mango",
     "open_graph": {
       "type": "product",
-      "title": "BarCraft Spicy Mango Mixer | Sweet Tropical Heat – Buy Spicy Mango Cocktail Mixer Online India",
-      "description": "Buy BarCraft Spicy Mango Mixer (600ml, 60ml). Sweet Tropical Heat: Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+      "title": "BarCraft Spicy Mango Mixer | Mango Cocktail & Mocktail Mixer in India",
+      "description": "Add a bold tropical twist to your drinks with BarCraft Spicy Mango Mixer. Explore mango-inspired cocktail and mocktail ideas for parties, celebrations and home entertaining.",
       "url": "https://www.barcraftmixer.com/mixers/spicy-mango",
       "image": "https://www.barcraftmixer.com/images/spicy-mango-art.jpg"
     },
@@ -16,6 +15,7 @@
       "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Hanken+Grotesk:wght@400;600&display=swap"
     ]
   },
+  "schema_version": "1.0",
   "product": {
     "image": {
       "src": "/images/spicy-mango-art.jpg",
@@ -34,14 +34,13 @@
       "Spirits": "Tequila, Vodka (neutral), Mango flavoured vodka",
       "Pairs with": "Tacos, grilled chicken, chaat and nachos"
     },
-            "bg":"/background-images/spicy mango big  1.jpg",
-            "bg60" : "/background-images/barcraft60ml/big spicy mango .jpg",
-
-        "accent":"#edf048",
-        "accent2":"#2B2D42",
-        "wrapper" : "/mixers/IngredientsNutrition/wrappers/spicy-mango.png",
-    "step2":"/mixers/steps/2-spicy-mango.png",
-    "bottleImage":"/mixers/IngredientsNutrition/spicy-mango.png",
+    "bg": "/background-images/spicy mango big  1.jpg",
+    "bg60": "/background-images/barcraft60ml/big spicy mango .jpg",
+    "accent": "#edf048",
+    "accent2": "#2B2D42",
+    "wrapper": "/mixers/IngredientsNutrition/wrappers/spicy-mango.png",
+    "step2": "/mixers/steps/2-spicy-mango.png",
+    "bottleImage": "/mixers/IngredientsNutrition/spicy-mango.png",
     "sizes": [
       {
         "size": "600ml",

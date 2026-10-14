@@ -1,13 +1,12 @@
 {
-  "schema_version": "1.0",
   "seo": {
-    "title": "BarCraft Mojito Mixer | Cool Citrus Crush – Buy Mojito Cocktail Mixer Online India",
-    "description": "Buy BarCraft Mojito Mixer (600ml, 60ml). Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+    "title": "BarCraft Mojito Mixer India | Cocktail & Mocktail Mix",
+    "description": "Enjoy the refreshing taste of mint and citrus with BarCraft Mojito Mixer. Create a classic mojito-style drink at home with ice, a garnish and your preferred serve.",
     "canonical_url": "https://www.barcraftmixer.com/mixers/mojito",
     "open_graph": {
       "type": "product",
-      "title": "BarCraft Mojito Mixer | Cool Citrus Crush – Buy Mojito Cocktail Mixer Online India",
-      "description": "Buy BarCraft Mojito Mixer (600ml, 60ml). Cool Citrus Crush: Zesty lime and fresh mint with balanced sweetness. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+      "title": "BarCraft Mojito Mixer | Mint & Lime Drink in India",
+      "description": "Enjoy the refreshing taste of mint and citrus with BarCraft Mojito Mixer. Create a classic mojito-style drink at home with ice, a garnish and your preferred serve.",
       "url": "https://www.barcraftmixer.com/mixers/mojito",
       "image": "https://www.barcraftmixer.com/images/mojito-art.jpg"
     },
@@ -16,6 +15,7 @@
       "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Hanken+Grotesk:wght@400;600&display=swap"
     ]
   },
+  "schema_version": "1.0",
   "product": {
     "image": {
       "src": "/images/mojito-art.jpg",
@@ -34,14 +34,13 @@
       "Spirits": "White rum, Vodka, Gin",
       "Pairs with": "Grilled fish, salads, tacos and light starters"
     },
-            "bg":"/background-images/mojito big  1.jpg",
-                "bg60" : "/background-images/barcraft60ml/big mojito.jpg",
-        "wrapper" : "/mixers/IngredientsNutrition/wrappers/mojito.png",
-
-        "accent": "#9bc53d",
-        "accent2":"#2A3F1F",
-    "step2":"/mixers/steps/2-mojito.png",
-    "bottleImage":"/mixers/IngredientsNutrition/mojito.png",
+    "bg": "/background-images/mojito big  1.jpg",
+    "bg60": "/background-images/barcraft60ml/big mojito.jpg",
+    "wrapper": "/mixers/IngredientsNutrition/wrappers/mojito.png",
+    "accent": "#9bc53d",
+    "accent2": "#2A3F1F",
+    "step2": "/mixers/steps/2-mojito.png",
+    "bottleImage": "/mixers/IngredientsNutrition/mojito.png",
     "sizes": [
       {
         "size": "600ml",
@@ -80,7 +79,7 @@
       "Pour in 45ml of your preferred spirit.",
       "Add 15ml of BarCraft Mojito Mixer.",
       "Finish with chilled soda."
-        ],
+    ],
     "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
   },
   "recipes": {

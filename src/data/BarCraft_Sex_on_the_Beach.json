@@ -1,13 +1,12 @@
 {
-  "schema_version": "1.0",
   "seo": {
-    "title": "BarCraft Sex on the Beach Mixer | Juicy Peach Paradise – Buy Sex on the Beach Cocktail Mixer Online India",
-    "description": "Buy BarCraft Sex on the Beach Mixer (600ml, 60ml). Juicy Peach Paradise: Sweet peach and orange balanced by tart cranberry. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+    "title": "BarCraft Sex on the Beach Mixer India | Cocktail & Mocktail",
+    "description": "Make a fruity, colourful Sex on the Beach-style drink with BarCraft Mixer. Explore an easy cocktail-inspired option for parties, celebrations and home entertaining.",
     "canonical_url": "https://www.barcraftmixer.com/mixers/sex-on-the-beach",
     "open_graph": {
       "type": "product",
-      "title": "BarCraft Sex on the Beach Mixer | Juicy Peach Paradise – Buy Sex on the Beach Cocktail Mixer Online India",
-      "description": "Buy BarCraft Sex on the Beach Mixer (600ml, 60ml). Juicy Peach Paradise: Sweet peach and orange balanced by tart cranberry. Pour 15ml mixer, add 45ml spirit, top with chilled soda and ice.",
+      "title": "BarCraft Sex on the Beach Mixer India | Cocktail & Mocktail",
+      "description": "Make a fruity, colourful Sex on the Beach-style drink with BarCraft Mixer. Explore an easy cocktail-inspired option for parties, celebrations and home entertaining.",
       "url": "https://www.barcraftmixer.com/mixers/sex-on-the-beach",
       "image": "https://www.barcraftmixer.com/images/sex-on-the-beach-art.jpg"
     },
@@ -16,6 +15,7 @@
       "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Hanken+Grotesk:wght@400;600&display=swap"
     ]
   },
+  "schema_version": "1.0",
   "product": {
     "image": {
       "src": "/images/sex-on-the-beach-art.jpg",
@@ -34,15 +34,13 @@
       "Spirits": "Vodka, White rum, Gin",
       "Pairs with": "Pizza, finger food, light snacks and fruit platters"
     },
-              "wrapper" : "/mixers/IngredientsNutrition/wrappers/sex-on-the-beach.png",
-
-            "bg":"/background-images/sex on the beach big  1.jpg",
-            "bg60" :"/background-images/barcraft60ml/big sex on the beach .jpg",
-        "accent": "#f7934c",
-         "accent2":"#3D0C11",
-
-    "step2":"/mixers/steps/2-sex-on-the-beach.png",
-    "bottleImage":"/mixers/IngredientsNutrition/sex-on-the-beach.png",
+    "wrapper": "/mixers/IngredientsNutrition/wrappers/sex-on-the-beach.png",
+    "bg": "/background-images/sex on the beach big  1.jpg",
+    "bg60": "/background-images/barcraft60ml/big sex on the beach .jpg",
+    "accent": "#f7934c",
+    "accent2": "#3D0C11",
+    "step2": "/mixers/steps/2-sex-on-the-beach.png",
+    "bottleImage": "/mixers/IngredientsNutrition/sex-on-the-beach.png",
     "sizes": [
       {
         "size": "600ml",
@@ -81,7 +79,7 @@
       "Pour in 45ml of your preferred spirit.",
       "Add 15ml of BarCraft Sex on the Beach Mixer.",
       "Finish with chilled soda."
-        ],
+    ],
     "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
   },
   "recipes": {

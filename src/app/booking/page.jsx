@@ -8,16 +8,20 @@ import WeddingHowItWorks from "@/components/wedding/WeddingHowItWorks";
 import WeddingIncluded from "@/components/wedding/WeddingIncluded";
 import WeddingRegistration from "@/components/wedding/WeddingRegistration";
 import WeddingTerms from "@/components/wedding/WeddingTerms";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, LOGO_IMAGE } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Weddings: 1000 Servings Free",
+  title: { absolute: "Wedding Cocktail & Mocktail Drinks | BarCraft" },
   description:
-    "Planning a wedding? Register with BarCraft and get 1000 cocktail and mocktail servings free for your celebration. See how it works, what's included and add-ons.",
-  path: "/wedding",
+    "Make wedding celebrations more memorable with cocktail and mocktail drink ideas from BarCraft. Explore refreshing flavours for receptions, parties and special occasions.",
+  socialTitle: "Wedding Cocktail & Mocktail Mixers | 1000 Servings Free",
+  socialDescription:
+    "Register your wedding with BarCraft: ten weddings get 1000 cocktail and mocktail mixer servings free, in four flavours. No purchase required.",
+  path: "/booking",
+  image: LOGO_IMAGE,
 });
 
-export default function WeddingPage() {
+export default function BookingPage() {
   return (
     <>
       <Navbar />

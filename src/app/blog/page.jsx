@@ -22,13 +22,17 @@
 import Navbar from "../../components/Navbar";
 import BlogIndex from "../../components/blog/BlogIndex";
 import Footer from "../../components/home/Footer";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, LOGO_IMAGE } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Blogs & Articles",
+  title: { absolute: "Cocktail & Mocktail Tips | Recipes & Drink Inspiration | BarCraft" },
   description:
-    "Stories from behind the bar: cocktail recipes, techniques and the craft of the perfect pour.",
+    "Explore cocktail tips, easy drink recipes, flavour inspiration and home bartending ideas on the BarCraft blog. Find new ways to make every pour special.",
+  socialTitle: "BarCraft Blog | Cocktail & Mocktail Recipes, Mixer Guides",
+  socialDescription:
+    "Easy cocktail and mocktail recipes, mixer guides and home bar tips from BarCraft. Learn to make a Mojito, Piña Colada and more at home in India.",
   path: "/blog",
+  image: LOGO_IMAGE,
 });
 
 const BLOGS_API =

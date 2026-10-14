@@ -19,7 +19,7 @@ async function getBlogEntries() {
         url: `${SITE_URL}/blog/${blog.slug}`,
         lastModified: new Date(blog.updatedAt || blog.createdAt || Date.now()),
         changeFrequency: "monthly",
-        priority: 0.6,
+        priority: 0.8,
       }));
   } catch (error) {
     console.error("SITEMAP BLOG ERROR:", error);
@@ -34,12 +34,9 @@ export default async function sitemap() {
     { path: "", priority: 1, changeFrequency: "weekly" },
     { path: "/mixers", priority: 0.9, changeFrequency: "weekly" },
     { path: "/recipes", priority: 0.8, changeFrequency: "weekly" },
-    { path: "/wedding", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/booking", priority: 0.7, changeFrequency: "monthly" },
     { path: "/blog", priority: 0.7, changeFrequency: "daily" },
     { path: "/faqs", priority: 0.6, changeFrequency: "monthly" },
-    { path: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
-    { path: "/cookie-policy", priority: 0.3, changeFrequency: "yearly" },
-    { path: "/terms-of-service", priority: 0.3, changeFrequency: "yearly" },
   ].map(({ path, ...rest }) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,

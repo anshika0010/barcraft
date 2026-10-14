@@ -1,6 +1,8 @@
 export const SITE_URL = "https://www.barcraftmixer.com";
 export const SITE_NAME = "BarCraft";
 export const DEFAULT_OG_IMAGE = "/mixers/IngredientsNutrition/NNN-1.png";
+export const LOGO_IMAGE = "/nav/nav-logo.png";
+export const OG_SITE_NAME = "BarCraft Mixer";
 
 export const absoluteUrl = (path = "/") =>
   path.startsWith("http") ? path : `${SITE_URL}${path.startsWith("/") ? "" : "/"}${path}`;
@@ -12,6 +14,9 @@ export function buildMetadata({
   path = "/",
   image = DEFAULT_OG_IMAGE,
   type = "website",
+  // Optional separate copy for Open Graph / Twitter cards
+  socialTitle,
+  socialDescription,
   noIndex = false,
   openGraph = {},
   ...rest
@@ -20,17 +25,19 @@ export function buildMetadata({
   // Page titles get the "| BarCraft" suffix from the root template; OG/Twitter need it spelled out
   const fullTitle =
     typeof title === "object" ? title.absolute : `${title} | ${SITE_NAME}`;
-  const images = [{ url: absoluteUrl(image), alt: fullTitle }];
+  const shareTitle = socialTitle ?? fullTitle;
+  const shareDescription = socialDescription ?? description;
+  const images = [{ url: absoluteUrl(image), alt: shareTitle }];
 
   return {
     title,
     description,
     alternates: { canonical: url },
     openGraph: {
-      title: fullTitle,
-      description,
+      title: shareTitle,
+      description: shareDescription,
       url,
-      siteName: SITE_NAME,
+      siteName: OG_SITE_NAME,
       locale: "en_IN",
       type,
       images,
@@ -38,8 +45,8 @@ export function buildMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: fullTitle,
-      description,
+      title: shareTitle,
+      description: shareDescription,
       images: images.map((img) => img.url),
     },
     ...(noIndex && { robots: { index: false, follow: true } }),

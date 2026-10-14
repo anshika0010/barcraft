@@ -2,13 +2,17 @@ import Navbar from "@/components/Navbar";
 import FAQs from "@/components/home/FAQs";
 import Footer from "@/components/home/Footer";
 import { FAQS } from "@/data/faqs";
-import { buildMetadata, JsonLd } from "@/lib/seo";
+import { buildMetadata, JsonLd, LOGO_IMAGE } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "FAQs",
+  title: { absolute: "BarCraft FAQs - Cocktail & Mocktail Mixer Questions" },
   description:
-    "Answers to common questions about BarCraft mixers: flavours, sizes, how to use them, which spirit to add and how many drinks a bottle makes.",
+    "Have questions about BarCraft mixers? Learn how to prepare cocktails and mocktails, choose serving options and get the most out of your favourite flavours.",
+  socialTitle: "Cocktail Mixer FAQs - Usage, Flavours & Serving | BarCraft",
+  socialDescription:
+    "Answers about BarCraft cocktail and mocktail mixers: flavours, sizes, how to use them, which spirit to add and how many drinks a bottle makes.",
   path: "/faqs",
+  image: LOGO_IMAGE,
 });
 
 const schema = {

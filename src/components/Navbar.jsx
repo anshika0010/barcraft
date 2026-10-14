@@ -20,7 +20,7 @@ const navItems = [
   },
     {
     label: "Booking",
-    href: "/wedding",
+    href: "/booking",
   },
     {
     label: "Blog",

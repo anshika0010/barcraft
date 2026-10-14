@@ -11,7 +11,7 @@ export default function WeddingTerms() {
   ];
 
   return (
-    <section className="w-full overflow-hidden bg-black py-[80px] md:py-[100px]">
+    <section id="terms" className="w-full overflow-hidden bg-black py-[80px] md:py-[100px]">
       <div
         className="
           relative

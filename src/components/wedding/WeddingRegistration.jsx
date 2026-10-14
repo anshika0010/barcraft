@@ -426,7 +426,7 @@ export default function WeddingRegistration() {
             >
               I accept the{" "}
               <a
-                href="/wedding/terms"
+                href="/booking#terms"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(event) =>
