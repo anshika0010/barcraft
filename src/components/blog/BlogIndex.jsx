@@ -158,7 +158,7 @@ function PostGrid({ posts }) {
                 alt={post.title}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
+                className="object-contain transition-transform duration-500 ease-out hover:scale-[1.02]"
               />
             </div>
           </Link>

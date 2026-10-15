@@ -178,7 +178,7 @@ export default function Footer() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover object-bottom "
+          className="object-contain object-bottom"
         />
       </div>
     </footer>

@@ -110,9 +110,9 @@ export default function Navbar() {
             src="/nav/nav-logo.png"
             alt="BarCraft"
             width={100}
-            height={70}
+            height={90}
             priority
-            className="h-auto w-[80px] object-contain md:w-[100px]"
+            className="h-auto w-[90px] object-contain md:w-[100px]"
           />
         </Link>
 
