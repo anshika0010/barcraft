@@ -302,11 +302,13 @@ const optionsFor = (recipes, key, allLabel) => [
   ...new Set(recipes.map((recipe) => recipe[key]).filter(Boolean)),
 ];
 
+export const ALL_PRODUCTS = "All products";
+
 // `recipes` comes from the admin API; the built-in list is only a fallback
-// for when the API can't be reached
-export default function AllRecipes({ recipes }) {
+// for when the API can't be reached. The product filter is owned by the
+// parent so the cocktail / mocktail cards can set it.
+export default function AllRecipes({ recipes, product, onProductChange: setProduct }) {
 const allRecipes = recipes ?? RECIPES;
-const [product, setProduct] = useState("All products");
 const [glassware, setGlassware] = useState("All glassware");
 const [spirit, setSpirit] = useState("All spirits");
 const [search, setSearch] = useState("");
@@ -327,7 +329,7 @@ const filteredRecipes = useMemo(() => {
 
   return allRecipes.filter((recipe) => {
     const matchesProduct =
-      product === "All products" ||
+      product === ALL_PRODUCTS ||
       recipe.product === product;
 
     const matchesGlassware =
@@ -408,7 +410,7 @@ useEffect(() => {
 }, [product, glassware, spirit, search]);
 
   const clearFilters = () => {
-    setProduct("All products");
+    setProduct(ALL_PRODUCTS);
     setGlassware("All glassware");
     setSpirit("All spirits");
     setSearch("");
@@ -416,8 +418,10 @@ useEffect(() => {
 
   return (
     <section
+      id="all-recipes"
       className="
         w-full
+        scroll-mt-[80px]
         overflow-hidden
         bg-black
         px-[30px]
@@ -478,7 +482,7 @@ useEffect(() => {
           <FilterSelect
             value={product}
             onChange={setProduct}
-            options={optionsFor(allRecipes, "product", "All products")}
+            options={optionsFor(allRecipes, "product", ALL_PRODUCTS)}
           />
 
           <FilterSelect

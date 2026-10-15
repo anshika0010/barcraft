@@ -1,8 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/home/Footer";
 import RecipesHero from "@/components/recipes/RecipesHero";
-import CocktailOrMocktail from "@/components/recipes/CocktailOrMocktail";
-import AllRecipes from "@/components/recipes/AllRecipes";
+import RecipesBrowser from "@/components/recipes/RecipesBrowser";
 import { buildMetadata, LOGO_IMAGE } from "@/lib/seo";
 import { getRecipes } from "@/lib/recipes";
 
@@ -26,8 +25,7 @@ export default async function RecipesPage() {
 
       <main>
         <RecipesHero />
-        <CocktailOrMocktail />
-        <AllRecipes recipes={recipes} />
+        <RecipesBrowser recipes={recipes} />
         {/* Other recipe sections will come here */}
       </main>
 

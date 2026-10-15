@@ -1,11 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { ALL_PRODUCTS } from "@/components/recipes/AllRecipes";
 
+// `category` is the recipe category name in the admin that each card filters to
 const OPTIONS = [
   {
     id: "cocktail",
-    count: "30 recipes",
+    category: "mixed mixers",
     title: "COCKTAIL RECIPES",
     description:
       "Pick a mixer, add your favourite spirit and finish with chilled soda.",
@@ -13,12 +14,10 @@ const OPTIONS = [
       "Label serves, tall drinks and spirit twists",
       "Party jugs and short serves",
     ],
-    href: "/recipes/cocktails",
-    active: true,
   },
   {
     id: "mocktail",
-    count: "6 recipes",
+    category: "Flavors",
     title: "MOCKTAIL RECIPES",
     description:
       "No spirit needed. Ice, 15ml of mixer and chilled soda is all it takes.",
@@ -26,12 +25,19 @@ const OPTIONS = [
       "Ready in about 30 seconds",
       "Good for drivers, fasting days and family gatherings",
     ],
-    href: "/recipes/mocktails",
-    active: false,
   },
 ];
 
-export default function CocktailOrMocktail() {
+const sameName = (a = "", b = "") =>
+  a.trim().toLowerCase() === b.trim().toLowerCase();
+
+export default function CocktailOrMocktail({
+  recipes,
+  activeProduct,
+  onSelect,
+}) {
+  const allRecipes = recipes ?? [];
+
   return (
     <section
       className="
@@ -134,12 +140,26 @@ export default function CocktailOrMocktail() {
             max-[640px]:gap-[22px]
           "
         >
-          {OPTIONS.map((option) => (
-            <RecipeOption
-              key={option.id}
-              option={option}
-            />
-          ))}
+          {OPTIONS.map((option) => {
+            const matching = allRecipes.filter((recipe) =>
+              sameName(recipe.product, option.category)
+            );
+            // Use the exact spelling from the API so it matches the dropdown
+            const product = matching[0]?.product;
+            const isActive = Boolean(product) && activeProduct === product;
+
+            return (
+              <RecipeOption
+                key={option.id}
+                option={option}
+                count={matching.length}
+                isActive={isActive}
+                onClick={() =>
+                  onSelect(isActive || !product ? ALL_PRODUCTS : product)
+                }
+              />
+            );
+          })}
         </div>
 
       </div>
@@ -152,21 +172,28 @@ export default function CocktailOrMocktail() {
    OPTION CARD
 =========================================================== */
 
-function RecipeOption({ option }) {
-  const isActive = option.active;
-
+function RecipeOption({ option, count, isActive, onClick }) {
   return (
-    <article
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={isActive}
       className={`
         flex
         min-h-[485px]
+        cursor-pointer
         flex-col
         border
+        text-left
         px-[15px]
         py-[22px]
 
         transition-colors
         duration-300
+        hover:border-white
+        focus-visible:outline-2
+        focus-visible:outline-offset-4
+        focus-visible:outline-white
 
         md:min-h-[455px]
         md:px-[15px]
@@ -205,7 +232,7 @@ function RecipeOption({ option }) {
           }
         `}
       >
-        {option.count}
+        {count > 0 ? `${count} recipes` : "\u00A0"}
       </p>
 
 
@@ -321,8 +348,6 @@ function RecipeOption({ option }) {
           CTA
       ================================================== */}
 
-     
-
-    </article>
+    </button>
   );
 }
