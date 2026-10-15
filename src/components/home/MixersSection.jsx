@@ -11,7 +11,7 @@ const flavor = [
     image: "/NEW BARCRAFT IMAGES/appletini600ml.jpeg",
     image60: "/60ml images/appletini 60ml.jpg",
     accent: "#c8102e",
-    href:'/mixers/mojito',
+    href:'/mixers/appletini',
     hoverImage: "/home/barcraft-mixers/appletini.webp",
   },
 

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import MixerSearch from "@/components/MixerSearch";
 
 const navItems = [
   {
@@ -31,6 +32,7 @@ const navItems = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -67,7 +69,10 @@ export default function Navbar() {
         {/* Mobile menu toggle */}
         <button
           type="button"
-          onClick={() => setMenuOpen((open) => !open)}
+          onClick={() => {
+            setMenuOpen((open) => !open);
+            setSearchOpen(false);
+          }}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -112,38 +117,47 @@ export default function Navbar() {
         </Link>
 
 {/* Search */}
-        {/* <div className="ml-auto">
-         <div
-                className="
-                    flex
-                    h-[48px]
-                    w-[372px]
-                    items-center
-                    rounded-full
-                    border
-                    border-white/30
-                    bg-white
-                  
-                    px-[16px]
-                "
-                >
-            <input
-              type="text"
-              placeholder="Search...."
-              aria-label="Search"
-              className="
-                w-full
-                bg-transparent
-                text-[15px]
-                font-medium
-                text-black
-                outline-none
-                placeholder:text-grey
-              "
-            />
-          </div>
-        </div> */}
+        <div className="ml-auto flex items-center">
+          <MixerSearch className="hidden lg:block lg:w-[240px] xl:w-[320px] 2xl:w-[372px]" />
+
+          {/* Mobile search toggle */}
+          <button
+            type="button"
+            onClick={() => {
+              setSearchOpen((open) => !open);
+              setMenuOpen(false);
+            }}
+            aria-label={searchOpen ? "Close search" : "Search mixers"}
+            aria-expanded={searchOpen}
+            className="flex h-10 w-10 items-center justify-center text-white lg:hidden"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              {searchOpen ? (
+                <path d="M6 6L18 18M18 6L6 18" />
+              ) : (
+                <>
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="M20 20L16.5 16.5" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile search */}
+      {searchOpen && (
+        <div className="border-t border-white/10 bg-black/90 px-4 py-3 backdrop-blur-md sm:px-6 lg:hidden">
+          <MixerSearch autoFocus onNavigate={() => setSearchOpen(false)} />
+        </div>
+      )}
 
       {/* Mobile menu */}
       {menuOpen && (
