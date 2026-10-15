@@ -13,7 +13,7 @@ const STEPS = [
     number: "01",
     title: "REGISTER",
     description:
-      "Register with your wedding date, venue and number of guests.",
+      "Register with your event date, venue and number of guests.",
     Icon: UserRoundCheck,
   },
   {

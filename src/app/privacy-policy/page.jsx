@@ -36,8 +36,8 @@ const SECTIONS = [
     list: [
       <>
         <strong>Information you give us.</strong> When you register for the
-        BarCraft wedding offer, we ask for your name, phone number, email
-        address, wedding venue and full address, wedding date, expected number
+        BarCraft event offer, we ask for your name, phone number, email
+        address, wedding venue and full address, event date, expected number
         of guests, and your chosen flavours and add-ons. If you email or message
         us, we receive whatever you choose to share.
       </>,

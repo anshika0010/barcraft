@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CalendarDays } from "lucide-react";
 
 const FLAVOURS = [
@@ -19,6 +19,91 @@ const ADD_ONS = [
   "Bartender",
 ];
 
+const BOOKING_API =
+  process.env.NEXT_PUBLIC_BOOKING_API ||
+  "https://api.barcraftmixer.com/barcraft/api/booking";
+
+const REQUIRED_FLAVOURS = 4;
+const MAX_GUESTS = 10000;
+
+const NAME_PATTERN = /^[\p{L}][\p{L}\s.'-]*$/u;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+// Indian mobile number, optionally prefixed with +91, 91 or 0.
+const PHONE_PATTERN = /^(?:\+?91|0)?[6-9]\d{9}$/;
+
+function getToday() {
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+
+  return `${now.getFullYear()}-${month}-${day}`;
+}
+
+function validateField(name, rawValue) {
+  const value = rawValue.trim();
+
+  switch (name) {
+    case "name":
+      if (!value) return "Please enter your name.";
+      if (value.length < 2) return "Name must be at least 2 characters.";
+      if (value.length > 60) return "Name must be under 60 characters.";
+      if (!NAME_PATTERN.test(value)) {
+        return "Name can only contain letters, spaces, dots, hyphens and apostrophes.";
+      }
+      return "";
+
+    case "phone": {
+      if (!value) return "Please enter your phone / WhatsApp number.";
+      const digits = value.replace(/[\s-]/g, "");
+      if (!PHONE_PATTERN.test(digits)) {
+        return "Enter a valid 10-digit mobile number.";
+      }
+      return "";
+    }
+
+    case "venue":
+      if (!value) return "Please enter the venue.";
+      if (value.length < 3) return "Venue must be at least 3 characters.";
+      return "";
+
+    case "guests": {
+      if (!value) return "Please enter the number of guests.";
+      if (!/^\d+$/.test(value)) return "Number of guests must be a whole number.";
+      const guests = Number(value);
+      if (guests < 1) return "There must be at least 1 guest.";
+      if (guests > MAX_GUESTS) {
+        return `Number of guests can't be more than ${MAX_GUESTS}.`;
+      }
+      return "";
+    }
+
+    case "fullAddress":
+      if (!value) return "Please enter the full address.";
+      if (value.length < 10) return "Please enter a complete address.";
+      return "";
+
+    case "eventDate":
+      if (!value) return "Please choose the event date.";
+      if (value < getToday()) return "Event date can't be in the past.";
+      return "";
+
+    case "email":
+      if (!value) return "Please enter your email.";
+      if (!EMAIL_PATTERN.test(value)) return "Enter a valid email address.";
+      return "";
+
+    default:
+      return "";
+  }
+}
+
+function validateFlavours(flavours) {
+  if (flavours.length !== REQUIRED_FLAVOURS) {
+    return `Please choose exactly ${REQUIRED_FLAVOURS} flavours (${flavours.length} selected).`;
+  }
+  return "";
+}
+
 export default function WeddingRegistration() {
   const [formData, setFormData] = useState({
     name: "",
@@ -26,14 +111,19 @@ export default function WeddingRegistration() {
     venue: "",
     fullAddress : "",
     guests: "",
-    weddingDate: "",
+    eventDate: "",
     email: "",
   });
 
   const [selectedFlavours, setSelectedFlavours] = useState([]);
   const [selectedAddOns, setSelectedAddOns] = useState([]);
-  const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
+  const [attemptedSubmit, setAttemptedSubmit] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -42,7 +132,28 @@ export default function WeddingRegistration() {
       ...current,
       [name]: value,
     }));
+
+    // Re-check as the user types once the field has already shown an error.
+    if (touched[name] || attemptedSubmit) {
+      setErrors((current) => ({
+        ...current,
+        [name]: validateField(name, value),
+      }));
+    }
   };
+
+  const handleBlur = (event) => {
+    const { name, value } = event.target;
+
+    setTouched((current) => ({ ...current, [name]: true }));
+    setErrors((current) => ({
+      ...current,
+      [name]: validateField(name, value),
+    }));
+  };
+
+  const fieldError = (name) =>
+    touched[name] || attemptedSubmit ? errors[name] : "";
 
   const toggleFlavour = (flavour) => {
     setSelectedFlavours((current) => {
@@ -50,13 +161,22 @@ export default function WeddingRegistration() {
         return current.filter((item) => item !== flavour);
       }
 
-      if (current.length >= 4) {
+      if (current.length >= REQUIRED_FLAVOURS) {
         return current;
       }
 
       return [...current, flavour];
     });
   };
+
+  useEffect(() => {
+    if (attemptedSubmit) {
+      setErrors((current) => ({
+        ...current,
+        flavours: validateFlavours(selectedFlavours),
+      }));
+    }
+  }, [selectedFlavours, attemptedSubmit]);
 
   const toggleAddOn = (addOn) => {
     setSelectedAddOns((current) => {
@@ -68,26 +188,78 @@ export default function WeddingRegistration() {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    if (submitting || submitted) return;
 
-    if (selectedFlavours.length !== 4) {
-      alert("Please choose exactly 4 flavours.");
-      return;
-    }
+    setAttemptedSubmit(true);
+    setSubmitError("");
 
-    if (!acceptedTerms) {
-      alert("Please accept the wedding offer terms and conditions.");
-      return;
-    }
+    const nextErrors = {};
 
-    console.log({
-      ...formData,
-      flavours: selectedFlavours,
-      addOns: selectedAddOns,
+    Object.entries(formData).forEach(([name, value]) => {
+      nextErrors[name] = validateField(name, value);
     });
+    nextErrors.flavours = validateFlavours(selectedFlavours);
 
-    setSubmitted(true);
+    setErrors(nextErrors);
+
+    const firstInvalid = Object.keys(nextErrors).find(
+      (name) => nextErrors[name]
+    );
+
+    if (firstInvalid) {
+      const target = document.getElementById(firstInvalid);
+
+      target?.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (firstInvalid !== "flavours") target?.focus({ preventScroll: true });
+      return;
+    }
+
+    const cleanData = Object.fromEntries(
+      Object.entries(formData).map(([name, value]) => [name, value.trim()])
+    );
+
+    setSubmitting(true);
+
+    try {
+      const response = await fetch(BOOKING_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: cleanData.name,
+          phone: cleanData.phone.replace(/[\s-]/g, ""),
+          venue: cleanData.venue,
+          address: cleanData.fullAddress,
+          guestNumber: String(Number(cleanData.guests)),
+          date: cleanData.eventDate,
+          email: cleanData.email,
+          flavour: selectedFlavours,
+          addon: selectedAddOns,
+        }),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.message || "Registration failed. Please try again."
+        );
+      }
+
+      setSuccessMessage(
+        result.message || "Registration successful, our team will contact you soon."
+      );
+      setSubmitted(true);
+    } catch (error) {
+      setSubmitError(
+        error instanceof TypeError
+          ? "Couldn't reach the server. Please check your connection and try again."
+          : error.message
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -138,7 +310,7 @@ export default function WeddingRegistration() {
               max-[390px]:text-[45px]
             "
           >
-            REGISTER YOUR WEDDING
+            REGISTER 
           </h2>
 
           <p
@@ -170,6 +342,7 @@ export default function WeddingRegistration() {
 
         <form
           onSubmit={handleSubmit}
+          noValidate
           className="
             mt-[82px]
             w-full
@@ -197,8 +370,12 @@ export default function WeddingRegistration() {
             <FormField
               label="NAME"
               name="name"
+              autoComplete="name"
+              maxLength={60}
               value={formData.name}
               onChange={handleChange}
+              onBlur={handleBlur}
+              error={fieldError("name")}
               required
             />
 
@@ -206,8 +383,13 @@ export default function WeddingRegistration() {
               label="PHONE / WHATSAPP NUMBER"
               name="phone"
               type="tel"
+              inputMode="tel"
+              autoComplete="tel"
+              maxLength={16}
               value={formData.phone}
               onChange={handleChange}
+              onBlur={handleBlur}
+              error={fieldError("phone")}
               required
             />
 
@@ -216,15 +398,21 @@ export default function WeddingRegistration() {
               name="venue"
               value={formData.venue}
               onChange={handleChange}
+              onBlur={handleBlur}
+              error={fieldError("venue")}
               required
             />
             <FormField
               label="NUMBER OF GUESTS"
               name="guests"
               type="number"
+              inputMode="numeric"
               min="1"
+              max={MAX_GUESTS}
               value={formData.guests}
               onChange={handleChange}
+              onBlur={handleBlur}
+              error={fieldError("guests")}
               required
             />
 
@@ -234,33 +422,40 @@ export default function WeddingRegistration() {
               name="fullAddress"
               value={formData.fullAddress}
               onChange={handleChange}
+              onBlur={handleBlur}
+              error={fieldError("fullAddress")}
               required
-              labelStyle="text-xl"
             />
 
           </div>
 
 
           {/* =================================================
-              WEDDING DATE
+              EVENT DATE
           ================================================== */}
 
           <div className="mt-[43px] max-[700px]:mt-[30px]">
 
 
-            <FieldLabel>
-              WEDDING DATE
+            <FieldLabel htmlFor="eventDate">
+              EVENT DATE
             </FieldLabel>
 
             <div className="relative mt-[12px]">
 
               <input
+                id="eventDate"
                 type="date"
-                name="weddingDate"
-                value={formData.weddingDate}
+                name="eventDate"
+                min={getToday()}
+                value={formData.eventDate}
                 onChange={handleChange}
+                onBlur={handleBlur}
                 required
-                className="
+                aria-invalid={Boolean(fieldError("eventDate"))}
+                aria-describedby={fieldError("eventDate") ? "eventDate-error" : undefined}
+                suppressHydrationWarning
+                className={`
                   h-[66px]
                   w-full
                   appearance-none
@@ -280,7 +475,9 @@ export default function WeddingRegistration() {
                   [&::-webkit-calendar-picker-indicator]:right-[28px]
                   [&::-webkit-calendar-picker-indicator]:cursor-pointer
                   [&::-webkit-calendar-picker-indicator]:opacity-0
-                "
+
+                  ${fieldError("eventDate") ? INVALID_INPUT_CLASSES : ""}
+                `}
               />
 
               <CalendarDays
@@ -300,6 +497,8 @@ export default function WeddingRegistration() {
 
             </div>
 
+            <ErrorText id="eventDate-error" message={fieldError("eventDate")} />
+
           </div>
 
 
@@ -309,17 +508,22 @@ export default function WeddingRegistration() {
 
           <div className="mt-[43px] max-[700px]:mt-[30px]">
 
-            <FieldLabel>
+            <FieldLabel htmlFor="email">
               EMAIL
             </FieldLabel>
 
             <input
+              id="email"
               type="email"
               name="email"
+              autoComplete="email"
               value={formData.email}
               onChange={handleChange}
+              onBlur={handleBlur}
               required
-              className="
+              aria-invalid={Boolean(fieldError("email"))}
+              aria-describedby={fieldError("email") ? "email-error" : undefined}
+              className={`
                 mt-[12px]
                 h-[66px]
                 w-full
@@ -333,8 +537,12 @@ export default function WeddingRegistration() {
 
                 max-[700px]:h-[60px]
                 max-[700px]:text-[18px]
-              "
+
+                ${fieldError("email") ? INVALID_INPUT_CLASSES : ""}
+              `}
             />
+
+            <ErrorText id="email-error" message={fieldError("email")} />
 
           </div>
 
@@ -344,12 +552,15 @@ export default function WeddingRegistration() {
           ================================================== */}
 
           <SelectionBox
-            title="CHOOSE EXACTLY 4 FLAVOURS"
+            id="flavours"
+            title={`CHOOSE EXACTLY ${REQUIRED_FLAVOURS} FLAVOURS`}
             items={FLAVOURS}
             selectedItems={selectedFlavours}
             onToggle={toggleFlavour}
-            maxSelection={4}
+            maxSelection={REQUIRED_FLAVOURS}
           />
+
+          <ErrorText id="flavours-error" message={errors.flavours} />
 
 
           {/* =================================================
@@ -365,93 +576,13 @@ export default function WeddingRegistration() {
 
 
           {/* =================================================
-              TERMS
-          ================================================== */}
-
-          <label
-            className="
-              mt-[55px]
-              flex
-              cursor-pointer
-              items-center
-              gap-[16px]
-
-              max-[700px]:mt-[40px]
-              max-[500px]:items-start
-            "
-          >
-
-            <input
-              type="checkbox"
-              checked={acceptedTerms}
-              onChange={(event) =>
-                setAcceptedTerms(event.target.checked)
-              }
-              className="
-                peer
-                sr-only
-              "
-            />
-
-            <span
-              className="
-                flex
-                h-[29px]
-                w-[29px]
-                shrink-0
-                items-center
-                justify-center
-                border-2
-                border-[#FFD400]
-                bg-black
-                peer-checked:bg-[#FFD400]
-              "
-            >
-              {acceptedTerms && (
-                <span className="font-sf-pro text-[21px] font-bold text-black">
-                  ✓
-                </span>
-              )}
-            </span>
-
-            <span
-              className="
-                font-sf-pro
-                text-[18px]
-                leading-[1.3]
-                text-white
-
-                max-[700px]:text-[16px]
-              "
-            >
-              I accept the{" "}
-              <a
-                href="/booking#terms"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(event) =>
-                  event.stopPropagation()
-                }
-                className="
-                  text-[#FFD400]
-                  underline
-                  underline-offset-[3px]
-                "
-              >
-                wedding offer terms and conditions.
-              </a>
-            </span>
-
-          </label>
-
-
-          {/* =================================================
               SUBMIT
           ================================================== */}
 
           <button
             type="submit"
-            disabled={submitted}
+            disabled={submitted || submitting}
+            aria-busy={submitting}
             className="
               mt-[50px]
               flex
@@ -485,7 +616,9 @@ export default function WeddingRegistration() {
             <span>
               {submitted
                 ? "REGISTERED"
-                : "REGISTER MY WEDDING"}
+                : submitting
+                  ? "SUBMITTING..."
+                  : "REGISTER MY WEDDING"}
             </span>
 
             <span
@@ -510,6 +643,25 @@ export default function WeddingRegistration() {
 
           </button>
 
+          <ErrorText id="submit-error" message={submitError} />
+
+          {successMessage && (
+            <p
+              role="status"
+              className="
+                mt-[16px]
+                font-sf-pro
+                text-[17px]
+                leading-[1.3]
+                text-[#FFD400]
+
+                max-[700px]:text-[15px]
+              "
+            >
+              {successMessage}
+            </p>
+          )}
+
         </form>
 
       </div>
@@ -528,11 +680,15 @@ function FormField({
   type = "text",
   value,
   onChange,
+  onBlur,
+  error,
   required = false,
-  min,
+  ...inputProps
 }) {
+  const errorId = `${name}-error`;
+
   return (
-    <div className="flex flex-col justify-end">
+    <div className="flex flex-col justify-start">
 
       <FieldLabel htmlFor={name}>
         {label}
@@ -544,9 +700,12 @@ function FormField({
         name={name}
         value={value}
         onChange={onChange}
+        onBlur={onBlur}
         required={required}
-        min={min}
-        className="
+        aria-invalid={Boolean(error)}
+        aria-describedby={error ? errorId : undefined}
+        {...inputProps}
+        className={`
           mt-[12px]
           h-[66px]
           w-full
@@ -560,10 +719,43 @@ function FormField({
 
           max-[700px]:h-[60px]
           max-[700px]:text-[18px]
-        "
+
+          ${error ? INVALID_INPUT_CLASSES : ""}
+        `}
       />
 
+      <ErrorText id={errorId} message={error} />
+
     </div>
+  );
+}
+
+
+/* ===========================================================
+   ERROR TEXT
+=========================================================== */
+
+const INVALID_INPUT_CLASSES = "ring-[3px] ring-[#FF4D4D]";
+
+function ErrorText({ id, message }) {
+  if (!message) return null;
+
+  return (
+    <p
+      id={id}
+      role="alert"
+      className="
+        mt-[10px]
+        font-sf-pro
+        text-[15px]
+        leading-[1.3]
+        text-[#FF6B6B]
+
+        max-[700px]:text-[14px]
+      "
+    >
+      {message}
+    </p>
   );
 }
 
@@ -598,6 +790,7 @@ function FieldLabel({ children, htmlFor }) {
 =========================================================== */
 
 function SelectionBox({
+  id,
   title,
   items,
   selectedItems,
@@ -609,6 +802,7 @@ function SelectionBox({
 
   return (
     <div
+      id={id}
       className="
         relative
         mt-[55px]
