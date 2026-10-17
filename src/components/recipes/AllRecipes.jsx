@@ -20,8 +20,8 @@ const RECIPES = [
     },
     ingredients: [
       "FRESH ICE",
-      "45ML VODKA",
-      "15ML BarCraft Screwdriver Mixer",
+      "30ML VODKA",
+      "30ML BarCraft Screwdriver Mixer",
       "40ML CHILLED SODA",
     ],
   },
@@ -40,7 +40,7 @@ const RECIPES = [
     },
     ingredients: [
       "ICE",
-      "15ML BarCraft Screwdriver Mixer",
+      "30ML BarCraft Screwdriver Mixer",
       "85ML CHILLED SODA",
       "AN ORANGE SLICE TO GARNISH",
     ],
@@ -60,8 +60,8 @@ const RECIPES = [
     },
     ingredients: [
       "FRESH ICE",
-      "45ML TEQUILA",
-      "15ML BarCraft Screwdriver Mixer",
+      "30ML TEQUILA",
+      "30ML BarCraft Screwdriver Mixer",
       "140ML CHILLED SODA",
     ],
   },
@@ -80,8 +80,8 @@ const RECIPES = [
     },
     ingredients: [
       "FRESH ICE",
-      "45ML GIN",
-      "15ML BarCraft Screwdriver Mixer",
+      "30ML GIN",
+      "30ML BarCraft Screwdriver Mixer",
       "40ML TONIC WATER",
     ],
   },
@@ -120,9 +120,9 @@ const RECIPES = [
     },
     ingredients: [
       "FRESH ICE",
-      "45ML VODKA",
-      "15ML BarCraft Screwdriver Mixer",
-      "15ML CHILLED SODA",
+      "30ML VODKA",
+      "30ML BarCraft Screwdriver Mixer",
+      "30ML CHILLED SODA",
     ],
   },
     {
@@ -139,14 +139,14 @@ const RECIPES = [
     },
     ingredients: [
       "FRESH ICE",
-      "45ML TEQUILA",
-      "15ML BarCraft Screwdriver Mixer",
+      "30ML TEQUILA",
+      "30ML BarCraft Screwdriver Mixer",
       "140ML CHILLED SODA",
     ],
     directions :[
       'Fill a Highball glass with ice',
-      'Pour in 45ML of White Rum',
-      'Add 15ML of Barcraft Mojito Mixer',
+      'Pour in 30ML of White Rum',
+      'Add 30ML of Barcraft Mojito Mixer',
       'Top up with 40ML of chilled Soda',
       'Stir Gently and Garnish with a mint sprig'
     ]
@@ -166,14 +166,14 @@ const RECIPES = [
     },
     ingredients: [
       "ICE",
-      "15ML BarCraft Mojito Mixer",
+      "30ML BarCraft Mojito Mixer",
       "85ML CHILLED SODA",
       "AN MINT SPRIG TO GARNISH",
     ],
     
     directions :[
       'Fill a Highball glass with ice',
-      'Add 15ML of Barcraft Mojito Mixer',
+      'Add 30ML of Barcraft Mojito Mixer',
       'Top up with 85ML of chilled Soda',
       'Stir and Garnish with a mint sprig'
     ]
@@ -193,14 +193,14 @@ const RECIPES = [
     },
     ingredients: [
       "FRESH ICE",
-      "45ML TEQUILA",
-      "15ML BarCraft Mojito Mixer",
+      "30ML TEQUILA",
+      "30ML BarCraft Mojito Mixer",
       "140ML CHILLED SODA",
     ],
     directions :[
       'Fill a Highball glass with ice',
-      'Pour in 45ML of Vodka',
-      'Add 15ML of Barcraft Mojito Mixer',
+      'Pour in 30ML of Vodka',
+      'Add 30ML of Barcraft Mojito Mixer',
       'Top up with 140ML of chilled Soda',
       'Stir Gently and Garnish with a mint sprig'
     ]
@@ -220,14 +220,14 @@ const RECIPES = [
     },
     ingredients: [
       "FRESH ICE",
-      "45ML GIN",
-      "15ML BarCraft Mojito Mixer",
+      "30ML GIN",
+      "30ML BarCraft Mojito Mixer",
       "40ML LEMON SODA",
     ],
     directions :[
       'Fill a Highball glass with ice',
-      'Pour in 45ML of Gin',
-      'Add 15ML of Barcraft Mojito Mixer',
+      'Pour in 30ML of Gin',
+      'Add 30ML of Barcraft Mojito Mixer',
       'Top up with 40ML of Lemon Soda',
       'Stir Gently and Garnish with a mint sprig'
     ]
@@ -274,15 +274,15 @@ const RECIPES = [
     },
     ingredients: [
       "FRESH ICE",
-      "45ML WHITE RUM",
-      "15ML BarCraft MOJITO Mixer",
-      "15ML CHILLED SODA",
+      "30ML WHITE RUM",
+      "30ML BarCraft MOJITO Mixer",
+      "30ML CHILLED SODA",
     ],
     directions :[
       'Fill a Rocks glass with ice',
-      'Pour in 45ML of White Rum',
-      'Add 15ML of Barcraft Mojito Mixer',
-      'Top up with 15ML of Chilled Soda',
+      'Pour in 30ML of White Rum',
+      'Add 30ML of Barcraft Mojito Mixer',
+      'Top up with 30ML of Chilled Soda',
       'Stir Gently and Garnish with a lime wheel'
     ]
   },

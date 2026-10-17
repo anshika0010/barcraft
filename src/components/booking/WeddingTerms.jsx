@@ -1,6 +1,6 @@
 export default function WeddingTerms() {
   const terms = [
-    "Each wedding receives 1000 BarCraft mixer servings.",
+    "Each events receives 1000 BarCraft mixer servings.",
     "The customer selects four flavours.",
     "We supply only the mixer, delivery and instructions.",
     "Alcohol is not included.",

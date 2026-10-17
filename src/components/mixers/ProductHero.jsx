@@ -350,10 +350,15 @@ export default function ProductHero({ data }) {
                   {bottleSizes.map((item) => {
                     const size = item.size;
                     const selected = selectedSize === size;
+                    // One serve is 30ml: 600ml → 20 servings, 60ml → 2
+                    const servings = Math.floor(parseInt(size, 10) / 30);
 
                     return (
-                      <button
+                      <div
                         key={size}
+                        className="flex flex-col items-center gap-[6px]"
+                      >
+                      <button
                         type="button"
                         onClick={() => setSelectedSize(size)}
                         className={`
@@ -378,6 +383,12 @@ export default function ProductHero({ data }) {
                       >
                         {size}
                       </button>
+                      {servings > 0 && (
+                        <span className="font-sf-pro text-[12px] font-semibold text-white/80">
+                          {servings} {servings === 1 ? "serving" : "servings"}
+                        </span>
+                      )}
+                      </div>
                     );
                   })}
                 </div>

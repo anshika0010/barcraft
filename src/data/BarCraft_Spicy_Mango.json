@@ -30,7 +30,7 @@
     "description": "Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
     "facts": {
       "Flavour": "Sweet Tropical Heat: Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang.",
-      "Serve": "15ml mixer + 45ml spirit + chilled soda + ice",
+      "Serve": "30ml mixer + 30ml spirit + chilled soda + ice",
       "Spirits": "Tequila, Vodka (neutral), Mango flavoured vodka",
       "Pairs with": "Tacos, grilled chicken, chaat and nachos"
     },
@@ -48,7 +48,7 @@
         "selected": true,
         "price": "",
         "cart_url": "#",
-        "servings": "About 40 servings of 15ml per bottle"
+        "servings": "About 20 servings of 30ml per bottle"
       },
       {
         "size": "60ml",
@@ -56,7 +56,7 @@
         "selected": false,
         "price": "",
         "cart_url": "#",
-        "servings": "About 4 servings of 15ml per bottle"
+        "servings": "About 2 servings of 30ml per bottle"
       }
     ],
     "currency": "INR",
@@ -73,12 +73,12 @@
   },
   "how_to_use": {
     "title": "How to make a Spicy Mango",
-    "description": "Simply pour 15ml BarCraft mixer, add 45ml of tequila, vodka (neutral) or mango flavoured vodka, add 15ml chilled water or soda with ice, and serve over fresh ice in a chilli-salt-rimmed glass.",
+    "description": "Simply pour 30ml BarCraft mixer, add 30ml of tequila, vodka (neutral) or mango flavoured vodka, add 30ml chilled water or soda with ice, and serve over fresh ice in a chilli-salt-rimmed glass.",
     "steps": [
       "Rim a rocks glass with chilli salt and fill it with fresh ice.",
-      "Pour in 45ml of tequila, neutral vodka or mango flavoured vodka.",
-      "Add 15ml of BarCraft Spicy Mango Mixer.",
-      "Add 15ml of chilled water or soda."
+      "Pour in 30ml of tequila, neutral vodka or mango flavoured vodka.",
+      "Add 30ml of BarCraft Spicy Mango Mixer.",
+      "Add 30ml of chilled water or soda."
     ],
     "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
   },
@@ -92,9 +92,9 @@
         "details": "75ml | Tequila | Rocks glass",
         "ingredients": [
           "Fresh ice",
-          "45ml Tequila",
-          "15ml BarCraft Spicy Mango Mixer",
-          "15ml chilled water or soda"
+          "30ml Tequila",
+          "30ml BarCraft Spicy Mango Mixer",
+          "30ml chilled water or soda"
         ],
         "recipe_url": "/recipes/classic-spicy-mango"
       },
@@ -104,7 +104,7 @@
         "details": "100ml | No spirit | Highball glass",
         "ingredients": [
           "Ice",
-          "15ml BarCraft Spicy Mango Mixer",
+          "30ml BarCraft Spicy Mango Mixer",
           "85ml chilled soda",
           "A chilli-salt rim to garnish"
         ],
@@ -116,8 +116,8 @@
         "details": "200ml | Vodka (neutral) | Highball glass",
         "ingredients": [
           "Fresh ice",
-          "45ml Vodka (neutral)",
-          "15ml BarCraft Spicy Mango Mixer",
+          "30ml Vodka (neutral)",
+          "30ml BarCraft Spicy Mango Mixer",
           "140ml chilled soda"
         ],
         "recipe_url": "/recipes/tall-spicy-mango-cooler"
@@ -128,8 +128,8 @@
         "details": "100ml | Mango flavoured vodka | Highball glass",
         "ingredients": [
           "Fresh ice",
-          "45ml Mango flavoured vodka",
-          "15ml BarCraft Spicy Mango Mixer",
+          "30ml Mango flavoured vodka",
+          "30ml BarCraft Spicy Mango Mixer",
           "40ml sparkling water"
         ],
         "recipe_url": "/recipes/mango-vodka-fizz"
@@ -152,8 +152,8 @@
         "details": "100ml | Tequila | Rocks glass",
         "ingredients": [
           "Fresh ice",
-          "45ml Tequila",
-          "15ml BarCraft Spicy Mango Mixer",
+          "30ml Tequila",
+          "30ml BarCraft Spicy Mango Mixer",
           "40ml chilled soda"
         ],
         "recipe_url": "/recipes/spicy-mango-on-the-rocks"
@@ -178,7 +178,7 @@
       "Trans Fat": "0 g",
       "Sodium": "400 mg"
     },
-    "serving_information": "Serving size: 15ml. Servings per 60ml bottle: 4. Servings per 600ml bottle: 40.",
+    "serving_information": "Serving size: 30ml. Servings per 60ml bottle: 2. Servings per 600ml bottle: 20.",
     "ingredients": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour.",
     "manufacturer_note": "Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details.",
     "label_image": {
@@ -202,7 +202,7 @@
       },
       {
         "question": "How do I make a Spicy Mango with BarCraft Mixer?",
-        "answer": "Simply pour 15ml BarCraft mixer, add 45ml of tequila, vodka (neutral) or mango flavoured vodka, add 15ml chilled water or soda with ice, and serve over fresh ice in a chilli-salt-rimmed glass."
+        "answer": "Simply pour 30ml BarCraft mixer, add 30ml of tequila, vodka (neutral) or mango flavoured vodka, add 30ml chilled water or soda with ice, and serve over fresh ice in a chilli-salt-rimmed glass."
       },
       {
         "question": "Which spirit should I use?",
@@ -210,11 +210,11 @@
       },
       {
         "question": "How many drinks does a bottle make?",
-        "answer": "One serving is 15ml, so the 600ml bottle makes about 40 servings and the 60ml bottle makes 4."
+        "answer": "One serving is 30ml, so the 600ml bottle makes about 20 servings and the 60ml bottle makes 2."
       },
       {
         "question": "Can I make Spicy Mango as a mocktail?",
-        "answer": "Yes. Leave out the spirit and use ice, 15ml of BarCraft Spicy Mango Mixer and chilled soda."
+        "answer": "Yes. Leave out the spirit and use ice, 30ml of BarCraft Spicy Mango Mixer and chilled soda."
       },
       {
         "question": "What are the ingredients?",
@@ -222,7 +222,7 @@
       },
       {
         "question": "How much sugar and how many calories does it have?",
-        "answer": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 15ml serve of the mixer that works out to about 24 kcal and 4.2g sugars, before any spirit or soda."
+        "answer": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 30ml serve of the mixer that works out to about 48 kcal and 8.4g sugars, before any spirit or soda."
       },
       {
         "question": "Does it contain preservatives or sweeteners?",
@@ -311,7 +311,7 @@
             "name": "How do I make a Spicy Mango with BarCraft Mixer?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Simply pour 15ml BarCraft mixer, add 45ml of tequila, vodka (neutral) or mango flavoured vodka, add 15ml chilled water or soda with ice, and serve over fresh ice in a chilli-salt-rimmed glass."
+              "text": "Simply pour 30ml BarCraft mixer, add 30ml of tequila, vodka (neutral) or mango flavoured vodka, add 30ml chilled water or soda with ice, and serve over fresh ice in a chilli-salt-rimmed glass."
             }
           },
           {
@@ -327,7 +327,7 @@
             "name": "How many drinks does a bottle make?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "One serving is 15ml, so the 600ml bottle makes about 40 servings and the 60ml bottle makes 4."
+              "text": "One serving is 30ml, so the 600ml bottle makes about 20 servings and the 60ml bottle makes 2."
             }
           },
           {
@@ -335,7 +335,7 @@
             "name": "Can I make Spicy Mango as a mocktail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Leave out the spirit and use ice, 15ml of BarCraft Spicy Mango Mixer and chilled soda."
+              "text": "Yes. Leave out the spirit and use ice, 30ml of BarCraft Spicy Mango Mixer and chilled soda."
             }
           },
           {
@@ -351,7 +351,7 @@
             "name": "How much sugar and how many calories does it have?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 15ml serve of the mixer that works out to about 24 kcal and 4.2g sugars, before any spirit or soda."
+              "text": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 30ml serve of the mixer that works out to about 48 kcal and 8.4g sugars, before any spirit or soda."
             }
           },
           {

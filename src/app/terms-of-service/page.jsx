@@ -61,15 +61,15 @@ const SECTIONS = [
     ],
   },
   {
-    title: "Wedding offer and promotions",
+    title: "Events offer and promotions",
     body: [
       <>
-        From time to time we may run offers, such as the BarCraft wedding
+        From time to time we may run offers, such as the BarCraft events
         offer. Submitting a registration on the Website is an expression of
         interest, not a confirmed booking. Each offer has its own terms and
         conditions, which are shown on the relevant page (for example, the{" "}
         <Link href="/booking" className={linkClass}>
-          wedding page
+          booking page
         </Link>
         ) and apply in addition to these Terms. We may change, pause or end any
         offer at any time, and availability is subject to confirmation by our

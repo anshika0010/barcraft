@@ -30,7 +30,7 @@
     "description": "Juicy sweet orange with fresh citrus acidity and subtle peel notes. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
     "facts": {
       "Flavour": "Bright Orange Burst: Juicy sweet orange with fresh citrus acidity and subtle peel notes.",
-      "Serve": "15ml mixer + 45ml spirit + chilled soda + ice",
+      "Serve": "30ml mixer + 30ml spirit + chilled soda + ice",
       "Spirits": "Vodka, Tequila, Gin",
       "Pairs with": "Brunch dishes, egg dishes, light sandwiches and salads"
     },
@@ -48,7 +48,7 @@
         "selected": true,
         "price": "",
         "cart_url": "#",
-        "servings": "About 40 servings of 15ml per bottle"
+        "servings": "About 20 servings of 30ml per bottle"
       },
       {
         "size": "60ml",
@@ -56,7 +56,7 @@
         "selected": false,
         "price": "",
         "cart_url": "#",
-        "servings": "About 4 servings of 15ml per bottle"
+        "servings": "About 2 servings of 30ml per bottle"
       }
     ],
     "currency": "INR",
@@ -73,11 +73,11 @@
   },
   "how_to_use": {
     "title": "How to make a Screwdriver",
-    "description": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour.",
+    "description": "Simply pour 30ml BarCraft, add 30ml of your preferred spirit, finish with chilled soda and ice, and savour.",
     "steps": [
       "Fill a highball glass with ice.",
-      "Pour in 45ml of your preferred spirit.",
-      "Add 15ml of BarCraft Screwdriver Mixer.",
+      "Pour in 30ml of your preferred spirit.",
+      "Add 30ml of BarCraft Screwdriver Mixer.",
       "Finish with chilled soda."
     ],
     "mocktail_note": "For a mocktail, leave out the spirit. Precision in every pour. Pleasure in every sip."
@@ -92,8 +92,8 @@
         "details": "100ml | Vodka | Highball glass",
         "ingredients": [
           "Fresh ice",
-          "45ml Vodka",
-          "15ml BarCraft Screwdriver Mixer",
+          "30ml Vodka",
+          "30ml BarCraft Screwdriver Mixer",
           "40ml chilled soda"
         ],
         "recipe_url": "/recipes/classic-screwdriver"
@@ -104,7 +104,7 @@
         "details": "100ml | No spirit | Highball glass",
         "ingredients": [
           "Ice",
-          "15ml BarCraft Screwdriver Mixer",
+          "30ml BarCraft Screwdriver Mixer",
           "85ml chilled soda",
           "An orange slice to garnish"
         ],
@@ -116,8 +116,8 @@
         "details": "200ml | Tequila | Highball glass",
         "ingredients": [
           "Fresh ice",
-          "45ml Tequila",
-          "15ml BarCraft Screwdriver Mixer",
+          "30ml Tequila",
+          "30ml BarCraft Screwdriver Mixer",
           "140ml chilled soda"
         ],
         "recipe_url": "/recipes/tall-orange-cooler"
@@ -128,8 +128,8 @@
         "details": "100ml | Gin | Highball glass",
         "ingredients": [
           "Fresh ice",
-          "45ml Gin",
-          "15ml BarCraft Screwdriver Mixer",
+          "30ml Gin",
+          "30ml BarCraft Screwdriver Mixer",
           "40ml tonic water"
         ],
         "recipe_url": "/recipes/tequila-orange-fizz"
@@ -152,9 +152,9 @@
         "details": "75ml | Vodka | Rocks glass",
         "ingredients": [
           "Fresh ice",
-          "45ml Vodka",
-          "15ml BarCraft Screwdriver Mixer",
-          "15ml chilled soda"
+          "30ml Vodka",
+          "30ml BarCraft Screwdriver Mixer",
+          "30ml chilled soda"
         ],
         "recipe_url": "/recipes/short-screwdriver"
       }
@@ -178,7 +178,7 @@
       "Trans Fat": "0 g",
       "Sodium": "400 mg"
     },
-    "serving_information": "Serving size: 15ml. Servings per 60ml bottle: 4. Servings per 600ml bottle: 40.",
+    "serving_information": "Serving size: 30ml. Servings per 60ml bottle: 2. Servings per 600ml bottle: 20.",
     "ingredients": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour.",
     "manufacturer_note": "Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details.",
     "label_image": {
@@ -202,7 +202,7 @@
       },
       {
         "question": "How do I make a Screwdriver with BarCraft Mixer?",
-        "answer": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour."
+        "answer": "Simply pour 30ml BarCraft, add 30ml of your preferred spirit, finish with chilled soda and ice, and savour."
       },
       {
         "question": "Which spirit should I use?",
@@ -210,11 +210,11 @@
       },
       {
         "question": "How many drinks does a bottle make?",
-        "answer": "One serving is 15ml, so the 600ml bottle makes about 40 servings and the 60ml bottle makes 4."
+        "answer": "One serving is 30ml, so the 600ml bottle makes about 20 servings and the 60ml bottle makes 2."
       },
       {
         "question": "Can I make Screwdriver as a mocktail?",
-        "answer": "Yes. Leave out the spirit and use ice, 15ml of BarCraft Screwdriver Mixer and chilled soda."
+        "answer": "Yes. Leave out the spirit and use ice, 30ml of BarCraft Screwdriver Mixer and chilled soda."
       },
       {
         "question": "What are the ingredients?",
@@ -222,7 +222,7 @@
       },
       {
         "question": "How much sugar and how many calories does it have?",
-        "answer": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 15ml serve of the mixer that works out to about 24 kcal and 4.2g sugars, before any spirit or soda."
+        "answer": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 30ml serve of the mixer that works out to about 48 kcal and 8.4g sugars, before any spirit or soda."
       },
       {
         "question": "Does it contain preservatives or sweeteners?",
@@ -311,7 +311,7 @@
             "name": "How do I make a Screwdriver with BarCraft Mixer?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Simply pour 15ml BarCraft, add 45ml of your preferred spirit, finish with chilled soda and ice, and savour."
+              "text": "Simply pour 30ml BarCraft, add 30ml of your preferred spirit, finish with chilled soda and ice, and savour."
             }
           },
           {
@@ -327,7 +327,7 @@
             "name": "How many drinks does a bottle make?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "One serving is 15ml, so the 600ml bottle makes about 40 servings and the 60ml bottle makes 4."
+              "text": "One serving is 30ml, so the 600ml bottle makes about 20 servings and the 60ml bottle makes 2."
             }
           },
           {
@@ -335,7 +335,7 @@
             "name": "Can I make Screwdriver as a mocktail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Leave out the spirit and use ice, 15ml of BarCraft Screwdriver Mixer and chilled soda."
+              "text": "Yes. Leave out the spirit and use ice, 30ml of BarCraft Screwdriver Mixer and chilled soda."
             }
           },
           {
@@ -351,7 +351,7 @@
             "name": "How much sugar and how many calories does it have?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 15ml serve of the mixer that works out to about 24 kcal and 4.2g sugars, before any spirit or soda."
+              "text": "Approximate values per 100ml are 160 kcal and 28g total sugars (all added). For one 30ml serve of the mixer that works out to about 48 kcal and 8.4g sugars, before any spirit or soda."
             }
           },
           {
