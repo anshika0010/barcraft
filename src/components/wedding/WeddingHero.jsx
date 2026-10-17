@@ -11,7 +11,7 @@ export default function WeddingHero() {
       ====================================================== */}
       <Image
         src="/wedding/wedding-hero.webp"
-        alt="BarCraft wedding cocktails"
+        alt="BarCraft  cocktails"
         fill
         priority
         sizes="100vw"
@@ -128,7 +128,7 @@ export default function WeddingHero() {
              
             "
           >
-            <h3 className="text-align-right tracking-wide">10 WEDDINGS</h3>
+            <h3 className="text-align-right tracking-wide">10 events</h3>
         
             <h1 className="text-[60px] md:text-[100px]">1000 SERVINGS. FREE</h1>
           </div>
@@ -153,8 +153,8 @@ export default function WeddingHero() {
               max-[430px]:text-[15px]
             "
           >
-            Register your wedding with BarCraft. Ten registered
-            weddings will get 1000 BarCraft mixer servings in
+            Register your event with BarCraft. Ten registered
+            event will get 1000 BarCraft mixer servings in
             four flavours of your choice. No purchase required.
           </p>
 
@@ -189,7 +189,7 @@ export default function WeddingHero() {
               "
             >
               <span className="tracking-wide">
-                REGISTER YOUR WEDDING
+                REGISTER YOUR EVENT
               </span>
 
               <span

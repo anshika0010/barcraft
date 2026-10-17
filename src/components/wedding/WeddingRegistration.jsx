@@ -618,7 +618,7 @@ export default function WeddingRegistration() {
                 ? "REGISTERED"
                 : submitting
                   ? "SUBMITTING..."
-                  : "REGISTER MY WEDDING"}
+                  : "REGISTER MY EVENT"}
             </span>
 
             <span

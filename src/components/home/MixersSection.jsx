@@ -35,6 +35,33 @@ const flavor = [
         image60: "/60ml images/spicy mango 60ml.jpg",
     href:"/mixers/spicy-mango"
   },
+  {
+    id: 4,
+    name: "Mojito",
+    description: "Zesty lime and fresh mint with balanced sweetness. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
+    accent: "#9bc53d",
+    image: "/NEW BARCRAFT IMAGES/MOJITO H600ml.jpeg",
+    image60: "/60ml images/MOJITOO SMALL.jpg",
+    href: "/mixers/mojito",
+  },
+  {
+    id: 5,
+    name: "Piña Colada",
+    description: "Juicy pineapple with creamy coconut and a mellow, sweet finish. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
+    accent: "#f5deb3",
+    image: "/NEW BARCRAFT IMAGES/PINA COLADA600ml.jpeg",
+    image60: "/60ml images/PINA COLADA.jpg",
+    href: "/mixers/pina-colada",
+  },
+  {
+    id: 6,
+    name: "Sex on the Beach",
+    description: "Sweet peach and orange balanced by tart cranberry. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
+    accent: "#f7934c",
+    image: "/NEW BARCRAFT IMAGES/SEX ON THE BEACH600ml.jpeg",
+    image60: "/60ml images/SEX ON THE BEACH SMALL.jpg",
+    href: "/mixers/sex-on-the-beach",
+  },
 ];
 
 export default function MixersSection() {

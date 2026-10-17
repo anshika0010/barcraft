@@ -286,26 +286,6 @@ function FlavorCard({ flavor, index }) {
         </AnimatePresence>
 
       {/* this is newly added code  */}
-      {/* Blur layer for coming-soon flavors */}
-        {!isAvailable && (
-          <div
-            aria-hidden="true"
-            className="
-              pointer-events-none
-              absolute
-              inset-0
-              z-10  
-              bg-black/10
-              backdrop-blur-[5px]
-              transition-all
-              duration-500
-              ease-in-out
-              group-hover:bg-black/20
-              group-hover:backdrop-blur-[7px]
-            "
-          />
-        )}
-
       {/* Hover overlay */}
       <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center bg-black/55 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         {isAvailable ? (
