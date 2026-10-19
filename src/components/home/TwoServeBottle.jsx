@@ -18,9 +18,7 @@ export default function TwoServeBottle() {
   return (
     <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-black">
       <div className="relative h-full w-full overflow-hidden">
-        {/* =====================================================
-            BACKGROUND
-        ====================================================== */}
+      
         <div className="absolute inset-0 z-0">
           <Image
             src="/home/2-serve-bottle/2-serve-bottle.jpg"
@@ -68,10 +66,6 @@ export default function TwoServeBottle() {
           />
         </div> */}
 
-        {/* =====================================================
-            MARQUEE
-            BETWEEN GREEN AND RED BOTTLES
-        ====================================================== */}
         <div
           className="
             pointer-events-none

@@ -491,53 +491,9 @@ useEffect(() => {
             options={optionsFor(allRecipes, "glassware", "All glassware")}
           />
 
-          <FilterSelect
-            value={spirit}
-            onChange={setSpirit}
-            options={optionsFor(allRecipes, "spirit", "All spirits")}
-          />
+        
 
-          {/* Search */}
-
-          <div
-            className="
-              flex
-              h-[58px]
-              items-center
-              border
-              border-white/70
-              px-[18px]
-
-              max-[1100px]:col-span-2
-
-              max-[640px]:col-span-1
-            "
-          >
-            <input
-              type="text"
-              value={search}
-              onChange={(event) =>
-                setSearch(event.target.value)
-              }
-              placeholder="Search.."
-              className="
-                min-w-0
-                flex-1
-                bg-transparent
-                font-sf-pro
-                text-[18px]
-                text-white
-                outline-none
-                placeholder:text-white/55
-              "
-            />
-
-            <Search
-              size={21}
-              strokeWidth={1.8}
-              className="shrink-0 text-white"
-            />
-          </div>
+         
 
 
           {/* Clear all */}
@@ -959,23 +915,7 @@ function ScrewdriverRecipeCard({ recipe }) {
               INGREDIENTS
             </h4>
 
-            <p
-              className="
-                mt-[12px]
-                font-sf-pro
-                text-[16px]
-                font-medium
-                uppercase
-                leading-[1.2]
-                text-white
-              "
-            >
-              {recipe.details.measure}
-              {" | "}
-              {recipe.details.spirit}
-              {" | "}
-              {recipe.details.glass}
-            </p>
+        
 
 
             <ul className="mt-[19px] space-y-[13px]">
