@@ -199,15 +199,15 @@ function CollectionSection({ collection, number }) {
 
 
 function FlavorCard({ flavor, index }) {
-  const [selectedSize, setSelectedSize] = useState("600ml");
+  const [selectedSize, setSelectedSize] = useState("550ml");
   const isAvailable = AVAILABLE_FLAVORS.includes(normalizeName(flavor.name));
   const selectedImage =
-    selectedSize === "60ml" && flavor.image60
+    selectedSize === "50ml" && flavor.image60
       ? flavor.image60=="NULL"?'/not-found.png':flavor.image60
       : flavor.image;
 
   const selectedHoverImage =
-    selectedSize === "60ml"
+    selectedSize === "50ml"
       ? flavor.hoverImage60
       : flavor.hoverImage;
 
@@ -293,7 +293,7 @@ function FlavorCard({ flavor, index }) {
             href={`/mixers/${slugify(flavor.name ?? "")}`}
             className="pointer-events-auto border border-brand-yellow bg-brand-yellow px-6 py-2 font-sf-pro text-[15px] font-semibold uppercase tracking-wider text-black transition hover:bg-transparent hover:text-brand-yellow"
           >
-            Read More
+            Explore Our {flavor.name} Mixer
           </Link>
         ) : (
           <span className="font-sf-pro text-[15px] font-semibold uppercase tracking-[0.25em] text-white">
@@ -321,26 +321,26 @@ function FlavorCard({ flavor, index }) {
         <div className="mt-[13px] flex gap-[7px]">
           <button
             type="button"
-            onClick={() => setSelectedSize("600ml")}
+            onClick={() => setSelectedSize("550ml")}
             className={`h-[35px] w-[113px] cursor-pointer font-sf-pro text-[17px] font-semibold leading-none ${
-              selectedSize === "600ml"
+              selectedSize === "550ml"
                 ? "bg-brand-yellow text-black"
                 : "border border-brand-yellow bg-transparent text-brand-yellow"
             }`}
           >
-            600ml
+            550ml
           </button>
 
           <button
             type="button"
-            onClick={() => setSelectedSize("60ml")}
+            onClick={() => setSelectedSize("50ml")}
             className={`h-[35px] w-[113px] cursor-pointer font-sf-pro text-[17px] font-semibold leading-none ${
-              selectedSize === "60ml"
+              selectedSize === "50ml"
                 ? "bg-brand-yellow text-black"
                 : "border border-brand-yellow bg-transparent text-brand-yellow"
             }`}
           >
-            60ml
+            50ml
           </button>
         </div>
       </div>

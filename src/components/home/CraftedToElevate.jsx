@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const CONTENT = {
   heading: {
-    firstLine: "Crafted to",
-    secondLine: "Elevate every",
-    thirdLine: "Pour",
+    firstLine: "Classic-Style ",
+    secondLine: "Cocktails at Home with BarCraft ",
+    thirdLine: "Mixers",
   },
 
   paragraphOne:

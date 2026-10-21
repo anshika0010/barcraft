@@ -141,7 +141,7 @@ const accent2 =  data.accent2 ;
     automatically use it.
   */
   const image =
-    recipe.image || "/mixers/recipes/classic-screwdriver.png";
+    recipe.image || "/mixers/recipes/classic-screwdriver.webp";
 
   return (
     <article

@@ -64,7 +64,7 @@ export default function ProductHero({ data }) {
         <Image
           key={selectedSize}
           src={
-            String(selectedSize).trim().toLowerCase() === "60ml"
+            String(selectedSize).trim().toLowerCase() === "50ml"
               ? product?.bg60 || product?.bg || "/not-found.png"
               : product?.bg || "/not-found.png"
           }
@@ -350,8 +350,8 @@ export default function ProductHero({ data }) {
                   {bottleSizes.map((item) => {
                     const size = item.size;
                     const selected = selectedSize === size;
-                    // One serve is 30ml: 600ml → 20 servings, 60ml → 2
-                    const servings = Math.floor(parseInt(size, 10) / 30);
+                    // One serve is 25ml: 550ml → 22 servings, 50ml → 2
+                    const servings = Math.floor(parseInt(size, 10) / 25);
 
                     return (
                       <div

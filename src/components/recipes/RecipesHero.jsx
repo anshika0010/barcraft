@@ -9,7 +9,7 @@ export default function RecipesHero() {
       ====================================================== */}
 
       <Image
-        src="/recipes/recipes-hero.png"
+        src="/images/recipes-hero.webp"
         alt="BarCraft cocktails"
         fill
         priority

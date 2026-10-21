@@ -8,8 +8,8 @@ const flavor = [
     id: 1,
     name: "Appletini",
     description: "Zesty lime and fresh mint with balanced sweetness. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
-    image: "/NEW BARCRAFT IMAGES/appletini600ml.jpeg",
-    image60: "/60ml images/appletini 60ml.jpg",
+    image: "/NEW BARCRAFT IMAGES/appletini 550ml 1.webp",
+    image60: "/60ml images/APPLETINI 50ML 1.webp",
     accent: "#c8102e",
     href:'/mixers/appletini',
     hoverImage: "/home/barcraft-mixers/appletini.webp",
@@ -20,8 +20,8 @@ const flavor = [
     name: "Screw Driver",
     description: "Juicy sweet orange with fresh citrus acidity and subtle peel notes. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
     accent: "#d3f83d",
-    image: "/NEW BARCRAFT IMAGES/screwdriver600ml.jpeg",
-    image60: "/60ml images/screwdriver 60ml.jpg",
+    image: "/NEW BARCRAFT IMAGES/SCREWDRIVER-550ML.webp",
+    image60: "/60ml images/screwdriver 50ml.webp",
     hoverImage: "/home/barcraft-mixers/screw-driver.webp",
     href:"/mixers/screw-driver"
   },
@@ -31,8 +31,8 @@ const flavor = [
     description: "Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
     hoverImage: "/home/barcraft-mixers/spicy-mango.webp",
             accent: "#edf048",
-        image: "/NEW BARCRAFT IMAGES/spicy mango600ml.jpeg",
-        image60: "/60ml images/spicy mango 60ml.jpg",
+        image: "/NEW BARCRAFT IMAGES/SPICY MANGO 550ML.webp",
+        image60: "/60ml images/spicy mango 50ml.webp",
     href:"/mixers/spicy-mango"
   },
   {
@@ -40,8 +40,8 @@ const flavor = [
     name: "Mojito",
     description: "Zesty lime and fresh mint with balanced sweetness. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
     accent: "#9bc53d",
-    image: "/NEW BARCRAFT IMAGES/MOJITO H600ml.jpeg",
-    image60: "/60ml images/MOJITOO SMALL.jpg",
+    image: "/NEW BARCRAFT IMAGES/mojitoo 550ML.webp",
+    image60: "/60ml images/MOJITO 50ML 1.webp",
     href: "/mixers/mojito",
   },
   {
@@ -49,8 +49,8 @@ const flavor = [
     name: "Piña Colada",
     description: "Juicy pineapple with creamy coconut and a mellow, sweet finish. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
     accent: "#f5deb3",
-    image: "/NEW BARCRAFT IMAGES/PINA COLADA600ml.jpeg",
-    image60: "/60ml images/PINA COLADA.jpg",
+    image: "/NEW BARCRAFT IMAGES/PINACOLADA-550ML.webp",
+    image60: "/60ml images/PINA COLADA.webp",
     href: "/mixers/pina-colada",
   },
   {
@@ -58,8 +58,8 @@ const flavor = [
     name: "Sex on the Beach",
     description: "Sweet peach and orange balanced by tart cranberry. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
     accent: "#f7934c",
-    image: "/NEW BARCRAFT IMAGES/SEX ON THE BEACH600ml.jpeg",
-    image60: "/60ml images/SEX ON THE BEACH SMALL.jpg",
+    image: "/NEW BARCRAFT IMAGES/SEX ON THE BEACH 550ML.webp",
+    image60: "/60ml images/SEX ON THE BEACH SMALL.webp",
     href: "/mixers/sex-on-the-beach",
   },
 ];
@@ -107,13 +107,13 @@ export default function MixersSection() {
 }
 
 function MixerCard({ flavor, index }) {
-  const [selectedSize, setSelectedSize] = useState("600ml");
+  const [selectedSize, setSelectedSize] = useState("550ml");
 
   const selectedImage =
-    selectedSize === "60ml" && flavor.image60 ? flavor.image60 : flavor.image;
+    selectedSize === "50ml" && flavor.image60 ? flavor.image60 : flavor.image;
 
   const selectedHoverImage =
-    selectedSize === "60ml" ? flavor.hoverImage60 : flavor.hoverImage;
+    selectedSize === "50ml" ? flavor.hoverImage60 : flavor.hoverImage;
 
   return (
     <article className="min-w-0">
@@ -203,26 +203,26 @@ function MixerCard({ flavor, index }) {
         <div className="mt-[13px] flex gap-[7px]">
           <button
             type="button"
-            onClick={() => setSelectedSize("600ml")}
+            onClick={() => setSelectedSize("550ml")}
             className={`h-[35px] w-[113px] cursor-pointer font-sf-pro text-[17px] font-semibold leading-none ${
-              selectedSize === "600ml"
+              selectedSize === "550ml"
                 ? "bg-brand-yellow text-black"
                 : "border border-brand-yellow bg-transparent text-brand-yellow"
             }`}
           >
-            600ml
+            550ml
           </button>
 
           <button
             type="button"
-            onClick={() => setSelectedSize("60ml")}
+            onClick={() => setSelectedSize("50ml")}
             className={`h-[35px] w-[113px] cursor-pointer font-sf-pro text-[17px] font-semibold leading-none ${
-              selectedSize === "60ml"
+              selectedSize === "50ml"
                 ? "bg-brand-yellow text-black"
                 : "border border-brand-yellow bg-transparent text-brand-yellow"
             }`}
           >
-            60ml
+            50ml
           </button>
         </div>
       </div>

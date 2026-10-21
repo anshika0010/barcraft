@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
     "Explore all BarCraft cocktail and mocktail mixers in refreshing flavours. Make your favourite drinks at home for parties, celebrations and relaxed evenings.",
   socialTitle: "Cocktail & Mocktail Mixers India: All Flavours | BarCraft",
   socialDescription:
-    "Explore all BarCraft cocktail and mocktail mixers in India: Mojito, Piña Colada, Moscow Mule, Cosmopolitan and more. 600ml and 60ml bottles.",
+    "Explore all BarCraft cocktail and mocktail mixers in India: Mojito, Piña Colada, Moscow Mule, Cosmopolitan and more. 550ml and 50ml bottles.",
   path: "/mixers",
   image: LOGO_IMAGE,
 });

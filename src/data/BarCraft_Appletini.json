@@ -13,12 +13,12 @@
   "schema_version": "1.0",
   "source": {
     "title": "BarCraft Appletini Mixer | Crisp Apple Bite – Buy Appletini Cocktail Mixer Online India ",
-    "description": "Buy BarCraft Appletini Mixer (600ml, 60ml). Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish. Pour 30ml mixer, add 30ml spirit, top with chilled soda and ice.",
+    "description": "Buy BarCraft Appletini Mixer (550ml, 50ml). Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish. Pour 30ml mixer, add 30ml spirit, top with chilled soda and ice.",
     "canonical_url": "https ://www .barcraftmixer.com/mixers/appletini",
     "open_graph": {
       "type": "product",
       "title": "BarCraft Appletini Mixer | Crisp Apple Bite – Buy Appletini Cocktail Mixer Online India",
-      "description": "Buy BarCraft Appletini Mixer (600ml, 60ml). Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish. Pour 30ml mixer, add 30ml spirit, top with chilled soda and ice.",
+      "description": "Buy BarCraft Appletini Mixer (550ml, 50ml). Crisp Apple Bite: Tart green apple with juicy sweetness and a crisp finish. Pour 30ml mixer, add 30ml spirit, top with chilled soda and ice.",
       "url": "https ://www .barcraftmixer.com/mixers/appletini",
       "image": "https ://www .barcraftmixer.com/images/appletini-art.jpg"
     }
@@ -46,24 +46,24 @@
     "accent": "#21e268",
     "wrapper": "/mixers/IngredientsNutrition/wrappers/appletini.png",
     "accent2": "#054A29",
-    "step2": "/mixers/steps/2-appletini.png",
-    "bottleImage": "/mixers/IngredientsNutrition/appletini.png",
+    "step2": "/mixers/steps/2-appletini.webp",
+    "bottleImage": "/mixers/IngredientsNutrition/appletini.webp",
     "sizes": [
       {
-        "size": "600ml ",
-        "value": "600ml",
+        "size": "550ml ",
+        "value": "550ml",
         "selected": true,
         "price": "",
         "cart_url": "#",
-        "servings": "About 20 servings of 30ml per bottle"
+        "servings": "About 22 servings of 25ml per bottle"
       },
       {
-        "size": "60ml ",
-        "value": "60ml",
+        "size": "50ml ",
+        "value": "50ml",
         "selected": false,
         "price": "",
         "cart_url": "#",
-        "servings": "About 2 servings of 30ml per bottle"
+        "servings": "About 2 servings of 25ml per bottle"
       }
     ],
     "currency": "INR",
@@ -175,12 +175,12 @@
       "Trans Fat ": "0 g ",
       "Sodium ": "400 mg "
     },
-    "serving_information": "Serving size: 30ml. Servings per 60ml bottle: 2. Servings per 600ml bottle: 20. ",
+    "serving_information": "Serving size: 25ml. Servings per 50ml bottle: 2. Servings per 550ml bottle: 22. ",
     "ingredients": "Water, Sugar, Glycerol [Humectant (INS 422)], Lime Juice Concentrate, Acidity Regulators [Citric Acid (INS 330), Sodium Citrate (INS 331)], Mint Extract, Natural and Nature-Identical Flavouring Substances, Sweetener [Sucralose (INS 955)], Common Salt, Preservatives [Potassium Sorbate (INS 202), Sodium Benzoate (INS 211)], Permitted Natural Colour. ",
     "manufacturer_note": "Marketed by: Nutri Next, Noida, Uttar Pradesh, India. Scan the QR code on the pack for manufacturer details. ",
     "label_image": {
       "src": "/images/appletini-label.jpg",
-      "alt": "Front and back label of BarCraft Appletini Mixer 600ml",
+      "alt": "Front and back label of BarCraft Appletini Mixer 550ml",
       "width": "1200",
       "height": "1040"
     }
@@ -204,7 +204,7 @@
     },
     {
       "question": "How many drinks does a bottle make? ",
-      "answer": "One serving is 30ml, so the 600ml bottle makes about 20 servings and the 60ml bottle makes 2. "
+      "answer": "One serving is 25ml, so the 550ml bottle makes about 22 servings and the 50ml bottle makes 2. "
     },
     {
       "question": "Can I make Appletini as a mocktail? ",
@@ -224,7 +224,7 @@
     },
     {
       "question": "Which bottle size should I buy? ",
-      "answer": "Choose the 600ml bottle for home bars, parties and regular use. Choose the 60ml bottle to try the flavour, to travel or to gift. "
+      "answer": "Choose the 550ml bottle for home bars, parties and regular use. Choose the 50ml bottle to try the flavour, to travel or to gift. "
     }
   ],
   "related_flavors": [

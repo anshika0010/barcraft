@@ -173,7 +173,7 @@ export default function WeddingHowItWorks() {
             "
           >
             <Image
-              src="/wedding/how-it-works.webp"
+              src="/images/how-it-works.webp"
               alt="BarCraft event cocktails"
               fill
               sizes="

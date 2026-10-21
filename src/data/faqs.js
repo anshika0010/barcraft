@@ -10,10 +10,7 @@ export const FAQS = [
     answer:
       "Mojito (lime and mint), Cosmopolitan (cranberry and citrus) and Moscow Mule (real ginger and lime).",
   },
-  {
-    question: "What sizes do they come in?",
-    answer: "600ml bottles and 2-serve bottles.",
-  },
+
   {
     question: "Are the mixers alcoholic?",
     answer:
@@ -33,14 +30,11 @@ export const FAQS = [
     question: "Do I need any special equipment?",
     answer: "No. A glass, ice and a spoon are enough. A shaker is optional.",
   },
-  {
-    question: "How much spirit should I add?",
-    answer: "We suggest 50ml per drink. Adjust to taste.",
-  },
+  
   {
     question: "How many drinks can I make from one bottle?",
     answer:
-      "It depends on how much mixer you use per drink. At a 60ml pour, a 600ml bottle makes about 10 drinks. Check your bottle label for exact serving details.",
+      "It depends on how much mixer you use per drink. At a 25ml pour, a 550ml bottle makes about 22 drinks. Check your bottle label for exact serving details.",
   },
   {
     question: "Which spirit goes with which mixer?",

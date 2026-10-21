@@ -15,7 +15,7 @@ const STEPS = [
     id: 2,
     title: "Add Your Spirit, or Keep It Zero-Proof",
     description:
-      "Make it your own. Pour 50ml of your favourite spirit for a classic cocktail experience, or skip the alcohol and add soda for a refreshing zero-proof serve. Either way, our mixer brings the flavour, balance, and character to every glass.",
+      "Make it your own. Pour 30ml of your favourite spirit for a classic cocktail experience, or skip the alcohol and add soda for a refreshing zero-proof serve. Either way, our mixer brings the flavour, balance, and character to every glass.",
     image: "/home/how-to-mix/steps/2.png",
   },
   {
@@ -173,7 +173,7 @@ export default function HowToMix() {
         {/* =================================================
             HORIZONTAL STEP STRIP
         ================================================== */}
-        <div className="relative mb-[12px] h-[35px] w-[200px] overflow-hidden">
+        <div className="relative mb-[23px] h-[24px] w-[88px] shrink-0 overflow-hidden">
           <div
             className="
               absolute

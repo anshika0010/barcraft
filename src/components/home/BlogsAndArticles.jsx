@@ -163,7 +163,7 @@ export default async function BlogsAndArticles() {
                 href={`/blog/${blog.slug}`}
                 className="font-bold text-red-500 transition-opacity duration-200 hover:opacity-70"
               >
-                read more
+                Read Our Blog
               </Link>
             </p>
           </article>

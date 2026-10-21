@@ -12,7 +12,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "HIGHBALL GLASS",
     spirit: "VODKA",
-    image: "/mixers/recipes/classic-screwdriver.png",
+    image: "/mixers/recipes/classic-screwdriver.webp",
     details: {
       measure: "100ML",
       spirit: "VODKA",
@@ -32,7 +32,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "HIGHBALL GLASS",
     spirit: "NO SPIRIT",
-    image: "/mixers/recipes/classic-screwdriver.png",
+    image: "/mixers/recipes/classic-screwdriver.webp",
     details: {
       measure: "100ML",
       spirit: "NO SPIRIT",
@@ -52,7 +52,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "HIGHBALL GLASS",
     spirit: "TEQUILA",
-    image: "/mixers/recipes/classic-screwdriver.png",
+    image: "/mixers/recipes/classic-screwdriver.webp",
     details: {
       measure: "200ML",
       spirit: "TEQUILA",
@@ -72,7 +72,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "HIGHBALL GLASS",
     spirit: "GIN",
-    image: "/mixers/recipes/classic-screwdriver.png",
+    image: "/mixers/recipes/classic-screwdriver.webp",
     details: {
       measure: "100ML",
       spirit: "GIN",
@@ -92,7 +92,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "JUG OR PITCHER",
     spirit: "WHITE RUM",
-    image: "/mixers/recipes/screwdriver-party-pitcher.png",
+    image: "/mixers/recipes/screwdriver-party-pitcher.webp",
     details: {
       measure: "1L",
       spirit: "WHITE RUM",
@@ -112,7 +112,7 @@ const RECIPES = [
     product: "Screwdriver",
     glassware: "ROCKS GLASS",
     spirit: "WHITE RUM",
-    image: "/mixers/recipes/short-daiquiri.png",
+    image: "/mixers/recipes/short-daiquiri.webp",
     details: {
       measure: "75ML",
       spirit: "WHITE RUM",
@@ -131,7 +131,7 @@ const RECIPES = [
     product: "MOJITO",
     glassware: "HIGHBALL GLASS",
     spirit: "VODKA",
-    image: "/mixers/recipes/classic-mojito.png",
+    image: "/mixers/recipes/classic-mojito.webp",
     details: {
       measure: "100ML",
       spirit: "VODKA",
@@ -158,7 +158,7 @@ const RECIPES = [
     product: "MOJITO",
     glassware: "HIGHBALL GLASS",
     spirit: "NO SPIRIT",
-    image: "/mixers/recipes/classic-mojito.png",
+    image: "/mixers/recipes/classic-mojito.webp",
     details: {
       measure: "100ML",
       spirit: "NO SPIRIT",
@@ -185,7 +185,7 @@ const RECIPES = [
     product: "MOJITO",
     glassware: "HIGHBALL GLASS",
     spirit: "TEQUILA",
-    image: "/mixers/recipes/classic-mojito.png",
+    image: "/mixers/recipes/classic-mojito.webp",
     details: {
       measure: "200ML",
       spirit: "TEQUILA",
@@ -212,7 +212,7 @@ const RECIPES = [
     product: "MOJITO",
     glassware: "HIGHBALL GLASS",
     spirit: "GIN",
-    image: "/mixers/recipes/classic-mojito.png",
+    image: "/mixers/recipes/classic-mojito.webp",
     details: {
       measure: "100ML",
       spirit: "GIN",
@@ -239,7 +239,7 @@ const RECIPES = [
     product: "MOJITO",
     glassware: "JUG OR PITCHER",
     spirit: "WHITE RUM",
-    image: "/mixers/recipes/mojito-party-pitcher.png",
+    image: "/mixers/recipes/mojito-party-pitcher.webp",
     details: {
       measure: "1L",
       spirit: "WHITE RUM",
@@ -266,7 +266,7 @@ const RECIPES = [
     product: "MOJITO",
     glassware: "ROCKS GLASS",
     spirit: "WHITE RUM",
-    image: "/mixers/recipes/short-mint-smash.png",
+    image: "/mixers/recipes/short-mint-smash.webp",
     details: {
       measure: "75ML",
       spirit: "WHITE RUM",
@@ -427,9 +427,7 @@ useEffect(() => {
         px-[30px]
         pb-[110px]
         pt-[80px]
-
         max-[1100px]:px-[24px]
-
         max-[640px]:px-5
         max-[640px]:pt-[65px]
       "

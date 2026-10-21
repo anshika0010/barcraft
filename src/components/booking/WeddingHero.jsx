@@ -10,7 +10,7 @@ export default function WeddingHero() {
           BACKGROUND IMAGE
       ====================================================== */}
       <Image
-        src="/wedding/wedding-hero.webp"
+        src="/images/wedding-hero.webp"
         alt="BarCraft  cocktails"
         fill
         priority
@@ -136,7 +136,7 @@ export default function WeddingHero() {
           {/* =================================================
               DESCRIPTION
           ================================================== */}
-          <p
+          <h1
             className="
               mx-auto
               mt-[21px]
@@ -156,7 +156,7 @@ export default function WeddingHero() {
             Register your event with BarCraft. Ten registered
             event will get 1000 BarCraft mixer servings in
             four flavours of your choice. No purchase required.
-          </p>
+          </h1>
 
           {/* =================================================
               CTA

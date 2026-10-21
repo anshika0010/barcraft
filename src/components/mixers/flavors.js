@@ -18,8 +18,8 @@ export const COLLECTIONS = [
         name:"Appletini",
         description:"NULL",
         accent:"#21e268",
-        image:"/NEW BARCRAFT IMAGES/appletini600ml.jpeg",
-        image60:"/60ml images/appletini 60ml.jpg",
+        image:"/NEW BARCRAFT IMAGES/appletini 550ml 1.webp",
+        image60:"/60ml images/APPLETINI 50ML 1.webp",
         bg:"/background-images/appletini-big-1.jpg",
 
       },
@@ -83,8 +83,8 @@ export const COLLECTIONS = [
         name: "Mojito",
         description: "Crisp, cooling garden mint paired with a sharp citrus bite.",
         accent: "#9bc53d",
-        image: "/NEW BARCRAFT IMAGES/MOJITO H600ml.jpeg",
-                image60: "/60ml images/MOJITOO SMALL.jpg",
+        image: "/NEW BARCRAFT IMAGES/mojitoo 550ML.webp",
+                image60: "/60ml images/MOJITO 50ML 1.webp",
         bg:"/background-images/mojito big  1.jpg",
 
       },
@@ -121,8 +121,8 @@ export const COLLECTIONS = [
         description:
           "Rich, creamy coconut layered seamlessly with ripe, golden pineapple.",
         accent: "#f5deb3",
-        image: "/NEW BARCRAFT IMAGES/PINA COLADA600ml.jpeg",
-                image60: "/60ml images/PINA COLADA.jpg",
+        image: "/NEW BARCRAFT IMAGES/PINACOLADA-550ML.webp",
+                image60: "/60ml images/PINA COLADA.webp",
         bg:"/background-images/pina colada big  1.jpg",
 
       },
@@ -170,8 +170,8 @@ export const COLLECTIONS = [
         name:"Screw Driver",
         description:"NULL",
         accent:"#f76227",
-        image:"/NEW BARCRAFT IMAGES/screwdriver600ml.jpeg",
-        image60:"/60ml images/screwdriver 60ml.jpg",
+        image:"/NEW BARCRAFT IMAGES/SCREWDRIVER-550ML.webp",
+        image60:"/60ml images/screwdriver 50ml.webp",
         bg:"/background-images/screwdriver big 1.jpg",
 
       },
@@ -179,8 +179,8 @@ export const COLLECTIONS = [
         name:"Spicy Mango",
         description:"NULL",
         accent:"#edf048",
-        image:"/NEW BARCRAFT IMAGES/spicy mango600ml.jpeg",
-        image60:"/60ml images/spicy mango 60ml.jpg",
+        image:"/NEW BARCRAFT IMAGES/SPICY MANGO 550ML.webp",
+        image60:"/60ml images/spicy mango 50ml.webp",
         bg:"/background-images/spicy mango big  1.jpg",
 
       },
@@ -217,8 +217,8 @@ export const COLLECTIONS = [
         description:
           "Ripe peach and sweet orange, immediately cut by a tart cranberry and cherry finish.",
         accent: "#f7934c",
-        image: "/NEW BARCRAFT IMAGES/SEX ON THE BEACH600ml.jpeg",
-        image60: "/60ml images/SEX ON THE BEACH SMALL.jpg",
+        image: "/NEW BARCRAFT IMAGES/SEX ON THE BEACH 550ML.webp",
+        image60: "/60ml images/SEX ON THE BEACH SMALL.webp",
         bg:"/background-images/sex on the beach big  1.jpg"
 
 
