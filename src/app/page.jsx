@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
     "Make bar-style drinks at home with BarCraft cocktail and mocktail mixers. Explore refreshing flavours, easy recipes and drink ideas for every occasion in India.",
   socialTitle: "BarCraft | Cocktail & Mocktail Mixers India",
   socialDescription:
-    "BarCraft cocktail and mocktail mixers for home bars in India. Pour 30ml mixer, add your spirit or soda, and make a Mojito, Piña Colada or Appletini.",
+    "BarCraft cocktail and mocktail mixers for home bars in India. Pour 25ml mixer, add your spirit or soda, and make a Mojito, Piña Colada or Appletini.",
   path: "/",
   image: LOGO_IMAGE,
 });
