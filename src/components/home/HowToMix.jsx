@@ -15,7 +15,7 @@ const STEPS = [
     id: 2,
     title: "Add Your Spirit, or Keep It Zero-Proof",
     description:
-      "Make it your own. Pour 30ml of your favourite spirit for a classic cocktail experience, or skip the alcohol and add soda for a refreshing zero-proof serve. Either way, our mixer brings the flavour, balance, and character to every glass.",
+      "Make it your own. Pour 25ml of your favourite spirit for a classic cocktail experience, or skip the alcohol and add soda for a refreshing zero-proof serve. Either way, our mixer brings the flavour, balance, and character to every glass.",
     image: "/home/how-to-mix/steps/2.png",
   },
   {

@@ -20,7 +20,7 @@ const OPTIONS = [
     category: "Mocktail-Flavors",
     title: "MOCKTAIL RECIPES",
     description:
-      "No spirit needed. Ice, 30ml of mixer and chilled soda is all it takes.",
+      "No spirit needed. Ice, 25ml of mixer and chilled soda is all it takes.",
     points: [
       "Ready in about 30 seconds",
       "Good for drivers, fasting days and family gatherings",

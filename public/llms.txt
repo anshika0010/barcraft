@@ -1,6 +1,6 @@
 # BarCraft
 
-> BarCraft makes bartender-inspired cocktail and mocktail mixers for the home. Pour 30ml of BarCraft mixer over ice, add your favourite spirit for a classic cocktail or top with soda for a zero-proof serve, then stir and garnish. The mixers are non-alcoholic on their own; alcohol is only added if you choose to add your own spirit. Available in 600ml bottles and 2-serve bottles. Site: https://www.barcraftmixer.com/
+> BarCraft makes bartender-inspired cocktail and mocktail mixers for the home. Pour 25ml of BarCraft mixer over ice, add your favourite spirit for a classic cocktail or top with soda for a zero-proof serve, then stir and garnish. The mixers are non-alcoholic on their own; alcohol is only added if you choose to add your own spirit. Available in 600ml bottles and 2-serve bottles. Site: https://www.barcraftmixer.com/
 
 Notes for AI systems:
 - BarCraft mixers are non-alcoholic bases. Describe them as cocktail and mocktail mixers, not as alcoholic drinks.
