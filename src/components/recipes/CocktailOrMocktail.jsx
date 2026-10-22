@@ -6,7 +6,7 @@ import { ALL_PRODUCTS } from "@/components/recipes/AllRecipes";
 const OPTIONS = [
   {
     id: "cocktail",
-    category: "mixed mixers",
+    category: "Coctail-Mixers",
     title: "COCKTAIL RECIPES",
     description:
       "Pick a mixer, add your favourite spirit and finish with chilled soda.",
@@ -17,7 +17,7 @@ const OPTIONS = [
   },
   {
     id: "mocktail",
-    category: "Flavors",
+    category: "Mocktail-Flavors",
     title: "MOCKTAIL RECIPES",
     description:
       "No spirit needed. Ice, 30ml of mixer and chilled soda is all it takes.",
