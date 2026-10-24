@@ -33,7 +33,7 @@ const STEPS = [
     image: "/home/how-to-mix/steps/4.png",
   },
 ];
-
+  
 export default function HowToMix() {
   const [activeStep, setActiveStep] = useState(0);
 

@@ -2,7 +2,6 @@
 
 import { ALL_PRODUCTS } from "@/components/recipes/AllRecipes";
 
-// `category` is the recipe category name in the admin that each card filters to
 const OPTIONS = [
   {
     id: "cocktail",
@@ -233,16 +232,11 @@ function RecipeOption({ option, count, isActive, onClick }) {
           uppercase
           leading-[0.82]
           tracking-[-1px]
-
           xl:text-[72px]
-
           lg:text-[61px]
-
           md:text-[53px]
-
           max-[640px]:mt-[26px]
           max-[640px]:text-[58px]
-
           max-[430px]:text-[48px]
 
           ${
@@ -329,9 +323,7 @@ function RecipeOption({ option, count, isActive, onClick }) {
       </ul>
 
 
-      {/* =================================================
-          CTA
-      ================================================== */}
+   
 
     </button>
   );
