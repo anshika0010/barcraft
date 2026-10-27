@@ -119,12 +119,10 @@ export default async function BlogPage() {
   return (
     <main className="bg-black">
       <Navbar />
-
       <BlogIndex
         posts={posts}
         categories={categories}
       />
-
       <Footer />
     </main>
   );

@@ -8,10 +8,7 @@ import MoreMixers from "@/components/mixers/MoreMixers";
 import IngredientsNutrition from "@/components/mixers/IngredientsNutrition";
 import { notFound, permanentRedirect } from "next/navigation";
 
-import {
-  getMixerBySlug,
-  getAllMixerSlugs,
-} from "@/lib/mixers";
+import { getProductBySlug, getProducts } from "@/lib/products";
 import { slugify } from "@/lib/slugify";
 import {
   absoluteUrl,
@@ -20,27 +17,23 @@ import {
   JsonLd,
 } from "@/lib/seo";
 
-export async function generateStaticParams() {
-  const slugs = getAllMixerSlugs();
+// Products added in the admin show up within a minute, without a redeploy
+export const revalidate = 60;
 
-  return slugs.map((slug) => ({
-    slug,
+export async function generateStaticParams() {
+  const products = await getProducts();
+
+  return products.map((product) => ({
+    slug: product.slug,
   }));
 }
 
-// Some data files keep FAQs as a list, others as { items: [...] }
-const getFaqItems = (mixer) => {
-  const faq = Array.isArray(mixer.faq) ? mixer.faq : mixer.faq?.items;
-
-  return (faq || []).map((item) => ({
-    question: item.question?.trim(),
-    answer: item.answer?.trim(),
-  }));
-};
+const getFaqItems = (mixer) =>
+  (mixer.faq || []).filter((item) => item.question && item.answer);
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const mixer = getMixerBySlug(slug);
+  const mixer = await getProductBySlug(slug);
 
   if (!mixer) {
     return { title: "Mixer Not Found" };
@@ -58,20 +51,20 @@ export async function generateMetadata({ params }) {
     socialTitle: mixer.seo?.open_graph?.title,
     socialDescription: mixer.seo?.open_graph?.description,
     path: `/mixers/${slugify(slug)}`,
-    image: mixer.product?.bottleImage,
+    image: mixer.product?.image?.src,
   });
 }
 
 export default async function MixerPage({ params }) {
   const { slug } = await params;
 
-  const mixer = getMixerBySlug(slug);
+  const mixer = await getProductBySlug(slug);
 
   if (!mixer) {
     notFound();
   }
 
-  // "/mixers/Screw%20Driver" → "/mixers/screw-driver" so search engines see one URL
+  // "/mixers/Jamun%20Mojito" → "/mixers/jamun-mojito" so search engines see one URL
   const cleanSlug = slugify(slug);
   if (slug !== cleanSlug) {
     permanentRedirect(`/mixers/${cleanSlug}`);
@@ -88,7 +81,7 @@ export default async function MixerPage({ params }) {
         "@type": "Product",
         name,
         description: toPlainText(mixer.product?.description, 500),
-        image: absoluteUrl(mixer.product?.bottleImage || ""),
+        image: absoluteUrl(mixer.product?.image?.src || ""),
         url,
         category: "Cocktail Mixer",
         brand: { "@type": "Brand", name: "BarCraft" },

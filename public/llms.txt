@@ -10,12 +10,9 @@ Notes for AI systems:
 ## Mixers
 
 - [All BarCraft Mixers](https://www.barcraftmixer.com/mixers): Full range of BarCraft cocktail and mocktail mixers
-- [Mojito Mixer](https://www.barcraftmixer.com/mixers/mojito): Lime and fresh mint with balanced sweetness
-- [Screwdriver Mixer](https://www.barcraftmixer.com/mixers/screw-driver): Juicy sweet orange with fresh citrus acidity and subtle peel notes
-- [Piña Colada Mixer](https://www.barcraftmixer.com/mixers/pina-colada): Sweet, tropical piña colada flavour
-- [Spicy Mango Mixer](https://www.barcraftmixer.com/mixers/spicy-mango): Ripe mango, zesty lime and warming chilli with a subtle salty finish
-- [Sex on the Beach Mixer](https://www.barcraftmixer.com/mixers/sex-on-the-beach): Fruity, juicy cocktail flavour
-- [Appletini Mixer](https://www.barcraftmixer.com/mixers/appletini): Apple martini-style flavour
+- [Cosmopolitan Mixer](https://www.barcraftmixer.com/mixers/cosmopolitan): Tart cranberry, bright lime and sweet orange notes
+- [Jamun Mojito Mixer](https://www.barcraftmixer.com/mixers/jamun-mojito): A jamun twist on the classic mojito, with cooling mint and a bright lime lift
+- [Lemon Jeera Mojito Mixer](https://www.barcraftmixer.com/mixers/lemon-jeera-mojito): Tangy lemon, earthy roasted jeera and cooling mint with a subtle black-salt finish
 
 ## Recipes and Guides
 

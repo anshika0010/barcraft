@@ -4,30 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { COLLECTIONS } from "@/components/mixers/flavors";
-import { slugify } from "@/lib/slugify";
+import { mergeCatalog } from "@/lib/catalog";
 
-// Mixers that have a product page (keep in sync with src/lib/mixers.js)
-const AVAILABLE_SLUGS = new Set([
-  "appletini",
-  "mojito",
-  "pina-colada",
-  "sex-on-the-beach",
-  "screw-driver",
-  "spicy-mango",
-]);
-
-const ALL_MIXERS = COLLECTIONS.flatMap((collection) =>
-  collection.flavors.map((flavor) => {
-    const slug = slugify(flavor.name ?? "");
-    return {
-      ...flavor,
-      slug,
-      collection: collection.title,
-      available: AVAILABLE_SLUGS.has(slug),
-    };
-  })
-);
+// Flattens the catalogue; `available` mixers (from the product API) link to their page
+const flattenMixers = (products) =>
+  mergeCatalog(products).flatMap((collection) =>
+    collection.flavors.map((flavor) => ({ ...flavor, collection: collection.title }))
+  );
 
 // Lowercase + strip accents so "pina" matches "Piña"
 const normalize = (value = "") =>
@@ -41,14 +24,28 @@ export default function MixerSearch({ className = "", autoFocus = false, onNavig
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [allMixers, setAllMixers] = useState(() => flattenMixers([]));
   const containerRef = useRef(null);
   const router = useRouter();
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/products")
+      .then((response) => (response.ok ? response.json() : []))
+      .then((products) => {
+        if (!cancelled && Array.isArray(products)) setAllMixers(flattenMixers(products));
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const results = useMemo(() => {
     const q = normalize(query);
     if (!q) return [];
 
-    return ALL_MIXERS.filter(
+    return allMixers.filter(
       (mixer) =>
         normalize(mixer.name).includes(q) ||
         (mixer.description !== "NULL" && normalize(mixer.description).includes(q))
@@ -60,7 +57,7 @@ export default function MixerSearch({ className = "", autoFocus = false, onNavig
           Number(b.available) - Number(a.available)
       )
       .slice(0, 8);
-  }, [query]);
+  }, [query, allMixers]);
 
   // Close the dropdown when clicking outside
   useEffect(() => {

@@ -3,68 +3,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import Link from 'next/link' ;
-const flavor = [
-  {
-    id: 1,
-    name: "Appletini",
-    description: "Zesty lime and fresh mint with balanced sweetness. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
-    image: "/NEW BARCRAFT IMAGES/appletini 550ml 1.webp",
-    image60: "/60ml images/APPLETINI 50ML 1.webp",
-    accent: "#c8102e",
-    href:'/mixers/appletini',
-    hoverImage: "/home/barcraft-mixers/appletini.webp",
-  },
 
-  {
-    id: 2,
-    name: "Screw Driver",
-    description: "Juicy sweet orange with fresh citrus acidity and subtle peel notes. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
-    accent: "#d3f83d",
-    image: "/NEW BARCRAFT IMAGES/SCREWDRIVER-550ML.webp",
-    image60: "/60ml images/screwdriver 50ml.webp",
-    hoverImage: "/home/barcraft-mixers/screw-driver.webp",
-    href:"/mixers/screw-driver"
-  },
-  {
-    id: 3,
-    name: "Spicy Mango",
-    description: "Juicy ripe mango, zesty lime and warming chilli, finishing with a subtle salty tang. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
-    hoverImage: "/home/barcraft-mixers/spicy-mango.webp",
-            accent: "#edf048",
-        image: "/NEW BARCRAFT IMAGES/SPICY MANGO 550ML.webp",
-        image60: "/60ml images/spicy mango 50ml.webp",
-    href:"/mixers/spicy-mango"
-  },
-  {
-    id: 4,
-    name: "Mojito",
-    description: "Zesty lime and fresh mint with balanced sweetness. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
-    accent: "#9bc53d",
-    image: "/NEW BARCRAFT IMAGES/mojitoo 550ML.webp",
-    image60: "/60ml images/MOJITO 50ML 1.webp",
-    href: "/mixers/mojito",
-  },
-  {
-    id: 5,
-    name: "Piña Colada",
-    description: "Juicy pineapple with creamy coconut and a mellow, sweet finish. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
-    accent: "#f5deb3",
-    image: "/NEW BARCRAFT IMAGES/PINACOLADA-550ML.webp",
-    image60: "/60ml images/PINA COLADA.webp",
-    href: "/mixers/pina-colada",
-  },
-  {
-    id: 6,
-    name: "Sex on the Beach",
-    description: "Sweet peach and orange balanced by tart cranberry. BarCraft Crafted Cocktail Mixers bring the character of a well-crafted cocktail to every pour, with a smooth, consistent serve and none of the complexity of traditional cocktail making.",
-    accent: "#f7934c",
-    image: "/NEW BARCRAFT IMAGES/SEX ON THE BEACH 550ML.webp",
-    image60: "/60ml images/SEX ON THE BEACH SMALL.webp",
-    href: "/mixers/sex-on-the-beach",
-  },
-];
 
-export default function MixersSection() {
+// `products` are the live mixers from the product API
+export default function MixersSection({ products = [] }) {
   return (
     <section className="w-full bg-black px-4 py-[60px] sm:px-6 md:py-[80px] lg:px-[28px] lg:py-[100px]">
       {/* Section heading */}
@@ -98,8 +40,11 @@ export default function MixersSection() {
           lg:grid-cols-3
         "
       >
-        {flavor.map((flavor) => (
-          <MixerCard key={flavor.id} flavor={flavor} />
+        {products.map((product) => (
+          <MixerCard
+            key={product.slug}
+            flavor={{ ...product, href: `/mixers/${product.slug}` }}
+          />
         ))}
       </div>
     </section>
@@ -186,7 +131,11 @@ function MixerCard({ flavor, index }) {
               </motion.div>
             )
           ) : (
-            <LabelArt flavor={flavor} index={index} />
+            // No photo uploaded yet: show the mixer's colour instead
+            <div
+              className="absolute inset-0"
+              style={{ backgroundColor: flavor.accent }}
+            />
           )}
         </AnimatePresence>
       </div>

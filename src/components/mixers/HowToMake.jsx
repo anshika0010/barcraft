@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 
-// Illustrations available in /public/mixers/steps (1.png … 4.png)
+// Fallback illustrations in /public/mixers/steps (1.png … 4.png), used when
+// the admin has no image for a step
 const STEP_IMAGE_COUNT = 4;
 
 // Max steps per row on large screens; extra steps wrap to a new row
@@ -10,7 +11,6 @@ const MAX_LG_COLUMNS = 4;
 
 export default function HowToMake({ data }) {
   const howToUse = data?.how_to_use;
-  const step2 = data?.product?.step2;
   const accent = data?.product?.accent;
 
   if (!howToUse) {
@@ -100,9 +100,8 @@ export default function HowToMake({ data }) {
       >
         {steps.map((text, index) => {
           const imageSrc =
-            index === 1 && step2
-              ? step2
-              : `/mixers/steps/${(index % STEP_IMAGE_COUNT) + 1}.png`;
+            howToUse.images?.[index] ||
+            `/mixers/steps/${(index % STEP_IMAGE_COUNT) + 1}.png`;
 
           // Divider on the left of every step that isn't first in its row
           const smBorder = index % 2 !== 0 ? "sm:border-l" : "sm:border-l-0";

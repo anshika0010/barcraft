@@ -96,7 +96,7 @@ export default function MixerRecipes({ data }) {
       >
         {recipes.map((recipe, index) => (
           <RecipeCard
-            key={recipe.name || index}
+            key={recipe.id || recipe.slug || index}
             recipe={recipe}
             index={index}
             data={data.product}

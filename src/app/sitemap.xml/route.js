@@ -1,19 +1,10 @@
 import { absoluteUrl } from "@/lib/seo";
+import { getProducts } from "@/lib/products";
 
 const BLOGS_API = "https://admin.barcraftmixer.com/barcraft/api/blogs/";
 
 // Rebuilt at most once an hour, so new blogs show up without a redeploy
 export const revalidate = 3600;
-
-// Mixer pages in the order they should appear in the sitemap
-const MIXER_SLUGS = [
-  "appletini",
-  "screw-driver",
-  "spicy-mango",
-  "mojito",
-  "pina-colada",
-  "sex-on-the-beach",
-];
 
 // The newest blogs are linked from the homepage, so they get a higher priority
 const FEATURED_BLOG_COUNT = 3;
@@ -66,7 +57,7 @@ const urlTag = ({ path, lastModified, priority }) => `<url>
 </url>`;
 
 export async function GET() {
-  const blogs = await getBlogs();
+  const [blogs, products] = await Promise.all([getBlogs(), getProducts()]);
   const now = new Date();
 
   const page = (path, priority) => ({ path, lastModified: now, priority });
@@ -82,7 +73,7 @@ export async function GET() {
     page("/recipes", 0.8),
     page("/booking", 0.8),
     page("/blog", 0.8),
-    ...MIXER_SLUGS.map((slug) => page(`/mixers/${slug}`, 0.8)),
+    ...products.map((product) => page(`/mixers/${product.slug}`, 0.8)),
     ...blogs.slice(0, FEATURED_BLOG_COUNT).map((blog) => blogPage(blog, 0.8)),
     page("/faqs", 0.8),
     ...blogs.slice(FEATURED_BLOG_COUNT).map((blog) => blogPage(blog, 0.64)),

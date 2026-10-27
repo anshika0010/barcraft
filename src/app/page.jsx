@@ -9,6 +9,9 @@ import BlogsAndArticles from "../components/home/BlogsAndArticles";
 import FAQs from "../components/home/FAQs";
 import Footer from "../components/home/Footer";
 import { buildMetadata, LOGO_IMAGE } from "@/lib/seo";
+import { getProductCards } from "@/lib/products";
+
+export const revalidate = 60;
 
 export const metadata = buildMetadata({
   title: { absolute: "BarCraft Mixer | Cocktail & Mocktail Mixers in India" },
@@ -21,13 +24,15 @@ export const metadata = buildMetadata({
   image: LOGO_IMAGE,
 });
 
-export default function Home() {
+export default async function Home() {
+  const products = await getProductCards();
+
   return (
     <main className="bg-black">
       <Navbar />
       <Hero />
       <CraftedToElevate />
-      <MixersSection/>
+      <MixersSection products={products} />
       <HowToMix />
       <PouredAndPraised />
       <TwoServeBottle />

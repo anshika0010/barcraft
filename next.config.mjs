@@ -19,6 +19,8 @@ const nextConfig = {
   async redirects() {
     return [
       { source: "/wedding", destination: "/booking", permanent: true },
+      // Screwdriver's URL changed when mixers moved to the product API
+      { source: "/mixers/screw-driver", destination: "/mixers/screwdriver", permanent: true },
     ];
   },
 

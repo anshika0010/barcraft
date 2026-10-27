@@ -3,38 +3,21 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { COLLECTIONS } from "./flavors";
 import Link from "next/link";
-import { slugify } from "@/lib/slugify";
+import { mergeCatalog } from "@/lib/catalog";
 const POUR_STEPS = [
   { title: "Choose your base", image: "/home/how-to-mix/steps/2.png" },
   { title: "Pour the mixer", image: "/home/how-to-mix/steps/3.png" },
   { title: "Bypass the bartender", image: "/home/how-to-mix/steps/4.png" },
 ];
-const AVAILABLE_FLAVORS = [
-  "appletini",
-  "mojito",
-  "piña colada",
-  "sex on the beach",
-  "screw driver",
-  "spicy mango",
-].map(normalizeName);
+// `products` are the live mixers from the product API; only those link to a page
+export default function FlavorArchive({ products = [] }) {
+  const collections = mergeCatalog(products);
 
-function normalizeName(name = "") {
-  return name
-    .trim()
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // strips accents: ñ -> n
-    .replace(/\s+/g, " ");
-}
-
-
-export default function FlavorArchive() {
   return (
     <>
-      <ArchiveHero />
-      {COLLECTIONS.map((collection, index) => (
+      <ArchiveHero collections={collections} />
+      {collections.map((collection, index) => (
         <CollectionSection
           key={collection.id}
           collection={collection}
@@ -50,7 +33,7 @@ export default function FlavorArchive() {
    HERO
 ========================================================= */
 
-function ArchiveHero() {
+function ArchiveHero({ collections }) {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-black">
       <Image
@@ -101,7 +84,7 @@ function ArchiveHero() {
           aria-label="Collections"
           className="mt-8 flex flex-wrap gap-[7px] lg:mt-[48px]"
         >
-          {COLLECTIONS.map((collection) => (
+          {collections.map((collection) => (
             <a
               key={collection.id}
               href={`#${collection.id}`}
@@ -200,7 +183,7 @@ function CollectionSection({ collection, number }) {
 
 function FlavorCard({ flavor, index }) {
   const [selectedSize, setSelectedSize] = useState("550ml");
-  const isAvailable = AVAILABLE_FLAVORS.includes(normalizeName(flavor.name));
+  const isAvailable = flavor.available;
   const selectedImage =
     selectedSize === "50ml" && flavor.image60
       ? flavor.image60=="NULL"?'/not-found.png':flavor.image60
@@ -290,7 +273,7 @@ function FlavorCard({ flavor, index }) {
       <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center bg-black/55 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         {isAvailable ? (
           <Link
-            href={`/mixers/${slugify(flavor.name ?? "")}`}
+            href={`/mixers/${flavor.slug}`}
             className="pointer-events-auto border border-brand-yellow bg-brand-yellow px-6 py-2 font-sf-pro text-[15px] font-semibold uppercase tracking-wider text-black transition hover:bg-transparent hover:text-brand-yellow"
           >
             Explore Our {flavor.name} Mixer

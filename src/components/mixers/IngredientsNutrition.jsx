@@ -8,7 +8,6 @@ export default function IngredientsNutrition({ data }) {
   const accent2 = data?.product.accent2;
   const bottleImage = data?.product.bottleImage;
   const wrapper = data?.product.wrapper;
-  console.log(accent);
   if (!productInfo) {
     return null;
   }
@@ -170,11 +169,11 @@ export default function IngredientsNutrition({ data }) {
               RIGHT — BOTTLE
           ================================================== */}
 
-          <BottleAnimation
+          {/* <BottleAnimation
             productName={data?.product?.name}
             bottleImage={bottleImage}
             wrapper={wrapper}
-          />
+          /> */}
         </div>
 
         {/* =====================================================
