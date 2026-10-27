@@ -160,11 +160,7 @@ export default function Footer() {
         </p>
       </div>
 
-      {/* =====================================================
-          GIANT BARCRAFT LOGO
-          Sits in normal flow at the very bottom, full width;
-          aspect ratio matches footer.png (7658x1607).
-      ====================================================== */}
+   
       <div
         className="
           pointer-events-none
@@ -174,7 +170,7 @@ export default function Footer() {
         "
       >
         <Image
-          src="/home/footer/footer.png"
+          src="/home/footer.png"
           alt=""
           fill
           sizes="100vw"

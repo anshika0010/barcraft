@@ -21,7 +21,7 @@ export default function TwoServeBottle() {
       
         <div className="absolute inset-0 z-0">
           <Image
-            src="/home/2-serve-bottle/2-serve-bottle.jpg"
+            src="/home/2-serve-bottle.jpg"
             alt="BarCraft bar scene"
             fill
             sizes="100vw"

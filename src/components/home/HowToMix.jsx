@@ -56,7 +56,7 @@ export default function HowToMix() {
       ====================================================== */}
       <div className="absolute inset-0">
         <Image
-          src="/home/how-to-mix/how-to-mix.webp"
+          src="/home/how-to-mix.webp"
           alt="How to mix a BarCraft cocktail"
           fill
           sizes="100vw"
