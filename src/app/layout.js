@@ -78,26 +78,7 @@ export const viewport = {
   colorScheme: "dark",
 };
 
-const siteSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${SITE_URL}/#organization`,
-      name: SITE_NAME,
-      url: SITE_URL,
-      logo: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
-      url: SITE_URL,
-      name: SITE_NAME,
-      publisher: { "@id": `${SITE_URL}/#organization` },
-      inLanguage: "en-IN",
-    },
-  ],
-};
+
 
 export default function RootLayout({ children }) {
   return (
@@ -117,7 +98,7 @@ export default function RootLayout({ children }) {
         </noscript>
         {/* End Google Tag Manager */}
 
-        <JsonLd data={siteSchema} />
+        
 
         {children}
 
